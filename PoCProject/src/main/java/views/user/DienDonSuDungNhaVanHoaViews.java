@@ -83,8 +83,8 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(852, 480));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setText("<html>Đơn đăng kí sử dụng Nhà văn hoá<html> ");
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
 
         jLabel2.setText("<html>Thời gian <br> bắt đầu <html>");
         jLabel2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
@@ -97,14 +97,14 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel5.setText("<html>Phòng yêu <br>cầu<html>");
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
-        jLabel10.setForeground(new java.awt.Color(255, 0, 51));
         jLabel10.setText("(*)");
+        jLabel10.setForeground(new java.awt.Color(255, 0, 51));
 
-        jLabel11.setForeground(new java.awt.Color(255, 0, 51));
         jLabel11.setText("(*)");
+        jLabel11.setForeground(new java.awt.Color(255, 0, 51));
 
-        jLabel12.setForeground(new java.awt.Color(255, 0, 51));
         jLabel12.setText("(*)");
+        jLabel12.setForeground(new java.awt.Color(255, 0, 51));
 
         description.setColumns(20);
         description.setRows(5);
@@ -159,8 +159,8 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
 
         jLabel15.setText("Ngày");
 
-        jLabel16.setForeground(new java.awt.Color(255, 0, 51));
         jLabel16.setText("(*)");
+        jLabel16.setForeground(new java.awt.Color(255, 0, 51));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
