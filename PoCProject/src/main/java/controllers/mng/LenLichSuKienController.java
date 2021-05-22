@@ -28,17 +28,17 @@ public class LenLichSuKienController {
                 eventID = 0;
             }
             // Xong phần lấy ra EventID
-            PreparedStatement ps = conn.prepareStatement("insert into eventtable(RoomNAME, StartTime, FinishTime, EVENTNAME, EVENTDescription, Fee, Note, EVENTID) values(?, ?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement ps = conn.prepareStatement("insert into eventtable(RoomNAME, StartTime, FinishTime, EVENTNAME, EVENTDescription, Fee, EVENTID) values(?, ?, ?, ?, ?, ?, ?)");
             ps.setString(1, lich.getRoomName());
             ps.setString(2, lich.getStartTime());
             ps.setString(3, lich.getFinishTime());
             ps.setString(4, lich.getEventName());
             ps.setString(5, lich.getEventDescriptions());
             ps.setInt(6, lich.getFee());
-            ps.setInt(7, lich.getNote());
-            ps.setInt(8, eventID);
+            ps.setInt(7, eventID);
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Đã thêm sự kiện");
+            
         } catch(SQLException e){
             System.out.println(e);
             
