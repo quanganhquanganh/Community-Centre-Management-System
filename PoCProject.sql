@@ -396,13 +396,13 @@ INSERT INTO INFRASTRUCTURE VALUES (15, 'Tủ lạnh',2 , '2021-05-01', 'Mới ',
 INSERT INTO INFRASTRUCTURE VALUES (16, 'Loa',4 , '2021-05-01', 'Mới ', 'Sân nhà văn hóa');
 
 -- INSERT INTO EVENTTABLE
-INSERT INTO EVENTTABLE VALUES (1, 'Họp hội phụ nữ', '2021-05-02 20:00:00', '2021-05-02 23:00:00', 'Hội trường', 'NULL', 0, 2);
+INSERT INTO EVENTTABLE VALUES (1, 'Họp hội phụ nữ', '2021-05-02 20:00:00', '2021-05-02 23:00:00', 'Hội trường', 'Hội trưởng hội phụ nữ thuê', 0, 2);
 INSERT INTO EVENTTABLE VALUES (2, 'Học sinh mượn phòng tập văn nghệ', '2021-05-03 18:00:23', '2021-05-03 20:00:00', 'Phòng chức năng', 'Có giáo viên đi kèm', 0, 2);
-INSERT INTO EVENTTABLE VALUES (3, 'Họp tổ dân phố', '2021-05-07 20:00:00', '2021-05-07 22:00:00', 'Hội trường', 'NULL', 0, 1);
-INSERT INTO EVENTTABLE VALUES (4, 'Công ty Tiến Việt mượn phòng quảng bá sản phẩm', '2021-05-15 07:30:00', '2021-05-15 17:00:00', 'Hội trường', 'NULL', 0, 2);
-INSERT INTO EVENTTABLE VALUES (5, 'Hội thảo kĩ năng sống', '2021-05-16 07:30:00', '2021-05-16 17:00:00', 'Hội trường', 'NULL', 0, 2);
-INSERT INTO EVENTTABLE VALUES (6, 'Hội trại', '2021-05-17 08:30:00', '2021-05-17 16:00:00', 'Sân nhà văn hóa', 'NULL', 0, 2);
-INSERT INTO EVENTTABLE VALUES (7, 'Hội trại', '2021-05-17 08:30:00', '2021-05-17 16:00:00', 'Nhà bếp', 'NULL', 0, 2);
+INSERT INTO EVENTTABLE VALUES (3, 'Họp tổ dân phố', '2021-05-07 20:00:00', '2021-05-07 22:00:00', 'Hội trường', 'Bầu tổ trưởng dân phố', 0, 1);
+INSERT INTO EVENTTABLE VALUES (4, 'Công ty Tiến Việt mượn phòng quảng bá sản phẩm', '2021-05-15 07:30:00', '2021-05-15 17:00:00', 'Hội trường', 'Chủ tịch tập đoàn đa cấp thuê', 10000000, 2);
+INSERT INTO EVENTTABLE VALUES (5, 'Hội thảo kĩ năng sống', '2021-05-16 07:30:00', '2021-05-16 17:00:00', 'Hội trường', 'Sinh viên giỏi Đỗ Bùi Quang Anh', 0, 2);
+INSERT INTO EVENTTABLE VALUES (6, 'Hội trại', '2021-05-17 08:30:00', '2021-05-17 16:00:00', 'Sân nhà văn hóa', 'Đoàn viên tổ chức', 0, 2);
+INSERT INTO EVENTTABLE VALUES (7, 'Hội trại', '2021-05-17 08:30:00', '2021-05-17 16:00:00', 'Nhà bếp', 'Đoàn viên tổ chức', 0, 2);
 --
 ALTER TABLE USERTAB
   ADD FULLTEXT KEY `soCMT` (`soCMT`);
