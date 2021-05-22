@@ -15,19 +15,17 @@ public class LenLichSuKien {
     private String eventName;
     private String eventDescriptions;
     private int fee;
-    private int note;
 
     public LenLichSuKien() {
     }
 
-    public LenLichSuKien(String roomName, String startTime, String finishTime, String eventName, String eventDescriptions, int fee, int note) {
+    public LenLichSuKien(String roomName, String startTime, String finishTime, String eventName, String eventDescriptions, int fee) {
         this.roomName = roomName;
         this.startTime = startTime;
         this.finishTime = finishTime;
         this.eventName = eventName;
         this.eventDescriptions = eventDescriptions;
         this.fee = fee;
-        this.note = note;
     }
 
     public String getRoomName() {
@@ -53,11 +51,6 @@ public class LenLichSuKien {
     public int getFee() {
         return fee;
     }
-
-    public int getNote() {
-        return note;
-    }
-
     public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
@@ -82,8 +75,5 @@ public class LenLichSuKien {
         this.fee = fee;
     }
 
-    public void setNote(int note) {
-        this.note = note;
-    }
     
 }
