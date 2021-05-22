@@ -6,10 +6,10 @@
 package views.mng;
 import models.LenLichSuKien;
 import controllers.mng.LenLichSuKienController;
-import controllers.user.XemLichSuDungNhaVanHoaController;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import javax.swing.JOptionPane;
+import controllers.user.XemLichSuDungNhaVanHoaController;
 /**
  *
  * @author keplegarry
@@ -25,7 +25,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
     }
     
     private boolean check(){
-        if(jTextFieldTenSk.getText().length() == 0 || jTextFieldLoaiSk.getText().length() == 0 || jTextFieldMoTa.getText().length() == 0
+        if(jTextFieldTenSk.getText().length() == 0 || jTextFieldMoTa.getText().length() == 0
             || jTextFieldChiPhi.getText().length() == 0 || dateTimePickerStart.getDatePicker().toString().length() == 0
             || dateTimePickerStart.getTimePicker().toString().length() == 0 || dateTimePickerFinish.getDatePicker().toString().length() == 0
             || dateTimePickerFinish.getTimePicker().toString().length() == 0)
@@ -49,13 +49,6 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Chi phí không hợp lệ", "Warning", JOptionPane.WARNING_MESSAGE);
                 return false;
             } 
-        try{
-                int note = Integer.parseInt(jTextFieldLoaiSk.getText());
-            } catch(NumberFormatException e){
-                System.out.println(e);
-                JOptionPane.showMessageDialog(null, "Loại sự kiện không hợp lệ", "Warning", JOptionPane.WARNING_MESSAGE);
-                return false;
-            } 
         return true;
     }
 
@@ -77,8 +70,6 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         dateTimePickerStart = new com.github.lgooddatepicker.components.DateTimePicker();
         jLabel4 = new javax.swing.JLabel();
         dateTimePickerFinish = new com.github.lgooddatepicker.components.DateTimePicker();
-        jLabel5 = new javax.swing.JLabel();
-        jTextFieldLoaiSk = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTextFieldChiPhi = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -88,37 +79,35 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-
-        jLabel1.setText("Chọn phòng:");
+        jLabel1.setText("-Chọn phòng:");
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         XemLichSuDungNhaVanHoaController xemLichSuDungNhaVanHoaController = new XemLichSuDungNhaVanHoaController();
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(xemLichSuDungNhaVanHoaController.layDanhSachPhong()));
+        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Tên sự kiện:");
+        jLabel2.setText("-Tên sự kiện:");
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel3.setText("Thời gian từ:");
+        jLabel3.setText("-Bắt đầu:");
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel4.setText("đến:");
+        jLabel4.setText("-Kết thúc:");
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel5.setText("Loại sự kiện:");
+        jLabel6.setText("-Chi phí:");
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jTextFieldLoaiSk.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldLoaiSkActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setText("Chi phí:");
-
-        jLabel7.setText("Mô tả:");
+        jLabel7.setText("-Mô tả:");
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jButton1.setText("Xác nhận");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -126,6 +115,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         });
 
         jButton2.setText("Hủy");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -139,81 +129,69 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
+                        .addGap(21, 21, 21)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel2)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel7))))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel4)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(25, 25, 25))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextFieldTenSk, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addGap(35, 35, 35))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextFieldLoaiSk, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6)
-                                .addGap(52, 52, 52)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldChiPhi, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(36, 36, 36))
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(22, 22, 22)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextFieldMoTa)
-                        .addContainerGap())
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldTenSk, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dateTimePickerStart, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dateTimePickerFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldChiPhi, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldMoTa, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 42, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(dateTimePickerFinish, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dateTimePickerStart, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton1)
+                        .addGap(51, 51, 51)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(171, 171, 171)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(150, 150, 150))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextFieldTenSk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(dateTimePickerStart, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(dateTimePickerFinish, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                    .addComponent(jTextFieldTenSk, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextFieldLoaiSk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(dateTimePickerStart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(dateTimePickerFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextFieldChiPhi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldChiPhi, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addComponent(jTextFieldMoTa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldMoTa, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(43, 43, 43))
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -237,14 +215,14 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
             String finishTime = dateTimePickerFinish.getDatePicker().toString() + " " + dateTimePickerFinish.getTimePicker();
             String eventName = jTextFieldTenSk.getText();
             String eventDescriptions = jTextFieldMoTa.getText();
-            int fee = Integer.parseInt(jTextFieldChiPhi.getText());            
-            int note = Integer.parseInt(jTextFieldLoaiSk.getText());          
-            LenLichSuKienController.lenLich(new LenLichSuKien(roomName, startTime, finishTime, eventName, eventDescriptions, fee, note)); 
-        } 
+            int fee = Integer.parseInt(jTextFieldChiPhi.getText());                   
+            LenLichSuKienController.lenLich(new LenLichSuKien(roomName, startTime, finishTime, eventName, eventDescriptions, fee));
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if(jTextFieldTenSk.getText().length() != 0 || jTextFieldLoaiSk.getText().length() != 0 || jTextFieldMoTa.getText().length() != 0
+        if(jTextFieldTenSk.getText().length() != 0 || jTextFieldMoTa.getText().length() != 0
             || jTextFieldChiPhi.getText().length() != 0 || dateTimePickerStart.getDatePicker().toString().length() != 0
             || dateTimePickerStart.getTimePicker().toString().length() != 0 || dateTimePickerFinish.getDatePicker().toString().length() != 0
             || dateTimePickerFinish.getTimePicker().toString().length() != 0){            
@@ -261,10 +239,6 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jTextFieldLoaiSkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLoaiSkActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldLoaiSkActionPerformed
 
     /**
      * @param args the command line arguments
@@ -300,7 +274,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
             }
         });
     }
-  
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.github.lgooddatepicker.components.DateTimePicker dateTimePickerFinish;
     private com.github.lgooddatepicker.components.DateTimePicker dateTimePickerStart;
@@ -311,12 +285,10 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextFieldChiPhi;
-    private javax.swing.JTextField jTextFieldLoaiSk;
     private javax.swing.JTextField jTextFieldMoTa;
     private javax.swing.JTextField jTextFieldTenSk;
     // End of variables declaration//GEN-END:variables

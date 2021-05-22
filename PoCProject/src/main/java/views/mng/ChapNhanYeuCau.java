@@ -77,17 +77,23 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jLabelMota.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabelMota.setText("Mô tả:");
 
+        jLabelThoigian.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabelThoigian.setText("Thời gian từ: ");
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel1.setText("Tên người dùng:");
 
+        jLabelghichu.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabelghichu.setText("Ghi chú:");
 
         jLabelphi.setText("Phí sử dụng:");
+        jLabelphi.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jButton1.setText("Chấp thuận");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -95,6 +101,7 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
         });
 
         jButton2.setText("Từ chối");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -118,12 +125,12 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton1)
-                                .addGap(116, 116, 116)
-                                .addComponent(jButton2))
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(88, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,16 +144,16 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
                 .addGap(71, 71, 71)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelghichu)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelphi)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(28, 28, 28))
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -157,7 +164,7 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
         int id = Integer.parseInt((String)model.getValueAt(index, 0));
         TinhTrangYeuCau tinhtrang = new TinhTrangYeuCau("Chấp thuận", jTextField1.getText(), id, (String)model.getValueAt(index, 2), (String)model.getValueAt(index, 3), Integer.parseInt(jTextField2.getText()));
         ThongTinNguoiDungDangKy.state(tinhtrang);
-        LenLichSuKienController.lenLich(new LenLichSuKien((String)model.getValueAt(index, 4), (String)model.getValueAt(index, 2), (String)model.getValueAt(index, 3), (String)model.getValueAt(index, 1) + " thuê", (String)model.getValueAt(index, 5), Integer.parseInt(jTextField2.getText()), 2));
+        LenLichSuKienController.lenLich(new LenLichSuKien((String)model.getValueAt(index, 4), (String)model.getValueAt(index, 2), (String)model.getValueAt(index, 3), (String)model.getValueAt(index, 1) + " thuê", (String)model.getValueAt(index, 5), Integer.parseInt(jTextField2.getText())));
         model.setRowCount(0);
         ThongTinNguoiDungDangKy.print(model);
         this.dispose();
