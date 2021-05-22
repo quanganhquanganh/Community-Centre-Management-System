@@ -42,7 +42,6 @@ public class XemLich {
                     arr.add(rs.getString("StartTime"));
                     arr.add(rs.getString("FinishTime"));
                     arr.add(rs.getString("RoomNAME"));
-                    arr.add(rs.getString("Note"));
                     arr.add(rs.getString("EVENTDescription"));
                     arr.add(rs.getString("Fee"));
                     return arr;

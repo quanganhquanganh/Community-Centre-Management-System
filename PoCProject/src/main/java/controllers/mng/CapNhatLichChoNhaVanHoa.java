@@ -21,9 +21,8 @@ public class CapNhatLichChoNhaVanHoa {
     private String eventName;
     private String eventDescriptions;
     private int fee;
-    private int note;
 
-    private LenLichSuKien lenLichSuKien = new LenLichSuKien(roomName, startTime, finishTime, eventName, eventDescriptions, fee, note);
+    private LenLichSuKien lenLichSuKien = new LenLichSuKien(roomName, startTime, finishTime, eventName, eventDescriptions, fee);
 
     public boolean capNhatLichChoPhong(LenLichSuKien lenLichSuKien) {
         try {
@@ -55,7 +54,6 @@ public class CapNhatLichChoNhaVanHoa {
             pstatement.setString(5, lenLichSuKien.getRoomName());
             pstatement.setString(6, lenLichSuKien.getEventDescriptions());
             pstatement.setInt(7, lenLichSuKien.getFee());
-            pstatement.setInt(8, lenLichSuKien.getNote());
             int i = pstatement.executeUpdate();
         } catch (Exception e) {
             System.out.println(e);
