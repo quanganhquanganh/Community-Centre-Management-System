@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import services.MysqlConnection;
 import controllers.mng.CapNhatCoSoVatChat;
+import controllers.user.XemLichSuDungNhaVanHoaController;
 import javax.swing.JOptionPane;
 /**
  *
@@ -102,7 +103,8 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxPhong.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hội trường", "Phòng chức năng 1" }));
+        XemLichSuDungNhaVanHoaController xemLichSuDungNhaVanHoaController = new XemLichSuDungNhaVanHoaController();
+        jComboBoxPhong.setModel(new javax.swing.DefaultComboBoxModel<>(xemLichSuDungNhaVanHoaController.layDanhSachPhong()));
         jComboBoxPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxPhongActionPerformed(evt);
@@ -122,7 +124,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
                             .addComponent(jLabel5)
                             .addComponent(jLabel2))
                         .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldThongTin)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,7 +137,9 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
                                 .addGap(49, 49, 49)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBoxPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jComboBoxPhong, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(30, 30, 30)))
                                 .addGap(41, 41, 41))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(84, 84, 84)
@@ -144,7 +148,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
                         .addComponent(jButtonLamMoi)
                         .addGap(105, 105, 105)
                         .addComponent(jButtonHuy, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,7 +250,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.github.lgooddatepicker.components.DatePicker datePicker;
     private javax.swing.JButton jButtonHuy;
@@ -261,7 +265,5 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JSpinner jSpinnerSoLuong;
     private javax.swing.JTextField jTextFieldThongTin;
-	//private javax.swing.*;
-
     // End of variables declaration//GEN-END:variables
 }

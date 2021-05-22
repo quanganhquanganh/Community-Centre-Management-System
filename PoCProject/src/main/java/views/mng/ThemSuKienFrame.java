@@ -6,6 +6,7 @@
 package views.mng;
 import models.LenLichSuKien;
 import controllers.mng.LenLichSuKienController;
+import controllers.user.XemLichSuDungNhaVanHoaController;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import javax.swing.JOptionPane;
@@ -91,7 +92,8 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
 
         jLabel1.setText("Chọn phòng:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hội trường", "Phòng chức năng 1" }));
+        XemLichSuDungNhaVanHoaController xemLichSuDungNhaVanHoaController = new XemLichSuDungNhaVanHoaController();
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(xemLichSuDungNhaVanHoaController.layDanhSachPhong()));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -105,6 +107,12 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         jLabel4.setText("đến:");
 
         jLabel5.setText("Loại sự kiện:");
+
+        jTextFieldLoaiSk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldLoaiSkActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Chi phí:");
 
@@ -147,7 +155,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jTextFieldTenSk, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                                 .addComponent(jLabel1)
                                 .addGap(35, 35, 35))
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -156,8 +164,8 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
                                 .addComponent(jLabel6)
                                 .addGap(52, 52, 52)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldChiPhi, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldChiPhi, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(36, 36, 36))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jTextFieldMoTa)
@@ -201,7 +209,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jTextFieldMoTa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -254,6 +262,10 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void jTextFieldLoaiSkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLoaiSkActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldLoaiSkActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -288,7 +300,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
             }
         });
     }
-
+  
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.github.lgooddatepicker.components.DateTimePicker dateTimePickerFinish;
     private com.github.lgooddatepicker.components.DateTimePicker dateTimePickerStart;

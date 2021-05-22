@@ -17,6 +17,7 @@ import javax.swing.table.DefaultTableModel;
 import models.ThongTinCoSoVatChat;
 import models.TinhTrangYeuCau;
 import services.MysqlConnection;
+import controllers.user.XemLichSuDungNhaVanHoaController;
 
 /**
  *
@@ -177,7 +178,7 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelTrangChuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelTrangChuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -207,7 +208,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanelQuanLyCSVCLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel2)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanelLich.setBackground(new java.awt.Color(153, 153, 153));
@@ -234,7 +235,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelLichLayout.setVerticalGroup(
             jPanelLichLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLichLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(21, 21, 21))
         );
@@ -263,7 +264,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelDonDangKyLayout.setVerticalGroup(
             jPanelDonDangKyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDonDangKyLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(21, 21, 21))
         );
@@ -294,7 +295,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanelDangXuatLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel5)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanelLeftLayout = new javax.swing.GroupLayout(jPanelLeft);
@@ -591,7 +592,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel14.setText("Phòng:");
 
-        jComboBoxPhong.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hội trường", "Phòng chức năng 1" }));
+        XemLichSuDungNhaVanHoaController xemLichSuDungNhaVanHoaController = new XemLichSuDungNhaVanHoaController();
+        jComboBoxPhong.setModel(new javax.swing.DefaultComboBoxModel<>(xemLichSuDungNhaVanHoaController.layDanhSachPhong()));
         jComboBoxPhong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxPhongActionPerformed(evt);
@@ -622,7 +624,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(jComboBoxVatPham, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49)
                         .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
                         .addComponent(jComboBoxPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(131, 131, 131))))
             .addGroup(jPanelCapNhatCSVCLayout.createSequentialGroup()
@@ -657,7 +659,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel17.setText("Chọn phòng:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hội trường", "Phòng chức năng 1" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(xemLichSuDungNhaVanHoaController.layDanhSachPhong()));
 
         jLabel18.setText("Tên vật phẩm:");
 
@@ -730,7 +732,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanelThemCSVCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
                     .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(jPanelThemCSVCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jTextFieldTT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -935,7 +937,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.github.lgooddatepicker.components.DatePicker datePicker1;
     private javax.swing.JButton jButton1;
