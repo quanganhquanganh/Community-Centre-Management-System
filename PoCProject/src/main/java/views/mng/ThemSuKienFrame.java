@@ -33,7 +33,7 @@ import com.toedter.calendar.JDateChooser;
 import javax.swing.SwingConstants;
 import java.awt.Font; // mới thêm
 public class ThemSuKienFrame extends javax.swing.JFrame {
-// mới thêm	
+// thêm
     private String hours[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"};
     private String minutes[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24",
         "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51",
@@ -53,7 +53,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
     
-    private boolean check(){
+    private boolean check(){      // thay đổi
         if(jTextFieldTenSk.getText().length() == 0 || jTextFieldMoTa.getText().length() == 0
             || jTextFieldChiPhi.getText().length() == 0 || jDateStart.getDate() == null
             || hourBoxStart.getItemAt(hourBoxStart.getSelectedIndex()).isEmpty() || jDateFinish.getDate() == null
@@ -95,6 +95,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         jTextFieldMoTa = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        // thêm
         jLabelTime1_1 = new javax.swing.JLabel();
         jLabelTime1_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jLabelTime1_2 = new javax.swing.JLabel();
@@ -107,7 +108,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         jDateStart.getCalendarButton().setText("Date");
         jDateFinish = new com.toedter.calendar.JDateChooser();
         jDateFinish.getCalendarButton().setText("Date");
-        hourBoxStart = new javax.swing.JComboBox<>(); // mới thêm
+        hourBoxStart = new javax.swing.JComboBox<>();
         minuteBoxStart = new javax.swing.JComboBox<>();
         hourBoxFinish = new javax.swing.JComboBox<>();
         minuteBoxFinish = new javax.swing.JComboBox<>();
@@ -156,6 +157,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
             }
         });
         
+        // thêm
         jDateStart.setDateFormatString("dd-MM-yyyy");
         
         hourBoxStart.setModel(modelHours1);
@@ -166,8 +168,6 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         });
         
         minuteBoxStart.setModel(modelMinutes1);
-//        minuteBoxStart.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        
         
         jDateFinish.setDateFormatString("dd-MM-yyyy");
         hourBoxFinish.setModel(modelHours2);
@@ -307,7 +307,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
     	Date dateStart = jDateStart.getDate();
     	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     	Date dateFinish = jDateFinish.getDate();
-        if(check()){
+        if(check()){	//thay đổi
             String roomName = (String)jComboBox1.getSelectedItem();
             String startTime = dateFormat.format(dateStart) + " " + hourBoxStart.getSelectedIndex() + ":" + minuteBoxStart.getSelectedIndex() + ":00";
             String finishTime = dateFormat.format(dateFinish) + " " + hourBoxFinish.getSelectedIndex() + ":" + minuteBoxFinish.getSelectedIndex() + ":00";
@@ -321,7 +321,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if(jTextFieldTenSk.getText().length() != 0 || jTextFieldMoTa.getText().length() != 0
-            || jTextFieldChiPhi.getText().length() != 0){            
+            || jTextFieldChiPhi.getText().length() != 0){            // thay đổi
             if (JOptionPane.showConfirmDialog(null, "Bạn có muốn hủy?", "WARNING",
                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                 this.dispose();
@@ -336,10 +336,12 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
     
+     //thêm
     private void hourBoxStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourBoxStartActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_hourBoxStartActionPerformed
     
+    //thêm
     private void hourBoxFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourBoxFinishActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_hourBoxFinishActionPerformed
