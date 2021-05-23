@@ -31,9 +31,9 @@ public class MngLoginController {
                             check = true;
                     }
                     if(check){
-                        JOptionPane.showMessageDialog(null, "Dang nhap thanh cong");
+                        JOptionPane.showMessageDialog(null, "Đăng nhập thành công");
                     } else {
-                        JOptionPane.showMessageDialog(null, "Tai khoan khong ton tai", "Warning", JOptionPane.WARNING_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Sai tên đăng nhập hoặc mật khẩu!", "Warning", JOptionPane.WARNING_MESSAGE);
                     }   
         } catch(SQLException e){
         }
