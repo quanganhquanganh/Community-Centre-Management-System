@@ -1,3 +1,4 @@
+-- Can sua
 CREATE DATABASE POCPROJECT character set UTF8MB3 collate utf8_unicode_ci;
 USE POCPROJECT;
 
@@ -323,23 +324,48 @@ INSERT INTO `tieu_su` (`ID`, `idNhanKhau`, `tuNgay`, `denNgay`, `diaChi`, `ngheN
 
 -- INSERT INTO USERTABLE
 INSERT INTO USERTAB VALUES ('0000000001','nguyenvana','root','Lưu Đình Hoàng','Khương Trung-Hà Nội','2020-11-29 14:30:20','Bác sĩ','970-09-30','123456789');
-
--- INSERT INTO MANAGER
-
-INSERT INTO MANAGER VALUES('admin', 'admin', 'Mai Xuân Thứ', 'Khương Trung-Hà Nội', '1970-11-11', '2020-11-11 11:11:11', '029388234');
-
+INSERT INTO USERTAB VALUES ('0000000002','dobuiquanganh','root','Đỗ Bùi Quang Anh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000003','nguyenvietanh','root','Nguyễn Việt Anh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000004','nguyenanhvuong','root','Nguyễn Anh Vương','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000005','leanhdung','root','Lê Anh Dũng','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000006','daongocban','root','Đào Ngọc Bản','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000007','phungngocvinh','root','Phùng Ngọc Vinh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000008','nguyentienviet','root','Nguyễn Tiến Việt','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000009','dangleduy','root','Đặng Lê Duy','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000010','ngotrunghieu','root','Ngô Trung Hiếu','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000011','nguyencongbinh','root','Nguyễn Công Bình','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+-- INSERT INTO MANAGERs
+INSERT INTO MANAGER VALUES('admin', 'admin', 'Nguyễn Tiến Việt', 'Long Biên-Hà Nội', '2001-04-31', '2021-05-01 17:17:17', '0973265421');
 -- INSERT INTO ROOM
-INSERT INTO ROOM VALUES('Hội trường', 1, 'Họp');
-INSERT INTO ROOM VALUES ('Phòng chức năng 1', 2, 'Tổ chức văn nghệ');
-
+INSERT INTO ROOM VALUES('Hội trường', 1, 'Họp ,Hội ,Liên hoan');
+INSERT INTO ROOM VALUES ('Phòng chức năng', 2, 'Tổ chức văn nghệ');
+INSERT INTO ROOM VALUES ('Sân nhà văn hóa', 2, 'Sự kiện ngoài trời');
 -- INSERT INTO ROOM
-INSERT INTO INFRASTRUCTURE VALUES (1, 'LOA', 1, '2020-11-11', 'Mới nguyên', 'Hội trường');
+INSERT INTO INFRASTRUCTURE VALUES (1, 'Bàn', 30, '2021-05-01', 'Mới nguyên', 'Hội trường');
+INSERT INTO INFRASTRUCTURE VALUES (2, 'Ghế', 100, '2021-05-01', 'Mới nguyên', 'Hội trường');
+INSERT INTO INFRASTRUCTURE VALUES (3, 'Loa',10 , '2021-05-01', 'Mới nguyên', 'Hội trường');
+INSERT INTO INFRASTRUCTURE VALUES (4, 'Đèn', 20, '2021-05-01', 'Mới nguyên', 'Hội trường');
+INSERT INTO INFRASTRUCTURE VALUES (5, 'Lọ hoa', 40, '2021-05-01', 'Mới nguyên', 'Hội trường');
+INSERT INTO INFRASTRUCTURE VALUES (6, 'Máy chiếu', 2, '2021-05-01', 'Mới nguyên', 'Hội trường');
 
+INSERT INTO INFRASTRUCTURE VALUES (7, 'Bàn', 20, '2021-05-01', 'Mới', 'Phòng chức năng');
+INSERT INTO INFRASTRUCTURE VALUES (8, 'Ghế', 60, '2021-05-01', 'Mới ', 'Phòng chức năng');
+INSERT INTO INFRASTRUCTURE VALUES (9, 'Loa',20 , '2021-05-01', 'Mới ', 'Phòng chức năng');
+INSERT INTO INFRASTRUCTURE VALUES (10, 'Đèn', 30, '2021-05-01', 'Mới ', 'Phòng chức năng');
+INSERT INTO INFRASTRUCTURE VALUES (11, 'Lọ hoa', 50, '2021-05-01', 'Mới ', 'Phòng chức năng');
+INSERT INTO INFRASTRUCTURE VALUES (12, 'Máy chiếu', 2, '2021-05-01', 'Mới ', 'Phòng chức năng');
+
+INSERT INTO INFRASTRUCTURE VALUES (13, 'Loa', 4, '2021-05-01', 'Mới ', 'Sân nhà văn hóa');
 -- INSERT INTO EVENTTABLE
-INSERT INTO EVENTTABLE VALUES (1, 'Họp mặt cựu chiến binh', '2020-11-11 22:22:23', '2020-11-11 23:00:00', 'Hội trường', 'NULL', 0);
-INSERT INTO EVENTTABLE VALUES (2, 'Học sinh mượn phòng tập văn nghệ', '2020-11-23 22:22:23', '2020-11-23 23:00:00', 'Phòng chức năng 1', 'Có giáo viên đi kèm', 0);
-INSERT INTO EVENTTABLE VALUES (3, 'Tổ dân phố họp', '2020-11-11 22:22:23', '2020-11-11 23:00:00', 'Hội trường', 'NULL', 0);
+INSERT INTO EVENTTABLE VALUES (1, 'Họp hội phụ nữ', '2021-05-02 20:00:00', '2021-05-02 23:00:00', 'Hội trường', 'Ban tổ chức hội phụ nữ thuê', 0);
+INSERT INTO EVENTTABLE VALUES (2, 'Học sinh mượn phòng tập văn nghệ', '2021-05-03 18:00:23', '2021-05-03 20:00:00', 'Phòng chức năng', 'Có giáo viên đi kèm', 0);
+INSERT INTO EVENTTABLE VALUES (3, 'Họp tổ dân phố', '2021-05-07 20:00:00', '2021-05-07 22:00:00', 'Hội trường', 'Tổ trưởng tổ dân phố tổ chức', 0);
 
+INSERT INTO EVENTTABLE VALUES (4, 'Công ty Tiến Việt mượn phòng quảng bá sản phẩm', '2021-05-15 07:30:00', '2021-05-15 17:00:00', 'Hội trường', 'Chủ tịch công ty đa cấp', 1000000);
+INSERT INTO EVENTTABLE VALUES (5, 'Hội thảo kĩ năng sống', '2021-05-16 07:30:00', '2021-05-16 17:00:00', 'Hội trường', 'Sinh viên Bách Khoa tuyên truyền', 0);
+INSERT INTO EVENTTABLE VALUES (6, 'Hội trại', '2021-05-17 08:30:00', '2021-05-17 16:00:00', 'Sân nhà văn hóa', 'Đoàn viên thanh niên tổ chức', 0);
+
+INSERT INTO EVENTTABLE VALUES (7, 'Văn nghệ thiếu niên, thanh niên', '2021-05-18 20:00:00', '2021-05-18 22:00:00', 'Phòng chức năng', 'Chuẩn bị cho tết thiếu nhi 6/1', 0);
 
 --
 ALTER TABLE USERTAB
