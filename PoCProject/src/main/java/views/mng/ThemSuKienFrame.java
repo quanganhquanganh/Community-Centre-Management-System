@@ -27,7 +27,7 @@ import javax.swing.JLabel;
  */
 
 import javax.swing.DefaultComboBoxModel;
-import com.jgoodies.forms.factories.DefaultComponentFactory;
+//import com.jgoodies.forms.factories.DefaultComponentFactory;
 import javax.swing.JTable;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.SwingConstants;
