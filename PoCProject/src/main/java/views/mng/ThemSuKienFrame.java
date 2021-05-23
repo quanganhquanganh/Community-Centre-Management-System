@@ -80,6 +80,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -95,23 +96,17 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         jTextFieldMoTa = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        // thêm
-        jLabelTime1_1 = new javax.swing.JLabel();
-        jLabelTime1_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        jLabelTime1_2 = new javax.swing.JLabel();
-        jLabelTime1_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        jLabelTime2_1 = new javax.swing.JLabel();
-        jLabelTime2_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        jLabelTime2_2 = new javax.swing.JLabel();
-        jLabelTime2_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
         jDateStart = new com.toedter.calendar.JDateChooser();
-        jDateStart.getCalendarButton().setText("Date");
         jDateFinish = new com.toedter.calendar.JDateChooser();
-        jDateFinish.getCalendarButton().setText("Date");
         hourBoxStart = new javax.swing.JComboBox<>();
         minuteBoxStart = new javax.swing.JComboBox<>();
         hourBoxFinish = new javax.swing.JComboBox<>();
         minuteBoxFinish = new javax.swing.JComboBox<>();
+        jLabelTime1_1 = new javax.swing.JLabel();
+        jLabelTime2_1 = new javax.swing.JLabel();
+        jLabelTime1_2 = new javax.swing.JLabel();
+        jLabelTime2_2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("-Chọn phòng:");
@@ -129,6 +124,8 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         jLabel2.setText("-Tên sự kiện:");
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
+        jTextFieldTenSk.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
         jLabel3.setText("-Bắt đầu:");
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
@@ -138,8 +135,16 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         jLabel6.setText("-Chi phí:");
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
+        jTextFieldChiPhi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldChiPhiActionPerformed(evt);
+            }
+        });
+
         jLabel7.setText("-Mô tả:");
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
+        jTextFieldMoTa.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jButton1.setText("Xác nhận");
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -156,155 +161,168 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        
-        // thêm
+
+        jDateStart.setToolTipText("");
         jDateStart.setDateFormatString("dd-MM-yyyy");
-        
-        hourBoxStart.setModel(modelHours1);
+        jDateStart.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        jDateFinish.setDateFormatString("dd-MM-yyyy");
+
+        hourBoxStart.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
         hourBoxStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hourBoxStartActionPerformed(evt);
             }
         });
-        
-        minuteBoxStart.setModel(modelMinutes1);
-        
-        jDateFinish.setDateFormatString("dd-MM-yyyy");
-        hourBoxFinish.setModel(modelHours2);
+
+        minuteBoxStart.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+        minuteBoxStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                minuteBoxStartActionPerformed(evt);
+            }
+        });
+
+        hourBoxFinish.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
         hourBoxFinish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hourBoxFinishActionPerformed(evt);
             }
         });
 
-        minuteBoxFinish.setModel(modelMinutes2);
-        
+        minuteBoxFinish.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+        minuteBoxFinish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                minuteBoxFinishActionPerformed(evt);
+            }
+        });
+
+        jLabelTime1_1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabelTime1_1.setText("Giờ");
-        jLabelTime1_2.setText("Phút");
+
+        jLabelTime2_1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabelTime2_1.setText("Giờ");
+
+        jLabelTime1_2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabelTime1_2.setText("Phút");
+
+        jLabelTime2_2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabelTime2_2.setText("Phút");
-        
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-        	jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(jPanel1Layout.createSequentialGroup()
-        			.addGap(18)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        				.addComponent(jLabel3)
-        				.addComponent(jLabel1)
-        				.addComponent(jLabel2)
-        				.addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 71, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(jLabel4)
-        				.addComponent(jLabel7))
-        			.addGap(10)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(jPanel1Layout.createSequentialGroup()
-        					.addComponent(jButton1)
-        					.addGap(80)
-        					.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE))
-        				.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
-        					.addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, 298, GroupLayout.PREFERRED_SIZE)
-        					.addComponent(jTextFieldTenSk, GroupLayout.PREFERRED_SIZE, 298, GroupLayout.PREFERRED_SIZE))
-        				.addGroup(jPanel1Layout.createSequentialGroup()
-        					.addPreferredGap(ComponentPlacement.RELATED)
-        					.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
-        						.addComponent(jDateFinish, GroupLayout.PREFERRED_SIZE, 166, GroupLayout.PREFERRED_SIZE)
-        						.addComponent(jDateStart, GroupLayout.PREFERRED_SIZE, 166, GroupLayout.PREFERRED_SIZE))
-        					.addGap(26)
-        					.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING, false)
-        						.addGroup(jPanel1Layout.createSequentialGroup()
-        							.addComponent(hourBoxStart, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
-        							.addPreferredGap(ComponentPlacement.RELATED)
-        							.addComponent(jLabelTime1_1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-        							.addPreferredGap(ComponentPlacement.RELATED)
-        							.addComponent(minuteBoxStart, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE))
-        						.addGroup(jPanel1Layout.createSequentialGroup()
-        							.addComponent(hourBoxFinish, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
-        							.addPreferredGap(ComponentPlacement.RELATED)
-        							.addComponent(jLabelTime2_1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-        							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        							.addComponent(minuteBoxFinish, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
-        							.addGap(1)))
-        					.addPreferredGap(ComponentPlacement.RELATED)
-        					.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        						.addComponent(jLabelTime1_2, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
-        						.addComponent(jLabelTime2_2, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
-        				.addComponent(jTextFieldChiPhi, GroupLayout.PREFERRED_SIZE, 298, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(jTextFieldMoTa, GroupLayout.PREFERRED_SIZE, 436, GroupLayout.PREFERRED_SIZE))
-        			.addContainerGap(69, Short.MAX_VALUE))
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel4)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldMoTa)
+                    .addComponent(jTextFieldChiPhi)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 38, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(51, 51, 51)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(173, 173, 173))
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jDateFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDateStart, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(51, 51, 51)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(hourBoxStart, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelTime1_1)
+                                .addGap(18, 18, 18)
+                                .addComponent(minuteBoxStart, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelTime1_2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(hourBoxFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelTime2_1)
+                                .addGap(18, 18, 18)
+                                .addComponent(minuteBoxFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelTime2_2)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jTextFieldTenSk))
+                .addGap(146, 146, 146))
         );
         jPanel1Layout.setVerticalGroup(
-        	jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(jPanel1Layout.createSequentialGroup()
-        			.addGap(18)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jTextFieldTenSk, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(jLabel2))
-        			.addGap(18)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jLabel1)
-        				.addComponent(jComboBox1, GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(jPanel1Layout.createSequentialGroup()
-        					.addGap(32)
-        					.addComponent(jLabel3))
-        				.addGroup(jPanel1Layout.createSequentialGroup()
-        					.addGap(18)
-        					.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        						.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-        							.addComponent(hourBoxStart, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-        							.addComponent(jLabelTime1_1, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-        							.addComponent(minuteBoxStart, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-        							.addComponent(jLabelTime1_2))
-        						.addComponent(jDateStart, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE))))
-        			.addPreferredGap(ComponentPlacement.RELATED)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(jPanel1Layout.createSequentialGroup()
-        					.addGap(31)
-        					.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        						.addComponent(jDateFinish, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-        						.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-        							.addComponent(hourBoxFinish, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-        							.addComponent(jLabelTime2_1, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-        							.addComponent(minuteBoxFinish, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-        							.addComponent(jLabelTime2_2))))
-        				.addGroup(jPanel1Layout.createSequentialGroup()
-        					.addGap(40)
-        					.addComponent(jLabel4)))
-        			.addGap(18)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jTextFieldChiPhi, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(jLabel6))
-        			.addGap(30)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jTextFieldMoTa, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(jLabel7))
-        			.addGap(29)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButton1)
-        				.addComponent(jButton2))
-        			.addGap(59))
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldTenSk, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(jLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(hourBoxStart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(minuteBoxStart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelTime1_1)
+                        .addComponent(jLabelTime1_2))
+                    .addComponent(jDateStart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jDateFinish, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(hourBoxFinish, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                        .addComponent(minuteBoxFinish, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                        .addComponent(jLabelTime2_1)
+                        .addComponent(jLabelTime2_2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextFieldChiPhi, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldMoTa, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(69, 69, 69)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(46, 46, 46))
         );
-        jPanel1.setLayout(jPanel1Layout);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-        	layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(layout.createSequentialGroup()
-        			.addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, 656, GroupLayout.PREFERRED_SIZE)
-        			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-        	layout.createParallelGroup(Alignment.LEADING)
-        		.addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        getContentPane().setLayout(layout);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    	Date dateStart = jDateStart.getDate();
+       Date dateStart = jDateStart.getDate();
     	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     	Date dateFinish = jDateFinish.getDate();
         if(check()){	//thay đổi
@@ -320,7 +338,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if(jTextFieldTenSk.getText().length() != 0 || jTextFieldMoTa.getText().length() != 0
+         if(jTextFieldTenSk.getText().length() != 0 || jTextFieldMoTa.getText().length() != 0
             || jTextFieldChiPhi.getText().length() != 0){            // thay đổi
             if (JOptionPane.showConfirmDialog(null, "Bạn có muốn hủy?", "WARNING",
                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
@@ -335,16 +353,26 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
-    
-     //thêm
+
+    private void jTextFieldChiPhiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldChiPhiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldChiPhiActionPerformed
+
     private void hourBoxStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourBoxStartActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_hourBoxStartActionPerformed
-    
-    //thêm
+
+    private void minuteBoxStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minuteBoxStartActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_minuteBoxStartActionPerformed
+
     private void hourBoxFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourBoxFinishActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_hourBoxFinishActionPerformed
+
+    private void minuteBoxFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minuteBoxFinishActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_minuteBoxFinishActionPerformed
 
     /**
      * @param args the command line arguments
@@ -380,27 +408,30 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
             }
         });
     }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> hourBoxFinish;
+    private javax.swing.JComboBox<String> hourBoxStart;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
+    private com.toedter.calendar.JDateChooser jDateFinish;
+    private com.toedter.calendar.JDateChooser jDateStart;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jLabelTime1_1;
     private javax.swing.JLabel jLabelTime1_2;
     private javax.swing.JLabel jLabelTime2_1;
     private javax.swing.JLabel jLabelTime2_2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextFieldChiPhi;
     private javax.swing.JTextField jTextFieldMoTa;
     private javax.swing.JTextField jTextFieldTenSk;
-    private com.toedter.calendar.JDateChooser jDateStart;
-    private com.toedter.calendar.JDateChooser jDateFinish;
-    private javax.swing.JComboBox<String> hourBoxStart;
-    private javax.swing.JComboBox<String> minuteBoxStart;
-    private javax.swing.JComboBox<String> hourBoxFinish;
     private javax.swing.JComboBox<String> minuteBoxFinish;
+    private javax.swing.JComboBox<String> minuteBoxStart;
+    // End of variables declaration//GEN-END:variables
 }
