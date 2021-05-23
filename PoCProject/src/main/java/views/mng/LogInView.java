@@ -47,9 +47,9 @@ public class LogInView extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(82, 83, 81));
 
-        jLabel1.setText("Tên đăng nhập:");
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Tên đăng nhập:");
 
         txtUsername.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtUsername.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -58,9 +58,9 @@ public class LogInView extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Mật khẩu:");
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Mật khẩu:");
 
         txtPassword.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -74,13 +74,12 @@ public class LogInView extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ADMIN\\Documents\\Nhavanhoa\\Community-Centre-Management-System\\PoCProject\\src\\main\\java\\views\\mng\\loginnvh.png")); // NOI18N
-        jLabel3.setText("jLabel3");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/loginnvh.png"))); // NOI18N
 
-        ShowPassword.setText("Hiển thị mật khẩu");
         ShowPassword.setBackground(new java.awt.Color(82, 83, 81));
         ShowPassword.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         ShowPassword.setForeground(new java.awt.Color(255, 255, 255));
+        ShowPassword.setText("Hiển thị mật khẩu");
         ShowPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ShowPasswordActionPerformed(evt);
@@ -92,11 +91,11 @@ public class LogInView extends javax.swing.JFrame {
             }
         });
 
-        LoginButton.setText("Đăng nhập");
         LoginButton.setBackground(new java.awt.Color(76, 175, 80));
-        LoginButton.setBorder(null);
         LoginButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButton.setText("Đăng nhập");
+        LoginButton.setBorder(null);
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginButtonActionPerformed(evt);
