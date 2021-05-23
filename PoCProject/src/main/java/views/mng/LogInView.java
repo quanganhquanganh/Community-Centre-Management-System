@@ -74,7 +74,7 @@ public class LogInView extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/loginnvh.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/loginnvh.png"))); // NOI18N
 
         ShowPassword.setBackground(new java.awt.Color(82, 83, 81));
         ShowPassword.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
