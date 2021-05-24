@@ -2,8 +2,8 @@ package quanlynhankhau;
 
 import java.util.Calendar;
 import javax.swing.UIManager;
-import views.LoginUI;
-import views.MainFrame;
+import views.mng.LogInView;
+import views.mng.MainFrame1;
 
 /**
  *
@@ -22,7 +22,7 @@ public class QuanLyNhanKhau {
 //        mainFrame.setLocationRelativeTo(null);
 //        mainFrame.setResizable(false);
 //        mainFrame.setVisible(true);
-        LoginUI loginUI = new LoginUI();
+        LogInView loginUI = new LogInView();
         loginUI.setVisible(true); 
     }
     
