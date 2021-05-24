@@ -10,6 +10,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -53,4 +55,30 @@ public class XemLich {
         }
         return null;
     }
+    public static boolean checkAvailable(String room, LocalDateTime startTime, LocalDateTime endTime) {
+        try{
+            Connection conn =  services.MysqlConnection.getMysqlConnection();
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("select * from eventTABLE");
+            while(rs.next()){
+                if(rs.getString("RoomNAME").equals(room)){
+                    String startTimeStr = rs.getString("StartTime");
+                    String endTimeStr = rs.getString("FinishTime");
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                    LocalDateTime db_startTime = LocalDateTime.parse(startTimeStr, formatter);
+                    LocalDateTime db_endTime = LocalDateTime.parse(endTimeStr, formatter);
+                    System.out.println(db_startTime);System.out.println(db_endTime);  
+                    if(((startTime.compareTo(db_startTime) > 0) && (startTime.compareTo(db_endTime) < 0))
+                        || ((endTime.compareTo(db_endTime) < 0) && (endTime.compareTo(db_startTime) > 0))
+                        || ((endTime.compareTo(db_endTime) >= 0) && (startTime.compareTo(db_startTime) <= 0))){
+                        return false;
+                    }
+                }
+            }
+        } catch(SQLException e){
+        } catch(ClassNotFoundException e){
+        }
+        return true;
+    }
 }
+
