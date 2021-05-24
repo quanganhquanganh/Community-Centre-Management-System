@@ -358,16 +358,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelTrangChuCentreLayout.setHorizontalGroup(
             jPanelTrangChuCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTrangChuCentreLayout.createSequentialGroup()
-                .addContainerGap(310, Short.MAX_VALUE)
+                .addContainerGap(322, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(263, 263, 263))
+                .addGap(251, 251, 251))
         );
         jPanelTrangChuCentreLayout.setVerticalGroup(
             jPanelTrangChuCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTrangChuCentreLayout.createSequentialGroup()
-                .addContainerGap(400, Short.MAX_VALUE)
+                .addContainerGap(410, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135))
+                .addGap(125, 125, 125))
         );
 
         jPanelCentre.add(jPanelTrangChuCentre, "card2");
@@ -436,8 +436,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelLichCentreLayout.setVerticalGroup(
             jPanelLichCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLichCentreLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
                 .addComponent(jLabelTenSuKien)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelThoiGian)
@@ -447,7 +447,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabelMoTa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelGia)
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         jPanelCentre.add(jPanelLichCentre, "card4");
@@ -933,8 +933,7 @@ public class MainFrame extends javax.swing.JFrame {
             new MainFrame1().setVisible(true);
         }
     }//GEN-LAST:event_jPanelChuyenMouseClicked
-
-   
+    
     private void jComboBoxVatPhamUpdate(){
         jComboBoxVatPham.removeAllItems();
         try{
