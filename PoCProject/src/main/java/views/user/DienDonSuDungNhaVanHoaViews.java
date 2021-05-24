@@ -54,6 +54,10 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jSpinner1 = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -79,43 +83,91 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+
+        jButton1.setText("jButton1");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(852, 480));
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("<html>Đơn đăng kí sử dụng Nhà văn hoá<html> ");
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("VUI LÒNG ĐIỀN THÔNG TIN SAU");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 4));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(240, 20, 400, 53);
 
-        jLabel2.setText("<html>Thời gian <br> bắt đầu <html>");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("BẮT ĐẦU TỪ");
         jLabel2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(78, 159, 80, 44);
 
-        jLabel3.setText("<html>Thời gian <br> kết thúc <html>");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("HẠN ĐẾN");
         jLabel3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(78, 236, 80, 44);
 
-        jLabel4.setText("<html>Mô tả vắn tắt <br>yêu cầu<html>");
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("NỘI DUNG");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(78, 316, 80, 80);
 
-        jLabel5.setText("<html>Phòng yêu <br>cầu<html>");
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("PHÒNG");
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(78, 96, 80, 45);
 
-        jLabel10.setText("(*)");
         jLabel10.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel10.setText("(*)");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(758, 159, 50, 44);
 
-        jLabel11.setText("(*)");
         jLabel11.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel11.setText("(*)");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(491, 96, 43, 44);
 
-        jLabel12.setText("(*)");
         jLabel12.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel12.setText("(*)");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(758, 348, 37, 44);
+
+        jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         description.setColumns(20);
+        description.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         description.setRows(5);
         jScrollPane1.setViewportView(description);
 
-        confirmButton.setText("Gửi yêu cầu");
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(176, 316, 572, 85);
+
+        confirmButton.setBackground(new java.awt.Color(102, 0, 153));
+        confirmButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        confirmButton.setText("GỬI BIỂU MẪU");
         confirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(confirmButton);
+        confirmButton.setBounds(349, 418, 174, 46);
 
         roomComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new DienDonSuDungNhaVanHoa().layDanhSachPhong()));
         roomComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -123,8 +175,12 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
                 roomComboBoxActionPerformed(evt);
             }
         });
+        getContentPane().add(roomComboBox);
+        roomComboBox.setBounds(176, 96, 311, 44);
 
         jDateStart.setDateFormatString("dd-MM-yyyy");
+        getContentPane().add(jDateStart);
+        jDateStart.setBounds(551, 159, 197, 44);
 
         hourBoxStart.setModel(modelHours1);
         hourBoxStart.addActionListener(new java.awt.event.ActionListener() {
@@ -132,11 +188,22 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
                 hourBoxStartActionPerformed(evt);
             }
         });
+        getContentPane().add(hourBoxStart);
+        hourBoxStart.setBounds(176, 159, 94, 44);
 
         minuteBoxStart.setModel(modelMinutes2);
         minuteBoxStart.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        minuteBoxStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                minuteBoxStartActionPerformed(evt);
+            }
+        });
+        getContentPane().add(minuteBoxStart);
+        minuteBoxStart.setBounds(340, 159, 91, 44);
 
         jDateFinish.setDateFormatString("dd-MM-yyyy");
+        getContentPane().add(jDateFinish);
+        jDateFinish.setBounds(551, 236, 197, 44);
 
         hourBoxFinish.setModel(modelHours2);
         hourBoxFinish.addActionListener(new java.awt.event.ActionListener() {
@@ -144,138 +211,73 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
                 hourBoxFinishActionPerformed(evt);
             }
         });
+        getContentPane().add(hourBoxFinish);
+        hourBoxFinish.setBounds(176, 236, 94, 44);
 
         minuteBoxFinish.setModel(modelMinutes1);
+        getContentPane().add(minuteBoxFinish);
+        minuteBoxFinish.setBounds(339, 237, 90, 43);
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Giờ");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(190, 200, 50, 44);
 
-        jLabel8.setText("Phút,");
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Phút");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(360, 210, 40, 15);
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Giờ");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(190, 270, 60, 44);
 
-        jLabel13.setText("Phút,");
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Phút");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(360, 270, 50, 44);
 
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Ngày");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(493, 159, 60, 44);
 
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Ngày");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(497, 237, 60, 43);
 
-        jLabel16.setText("(*)");
         jLabel16.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel16.setText("(*)");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(758, 236, 42, 44);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel5))
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(roomComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(hourBoxStart, 0, 94, Short.MAX_VALUE)
-                                    .addComponent(hourBoxFinish, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(minuteBoxStart, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(minuteBoxFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jDateStart, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                                    .addComponent(jDateFinish, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jScrollPane1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(248, 248, 248)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(349, 349, 349)
-                        .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(roomComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2)
-                    .addComponent(jDateStart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(hourBoxStart, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(minuteBoxStart)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jDateFinish, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(hourBoxFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(minuteBoxFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(26, 26, 26)
-                .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
-        );
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("jLabel6");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 820, 510);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
 
-        // Lấy về thời gian bắt dầu sự kiện của yêu cầu.
+        // L?y v? th?i gian b?t d?u s? ki?n c?a y�u c?u.
         
         try {
             Date dateStart = jDateStart.getDate();
@@ -304,9 +306,9 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             } else {
 //            System.out.println(userUsername);
                 if (new DienDonSuDungNhaVanHoa().themDonYeuCau(userUsername, startTimeRequest, finishTimeRequest, requestDescriptions, requestRoom)) {
-                    JOptionPane.showMessageDialog(this, "Yêu cầu đã được thêm vào hệ thống");
+                    JOptionPane.showMessageDialog(this, "Yêu cầu được thêm vào hệ thống");
                 } else {
-                    JOptionPane.showMessageDialog(this, "Đã có lỗi xảy ra. Vui lòng thử lại");
+                    JOptionPane.showMessageDialog(this, "�? c� l?i x?y ra. Vui l?ng th? l?i");
                 };
             }
         } catch (Exception e) {
@@ -327,6 +329,10 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
     private void hourBoxFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourBoxFinishActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_hourBoxFinishActionPerformed
+
+    private void minuteBoxStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minuteBoxStartActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_minuteBoxStartActionPerformed
 
     /**
      * @param args the command line arguments
@@ -370,6 +376,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
     private javax.swing.JTextArea description;
     private javax.swing.JComboBox<String> hourBoxFinish;
     private javax.swing.JComboBox<String> hourBoxStart;
+    private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateFinish;
     private com.toedter.calendar.JDateChooser jDateStart;
     private javax.swing.JLabel jLabel1;
@@ -384,10 +391,14 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JComboBox<String> minuteBoxFinish;
     private javax.swing.JComboBox<String> minuteBoxStart;
     private javax.swing.JComboBox<String> roomComboBox;

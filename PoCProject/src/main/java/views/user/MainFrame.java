@@ -9,6 +9,7 @@ import controllers.user.CurrentUserUsername;
 import javax.swing.*;
 import controllers.user.XemTinhTrangYeuCauController;
 import controllers.user.XemLichSuDungNhaVanHoaController;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -17,6 +18,9 @@ import java.util.List;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumnModel;
 import models.XemLichSuDung;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -24,7 +28,7 @@ import models.XemLichSuDung;
  */
 public class MainFrame extends JFrame {
 
-    private JButton trangChu, xemYeuCau, xemLichSuDung, taoYeuCauMoi, hienThi;
+    private JButton trangChu, xemYeuCau, xemLichSuDung, taoYeuCauMoi, hienThi,hienThi1;
     private XemTinhTrangYeuCauController tinhTrangYeuCau = new XemTinhTrangYeuCauController();
     private JTable jTable1 = tinhTrangYeuCau.hienThiTinhTrangYeuCau(tinhTrangYeuCau.getTinhTrangYeuCau(new CurrentUserUsername().getCurrentUserUsrename()));
     private JTableHeader headerTinhTrangYeuCau = jTable1.getTableHeader();
@@ -41,21 +45,37 @@ public class MainFrame extends JFrame {
     int remove = 0;
     private JLabel jLabel;
     private JLabel labelYeuCauDaTao;
-
+    
     public MainFrame() {
 //        add(new JLabel(new ImageIcon("/Volumes/Data/Eagle Pictures/patrick-hendry-L4EsOAoU8-M-unsplash.jpg")));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        
         this.setSize(1000, 500);
+        this.setBackground(Color.yellow);
         this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
         this.setVisible(true);
+       
         this.setLayout(null);
         invalidate();
         validate();
         //Thêm nút trang chủ và các chức năng cho nút này
 
-        trangChu = new JButton("Trang chủ");
+        trangChu = new JButton("Facebook");
         int height = 80;
-        trangChu.setBounds(30, 40, height * (1 + (int) Math.sqrt(5)) / 2, height);
+         trangChu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        trangChu.setText("Facebook");
+        trangChu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                try {
+            String url = "https://www.facebook.com/pages/Nh%C3%A0%20V%C4%83n%20Ho%C3%A1%20Qu%E1%BA%ADn%20Hai%20B%C3%A0%20Tr%C6%B0ng/418585548201171/"; // TODO add your handling code here:
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+            }   catch (java.io.IOException ex) {
+                    Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
+        
+        trangChu.setBounds(40, 40,100, 60);
         trangChu.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ee) {
                 if (xemYeuCauExist) {
@@ -99,9 +119,10 @@ public class MainFrame extends JFrame {
 
         //Thêm nút Xem Yêu Cầu và các chức năng cho nút này.
         xemYeuCau = new JButton("<html>Yêu Cầu Đã Tạo<html>");
+        xemYeuCau.setFont(new java.awt.Font("Tahoma", 1, 12));
         labelYeuCauDaTao = new JLabel("Danh sách các yêu cầu đã tạo");
         labelYeuCauDaTao.setBounds(380, 50, 500, 50);
-        labelYeuCauDaTao.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+        labelYeuCauDaTao.setFont(new Font("tahoma", 1, 24));
         xemYeuCau.setBounds(40, 150, 100, 60);
         xemYeuCau.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {               
@@ -136,12 +157,14 @@ public class MainFrame extends JFrame {
 
         //Thêm nút xem lịch sử dụng và các chức năng cho nút này
         xemLichSuDung = new JButton("<html>Lịch Sử Dụng<html>");
+        xemLichSuDung.setFont(new java.awt.Font("Tahoma", 1, 12));
         xemLichSuDung.setBounds(40, 240, 100, 60);
         jComboBox.setBounds(440, 50, 250, 50);
         hienThi = new JButton("Hiển thị");
+        hienThi.setFont(new java.awt.Font("Tahoma", 1, 12));
         hienThi.setBounds(720, 50, 100, 50);
         jLabel = new JLabel("Chọn phòng muốn xem: ");
-        jLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
+        jLabel.setFont(new Font("Tahoma", 1, 16));
         jLabel.setBounds(240, 50, 200, 50);
 
         xemLichSuDung.addActionListener(new ActionListener() {
@@ -150,6 +173,7 @@ public class MainFrame extends JFrame {
                 if (xemYeuCauExist) {
                     remove(jScrollPane1);
                     remove(labelYeuCauDaTao);
+                    
                     xemYeuCauExist = false;
                     repaint();
                     invalidate();
@@ -196,14 +220,39 @@ public class MainFrame extends JFrame {
 
         taoYeuCauMoi = new JButton("<html>Tạo Yêu Cầu Mới<html>");
         taoYeuCauMoi.setBounds(40, 330, 100, 60);
+        taoYeuCauMoi.setFont(new java.awt.Font("Tahoma", 1, 12));
         taoYeuCauMoi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new DienDonSuDungNhaVanHoaViews().hienThi();
             }
         });
         add(taoYeuCauMoi);
+        invalidate();
+        validate();
+        repaint();
+        hienThi1 = new JButton("Cập Nhật");
+        hienThi1.setFont(new java.awt.Font("Tahoma", 1, 12));
+        hienThi1.setBounds(850, 50, 100, 50);
+        add(hienThi1);
+         hienThi1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent eee) {
+                dispose();
+                new MainFrame();
+            }
+        });
+        
     }
+    
 //    public static void main(String args[]) {
 //        new MainFrame();
 //    }
+    private ImageIcon loadImage() {
+
+        ImageIcon ii = new ImageIcon("D:\\Desktop\\Community-Centre-Management-System\\PoCProject\\src\\main\\java\\views\\user\\rsz_rsz_uidesign3.jpg");
+        return ii;
+    }
+
+    private void setIconImage(ImageIcon ii) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
