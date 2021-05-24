@@ -237,6 +237,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jPanelDangXuat.setBackground(new java.awt.Color(76, 175, 80));
+        jPanelDangXuat.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jPanelDangXuat.setPreferredSize(new java.awt.Dimension(151, 60));
         jPanelDangXuat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -358,7 +359,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelTrangChuCentreLayout.setHorizontalGroup(
             jPanelTrangChuCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTrangChuCentreLayout.createSequentialGroup()
-                .addContainerGap(233, Short.MAX_VALUE)
+                .addContainerGap(386, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(187, 187, 187))
         );
@@ -430,7 +431,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelLichCentre.setLayout(jPanelLichCentreLayout);
         jPanelLichCentreLayout.setHorizontalGroup(
             jPanelLichCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 831, Short.MAX_VALUE)
             .addGroup(jPanelLichCentreLayout.createSequentialGroup()
                 .addGroup(jPanelLichCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelLichCentreLayout.createSequentialGroup()
@@ -504,7 +505,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelDonDangKyCentre.setLayout(jPanelDonDangKyCentreLayout);
         jPanelDonDangKyCentreLayout.setHorizontalGroup(
             jPanelDonDangKyCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 782, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 831, Short.MAX_VALUE)
             .addGroup(jPanelDonDangKyCentreLayout.createSequentialGroup()
                 .addGap(306, 306, 306)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -600,7 +601,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jTextFieldTTNgayCapNhat, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldTTSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jTextFieldTT, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -770,7 +771,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jSpinnerSoLuong1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jTextFieldTT1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
         jPanelThemCSVCLayout.setVerticalGroup(
             jPanelThemCSVCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -821,7 +822,7 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 991, Short.MAX_VALUE)
+            .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -947,13 +948,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void jPanelChuyenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelChuyenMouseClicked
         
         if(evt.getSource() == jPanelChuyen){
-            if (JOptionPane.showConfirmDialog(null, "Bạn có muốn chuyển?", "WARNING",
-        JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-                this.dispose();
-                new test().setVisible(true);
-            } else {
-               
-            }
+            this.dispose();
+            new MainFrame1().setVisible(true);
         }
     }//GEN-LAST:event_jPanelChuyenMouseClicked
     
