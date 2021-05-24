@@ -54,7 +54,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
     }
     
     private boolean check(){      // thay đổi
-        if(jTextFieldTenSk.getText().length() == 0 || jTextFieldMoTa.getText().length() == 0
+        if(jTextFieldTenSk.getText().length() == 0
             || jTextFieldChiPhi.getText().length() == 0 || jDateStart.getDate() == null
             || hourBoxStart.getItemAt(hourBoxStart.getSelectedIndex()).isEmpty() || jDateFinish.getDate() == null
             || hourBoxFinish.getItemAt(hourBoxStart.getSelectedIndex()).isEmpty() || minuteBoxStart.getItemAt(hourBoxStart.getSelectedIndex()).isEmpty()
