@@ -83,7 +83,6 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelPhong = new javax.swing.JLabel();
         jLabelGia = new javax.swing.JLabel();
         jLabelMoTa = new javax.swing.JLabel();
-        jButtonCapNhatDuLieu = new javax.swing.JButton();
         jPanelDonDangKyCentre = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableDonDangKy = new javax.swing.JTable();
@@ -359,16 +358,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelTrangChuCentreLayout.setHorizontalGroup(
             jPanelTrangChuCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTrangChuCentreLayout.createSequentialGroup()
-                .addContainerGap(386, Short.MAX_VALUE)
+                .addContainerGap(310, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(187, 187, 187))
+                .addGap(263, 263, 263))
         );
         jPanelTrangChuCentreLayout.setVerticalGroup(
             jPanelTrangChuCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTrangChuCentreLayout.createSequentialGroup()
-                .addContainerGap(398, Short.MAX_VALUE)
+                .addContainerGap(400, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(137, 137, 137))
+                .addGap(135, 135, 135))
         );
 
         jPanelCentre.add(jPanelTrangChuCentre, "card2");
@@ -419,33 +418,20 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelMoTa.setText("Mô tả:");
         jLabelMoTa.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jButtonCapNhatDuLieu.setText("Cập nhật dữ liệu");
-        jButtonCapNhatDuLieu.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jButtonCapNhatDuLieu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCapNhatDuLieuActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanelLichCentreLayout = new javax.swing.GroupLayout(jPanelLichCentre);
         jPanelLichCentre.setLayout(jPanelLichCentreLayout);
         jPanelLichCentreLayout.setHorizontalGroup(
             jPanelLichCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 831, Short.MAX_VALUE)
             .addGroup(jPanelLichCentreLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanelLichCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelLichCentreLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanelLichCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelMoTa)
-                            .addComponent(jLabelTenSuKien)
-                            .addComponent(jLabelThoiGian)
-                            .addComponent(jLabelPhong)
-                            .addComponent(jLabelGia)))
-                    .addGroup(jPanelLichCentreLayout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jButtonCapNhatDuLieu)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabelMoTa)
+                    .addComponent(jLabelTenSuKien)
+                    .addComponent(jLabelThoiGian)
+                    .addComponent(jLabelPhong)
+                    .addComponent(jLabelGia))
+                .addContainerGap(731, Short.MAX_VALUE))
         );
         jPanelLichCentreLayout.setVerticalGroup(
             jPanelLichCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -461,9 +447,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabelMoTa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelGia)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
-                .addComponent(jButtonCapNhatDuLieu)
-                .addGap(81, 81, 81))
+                .addContainerGap(252, Short.MAX_VALUE))
         );
 
         jPanelCentre.add(jPanelLichCentre, "card4");
@@ -850,6 +834,9 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelQuanLyCSVCCentre.setVisible(false);
             jPanelLichCentre.setVisible(true);
             jPanelDonDangKyCentre.setVisible(false);
+            DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
+            model.setRowCount(0);
+            XemLichSuDung();
         }
         if(evt.getSource() == jPanelDonDangKy){
             jPanelTrangChuCentre.setVisible(false);
@@ -921,12 +908,6 @@ public class MainFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jTableLichMouseClicked
 
-    private void jButtonCapNhatDuLieuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCapNhatDuLieuActionPerformed
-        DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
-        model.setRowCount(0);
-        XemLichSuDung();
-    }//GEN-LAST:event_jButtonCapNhatDuLieuActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new ThemSuKienFrame().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -952,7 +933,8 @@ public class MainFrame extends javax.swing.JFrame {
             new MainFrame1().setVisible(true);
         }
     }//GEN-LAST:event_jPanelChuyenMouseClicked
-    
+
+   
     private void jComboBoxVatPhamUpdate(){
         jComboBoxVatPham.removeAllItems();
         try{
@@ -1012,7 +994,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCapNhat;
-    private javax.swing.JButton jButtonCapNhatDuLieu;
     private javax.swing.JButton jButtonChiTiet;
     private javax.swing.JButton jButtonLamMoi1;
     private javax.swing.JButton jButtonXacNhan1;
