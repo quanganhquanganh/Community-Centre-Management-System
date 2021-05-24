@@ -11,16 +11,22 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.swing.JOptionPane;
 import controllers.user.XemLichSuDungNhaVanHoaController;
+import controllers.mng.XemLich;
 import javax.swing.JComboBox;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JLabel;
+
+import java.time.Instant;
+import java.time.ZoneId;
+//import java.sql;
 /**
  *
  * @author keplegarry
@@ -54,13 +60,34 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
     }
     
     private boolean check(){      // thay đổi
-        if(jTextFieldTenSk.getText().length() == 0 || jTextFieldMoTa.getText().length() == 0
+        if(jTextFieldTenSk.getText().length() == 0
             || jTextFieldChiPhi.getText().length() == 0 || jDateStart.getDate() == null
             || hourBoxStart.getItemAt(hourBoxStart.getSelectedIndex()).isEmpty() || jDateFinish.getDate() == null
             || hourBoxFinish.getItemAt(hourBoxStart.getSelectedIndex()).isEmpty() || minuteBoxStart.getItemAt(hourBoxStart.getSelectedIndex()).isEmpty()
             || minuteBoxFinish.getItemAt(hourBoxStart.getSelectedIndex()).isEmpty())
         {
             JOptionPane.showMessageDialog(null, "Vui lòng điền đẩy đủ thông tin", "Warning", JOptionPane.WARNING_MESSAGE);
+            return false;
+        }
+        
+        String startHour = hourBoxStart.getItemAt(hourBoxStart.getSelectedIndex());
+        String startMinute = minuteBoxStart.getItemAt(minuteBoxStart.getSelectedIndex());
+        LocalDateTime startTime = Instant.ofEpochMilli(jDateStart.getDate().getTime() )
+                            .atZone( ZoneId.systemDefault() )
+                            .toLocalDateTime();
+        startTime.plusHours(Integer.valueOf(startHour));
+        startTime.plusMinutes(Integer.valueOf(startMinute));
+        
+        String endHour = hourBoxFinish.getItemAt(hourBoxFinish.getSelectedIndex());
+        String endMinute = minuteBoxFinish.getItemAt(minuteBoxFinish.getSelectedIndex());
+        LocalDateTime endTime = Instant.ofEpochMilli(jDateFinish.getDate().getTime() )
+                            .atZone( ZoneId.systemDefault() )
+                            .toLocalDateTime();
+        endTime.plusHours(Integer.valueOf(endHour));
+        endTime.plusMinutes(Integer.valueOf(endMinute));
+        
+        if(!XemLich.checkAvailable((String)jComboBox1.getSelectedItem(), startTime, endTime)) {
+            JOptionPane.showMessageDialog(null, "Sự kiện trùng với sự kiện khác", "Warning", JOptionPane.WARNING_MESSAGE);
             return false;
         }
         
