@@ -30,6 +30,30 @@ public class UserLoginController {
         connection.close();
         return false;
     }
+    public boolean checker(String userUsername, String userPassword)  throws SQLException, ClassNotFoundException {
+        Connection connection = MysqlConnection.getMysqlConnection();
+        Statement stm = connection.createStatement();
+        String query = "SELECT USERUSERNAME,USERPASSWORD from USERTAB";
+        ResultSet rs = stm.executeQuery(query);
+        while(rs.next())
+        {
+            if(userUsername.equals(rs.getString("USERUSERNAME"))){
+                connection.close();
+                    return false; 
+            }; 
+        }
+        connection.close();
+        
+        return true;
+    }
+    public void save_(String userUsername, String userPassword)  throws SQLException, ClassNotFoundException {
+      
+        Connection connection1 = MysqlConnection.getMysqlConnection();
+        Statement stm1 = connection1.createStatement();
+        String query1 = "INSERT INTO USERTAB(USERUSERNAME,USERPASSWORD) VALUES("+userUsername+","+ userPassword+")";
+        PreparedStatement rs1 = connection1.prepareStatement(query1);
+        connection1.close();
+    }
     public static void main(String args[]){
         try {
             Connection connection = MysqlConnection.getMysqlConnection();
