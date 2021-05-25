@@ -86,7 +86,6 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelDonDangKyCentre = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableDonDangKy = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
         jPanelQuanLyCSVCCentre = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanelCapNhatCSVC = new javax.swing.JPanel();
@@ -493,32 +492,17 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTableDonDangKy);
 
-        jButton2.setText("Cập nhật");
-        jButton2.setBorder(null);
-        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanelDonDangKyCentreLayout = new javax.swing.GroupLayout(jPanelDonDangKyCentre);
         jPanelDonDangKyCentre.setLayout(jPanelDonDangKyCentreLayout);
         jPanelDonDangKyCentreLayout.setHorizontalGroup(
             jPanelDonDangKyCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDonDangKyCentreLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(355, 355, 355))
         );
         jPanelDonDangKyCentreLayout.setVerticalGroup(
             jPanelDonDangKyCentreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDonDangKyCentreLayout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
         jPanelCentre.add(jPanelDonDangKyCentre, "card5");
@@ -867,10 +851,11 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelTrangChuCentre.setVisible(false);
             jPanelQuanLyCSVCCentre.setVisible(false);
             jPanelLichCentre.setVisible(false);
-//            JScrollPane donDangKy = new PheDuyetYeuCauNguoiDungViews().pheDuyetYeuCauNguoiDung();         
-//            donDangKy.setSize(jPanelDonDangKyCentre.getSize());
-//            jPanelDonDangKyCentre.add(donDangKy);
+
             jPanelDonDangKyCentre.setVisible(true);
+            DefaultTableModel model = (DefaultTableModel) jTableDonDangKy.getModel();
+            model.setRowCount(0);
+            XemThongTinDangKy();
         }
         if(evt.getSource() == jPanelDangXuat){
             if (JOptionPane.showConfirmDialog(null, "Bạn có muốn đăng xuất?", "WARNING",
@@ -936,12 +921,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new ThemSuKienFrame().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        DefaultTableModel model = (DefaultTableModel) jTableDonDangKy.getModel();
-        model.setRowCount(0);
-        XemThongTinDangKy();;
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTableDonDangKyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableDonDangKyMouseClicked
         new ChapNhanYeuCau((DefaultTableModel) jTableDonDangKy.getModel(), jTableDonDangKy.getSelectedRow()).setVisible(true);
@@ -1020,7 +999,6 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.github.lgooddatepicker.components.DatePicker datePicker1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCapNhat;
     private javax.swing.JButton jButtonChiTiet;
     private javax.swing.JButton jButtonLamMoi1;
