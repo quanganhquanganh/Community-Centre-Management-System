@@ -25,16 +25,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="jtfSearch" min="-2" pref="273" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="434" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="425" max="32767" attributes="0"/>
                   </Group>
                   <Component id="tablePanel" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="addNewBtn" min="-2" pref="120" max="-2" attributes="0"/>
-                  <Component id="tamTruBtn" min="-2" pref="120" max="-2" attributes="0"/>
-                  <Component id="tamVangBtn" min="-2" pref="120" max="-2" attributes="0"/>
-                  <Component id="khaiTuBtn" alignment="1" min="-2" pref="120" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="tamVangBtn" alignment="0" max="32767" attributes="0"/>
+                  <Component id="addNewBtn" alignment="0" max="32767" attributes="0"/>
+                  <Component id="tamTruBtn" alignment="0" max="32767" attributes="0"/>
+                  <Component id="khaiTuBtn" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -43,9 +43,8 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="jtfSearch" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="tablePanel" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
@@ -67,7 +66,7 @@
     <Component class="javax.swing.JButton" name="tamVangBtn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="14" style="1"/>
+          <Font name="Times New Roman" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&#x110;K t&#x1ea1;m v&#x1eaf;ng"/>
       </Properties>
@@ -85,18 +84,15 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="389" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="424" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
     </Container>
     <Component class="javax.swing.JButton" name="addNewBtn">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="14" style="1"/>
+          <Font name="Times New Roman" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Th&#xea;m m&#x1edb;i"/>
       </Properties>
@@ -107,7 +103,7 @@
     <Component class="javax.swing.JButton" name="tamTruBtn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="14" style="1"/>
+          <Font name="Times New Roman" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&#x110;K t&#x1ea1;m tr&#xfa;"/>
       </Properties>
@@ -118,9 +114,9 @@
     <Component class="javax.swing.JButton" name="khaiTuBtn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="14" style="1"/>
+          <Font name="Times New Roman" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Khai T&#x1eed;"/>
+        <Property name="text" type="java.lang.String" value="Khai t&#x1eed;"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="khaiTuBtnActionPerformed"/>
@@ -129,7 +125,7 @@
     <Component class="javax.swing.JTextField" name="jtfSearch">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="14" style="0"/>
+          <Font name="Times New Roman" size="18" style="0"/>
         </Property>
       </Properties>
       <Events>

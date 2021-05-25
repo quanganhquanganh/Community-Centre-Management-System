@@ -45,7 +45,7 @@ public class NhanKhauManagePanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        tamVangBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        tamVangBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tamVangBtn.setText("ĐK tạm vắng");
         tamVangBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,11 +61,10 @@ public class NhanKhauManagePanel extends javax.swing.JPanel {
         );
         tablePanelLayout.setVerticalGroup(
             tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 389, Short.MAX_VALUE)
+            .addGap(0, 424, Short.MAX_VALUE)
         );
 
-        addNewBtn.setBackground(new java.awt.Color(255, 255, 255));
-        addNewBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        addNewBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         addNewBtn.setText("Thêm mới");
         addNewBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,7 +72,7 @@ public class NhanKhauManagePanel extends javax.swing.JPanel {
             }
         });
 
-        tamTruBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        tamTruBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tamTruBtn.setText("ĐK tạm trú");
         tamTruBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,15 +80,15 @@ public class NhanKhauManagePanel extends javax.swing.JPanel {
             }
         });
 
-        khaiTuBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        khaiTuBtn.setText("Khai Tử");
+        khaiTuBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        khaiTuBtn.setText("Khai tử");
         khaiTuBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 khaiTuBtnActionPerformed(evt);
             }
         });
 
-        jtfSearch.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jtfSearch.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jtfSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfSearchActionPerformed(evt);
@@ -104,22 +103,21 @@ public class NhanKhauManagePanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 434, Short.MAX_VALUE))
+                        .addGap(0, 425, Short.MAX_VALUE))
                     .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addNewBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tamTruBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tamVangBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(khaiTuBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tamVangBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(addNewBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tamTruBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(khaiTuBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
                 .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()

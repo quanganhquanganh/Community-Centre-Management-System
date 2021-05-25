@@ -159,7 +159,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jlbNhanKhau" min="-2" pref="307" max="-2" attributes="0"/>
+                          <Component id="jlbNhanKhau" min="-2" pref="308" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -198,7 +198,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jlbHoKhau" min="-2" pref="306" max="-2" attributes="0"/>
+                          <Component id="jlbHoKhau" min="-2" pref="308" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -237,7 +237,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jlbThongKe" min="-2" pref="301" max="-2" attributes="0"/>
+                          <Component id="jlbThongKe" min="-2" pref="299" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
