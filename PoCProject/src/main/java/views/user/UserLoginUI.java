@@ -145,10 +145,16 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel3.add(jLabel7);
         jLabel7.setBounds(50, 170, 130, 20);
+
+        taiKhoan1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                taiKhoan1ActionPerformed(evt);
+            }
+        });
         jPanel3.add(taiKhoan1);
-        taiKhoan1.setBounds(220, 130, 180, 20);
+        taiKhoan1.setBounds(220, 130, 180, 30);
         jPanel3.add(matKhau1);
-        matKhau1.setBounds(220, 170, 180, 20);
+        matKhau1.setBounds(220, 170, 180, 30);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton5.setText("xác nhận");
@@ -454,10 +460,24 @@ public class UserLoginUI extends javax.swing.JFrame  {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         keyListenner(taiKhoan2);
         keyListenner(matKhau2);
-        String tk1 = taiKhoan2.getText();
-        String mk1 = String.valueOf(matKhau2.getPassword());
+        String tk2 = taiKhoan2.getText();
+        String mk2 = String.valueOf(matKhau2.getPassword());
+         try {
+            if (!this.cont1.checker(tk2, mk2)) {
+                 JOptionPane.showMessageDialog(rootPane, "đổi mật khẩu thành công", "Thông báo nè ", JOptionPane.WARNING_MESSAGE);
+                 this.cont1.reset_pass(tk2, mk2);
+                 jDialog1.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Tài khoản không tồn tại", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+        }
         jDialog2.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+        
+    private void taiKhoan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taiKhoan1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_taiKhoan1ActionPerformed
 
     /**
      * @param args the command line arguments
