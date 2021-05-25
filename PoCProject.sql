@@ -1,4 +1,3 @@
--- Can sua
 CREATE DATABASE POCPROJECT character set UTF8MB3 collate utf8_unicode_ci;
 USE POCPROJECT;
 
@@ -6,12 +5,9 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
--- --------------------------------------------------------
 
---
--- Cấu trúc bảng cho bảng `chung_minh_thu`
---
 
+-- CREATE DINH CHINH TABLE 
 CREATE TABLE `chung_minh_thu` (
   `ID` int(11) NOT NULL,
   `idNhanKhau` int(11) DEFAULT NULL,
@@ -20,26 +16,7 @@ CREATE TABLE `chung_minh_thu` (
   `noiCap` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `chung_minh_thu`
---
 
-INSERT INTO `chung_minh_thu` (`ID`, `idNhanKhau`, `soCMT`, `ngayCap`, `noiCap`) VALUES
-(13, 26, '000000000001', NULL, NULL),
-(14, 27, '000000000002', NULL, NULL),
-(15, 28, '000000000003', NULL, NULL),
-(16, 29, '000000000004', NULL, NULL),
-(17, 30, '000000000005', NULL, NULL),
-(18, 31, '000000000006', NULL, NULL),
-(19, 32, '000000000007', NULL, NULL),
-(20, 33, '000000000008', NULL, NULL),
-(21, 34, '000000000009', NULL, NULL),
-(22, 35, '100000000001', NULL, NULL),
-(23, 36, '100000000002', NULL, NULL),
-(24, 37, '000000000010', NULL, NULL),
-(25, 38, '000000000011', NULL, NULL);
-
--- --------------------------------------------------------
 -- CREATE DINH CHINH TABLE 
 CREATE TABLE `dinh_chinh` (
   `ID` int(11) NOT NULL,
@@ -90,7 +67,6 @@ CREATE TABLE `khai_tu` (
 
 
 -- CREATE NHAN KHAU TABLE 
-
 CREATE TABLE `nhan_khau` (
   `ID` int(11) NOT NULL,
   `maNhanKhau` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -98,8 +74,6 @@ CREATE TABLE `nhan_khau` (
   `bietDanh` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `namSinh` date DEFAULT NULL,
   `gioiTinh` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ngayCap` date DEFAULT NULL,
-  `noiCap` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `noiSinh` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `nguyenQuan` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `danToc` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -253,7 +227,8 @@ CONSTRAINT FK_APPROVE_REQUEST FOREIGN KEY(REQUESTID) REFERENCES REQUEST(REQUESTI
 ALTER TABLE APPROVE MODIFY COLUMN NOTE VARCHAR(1000);
 
 -- CREATE EVENT TABLE
-CREATE TABLE EVENTTABLE(EVENTID INT NOT NULL,
+CREATE TABLE EVENTTABLE(
+EVENTID INT NOT NULL,
 EVENTNAME VARCHAR(200) NOT NULL,
 STARTTIME DATETIME NOT NULL,
 FINISHTIME DATETIME NOT NULL,
@@ -266,6 +241,21 @@ CONSTRAINT FK_EVENT_ROOM FOREIGN KEY(ROOMNAME) REFERENCES ROOM(ROOMNAME));
 INSERT INTO `thu_ky` (`ID`, `thu_ky_Name`, `passwd`) VALUES
 (1, 'thuKy', '1');
 
+
+INSERT INTO `chung_minh_thu` (`ID`, `idNhanKhau`, `soCMT`, `ngayCap`, `noiCap`) VALUES
+(13, 26, '000000000001', NULL, NULL),
+(14, 27, '000000000002', NULL, NULL),
+(15, 28, '000000000003', NULL, NULL),
+(16, 29, '000000000004', NULL, NULL),
+(17, 30, '000000000005', NULL, NULL),
+(18, 31, '000000000006', NULL, NULL),
+(19, 32, '000000000007', NULL, NULL),
+(20, 33, '000000000008', NULL, NULL),
+(21, 34, '000000000009', NULL, NULL),
+(22, 35, '100000000001', NULL, NULL),
+(23, 36, '100000000002', NULL, NULL),
+(24, 37, '000000000010', NULL, NULL),
+(25, 38, '000000000011', NULL, NULL);
 
 -- INSERT INTO GIA DINH TABLE 
 INSERT INTO `gia_dinh` (`ID`, `idNhanKhau`, `hoTen`, `namSinh`, `gioiTinh`, `quanHeVoiNhanKhau`, `ngheNghiep`, `diaChiHienTai`) VALUES
@@ -312,20 +302,20 @@ INSERT INTO `ho_khau` (`ID`, `maHoKhau`, `idChuHo`, `maKhuVuc`, `diaChi`, `ngayL
 
 
 -- INSERT INTO NHAN KHAU TABLE 
-INSERT INTO `nhan_khau` (`ID`, `maNhanKhau`, `hoTen`, `bietDanh`, `namSinh`, `gioiTinh`, `ngayCap`,`noiCap`,`noiSinh`, `nguyenQuan`, `danToc`, `tonGiao`, `quocTich`, `soHoChieu`, `noiThuongTru`, `diaChiHienNay`, `trinhDoHocVan`, `TrinhDoChuyenMon`, `bietTiengDanToc`, `trinhDoNgoaiNgu`, `ngheNghiep`, `noiLamViec`, `tienAn`, `ngayChuyenDen`, `lyDoChuyenDen`, `ngayChuyenDi`, `lyDoChuyenDi`, `diaChiMoi`, `ngayTao`, `idNguoiTao`, `ngayXoa`, `idNguoiXoa`, `lyDoXoa`, `ghiChu`) VALUES
-(26, NULL, 'Trinh Văn An', '', '1990-12-07', 'Nam',NULL,NULL, NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'Không', 'Anh trình đọ B', 'Giáo Viên', 'Trường THCS Chu Văn An', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(27, NULL, 'Trần Thanh Duyên', '', '1997-12-23', 'Nữ',NULL,NULL, NULL, 'Hải Phòng', 'Kinh', 'Không', 'Việt Nam', '', 'Số 3, đường Đình Đông, phường Đình Đông, quận Ngô Quyền, Hải Phòng', 'Số 2 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'Không', 'Anh trình độ D', 'Nhân viên văn phòng', 'Công ty ABC', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(28, NULL, 'Nguyễn Minh Quân', '', '1995-05-31', 'Nam',NULL,NULL, NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 2 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 2 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'Không', 'Anh trình độ D', 'Kỹ sư', 'Viettel', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(29, NULL, 'Nguyễn Tiến Dũng', '', '1964-06-03', 'Nam',NULL,NULL, NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Kỹ sư', 'Không', 'Không', 'Phó giám đốc', 'Công ty EXE', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(30, NULL, 'Vũ Mỹ Linh', '', '1965-12-06', 'Nữ',NULL,NULL, NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12', 'Cử Nhân', 'Không', 'Không', 'Nội trợ', 'Tại nhà', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(31, NULL, 'Nguyễn Tiến Đạt', '', '1990-09-09', 'Nam',NULL,NULL, NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Kỹ sư', 'không', 'Anh trình độ C', 'Kỹ sư điện', 'Công ty điện EVN', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(32, NULL, 'Nguyễn Trà My', '', '1997-12-12', 'Nữ',NULL,NULL, NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'không', 'Anh trình đố D', 'Luật sư', 'Văn phòng luật sư 123', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(33, NULL, 'Trần Văn Nam', '', '1980-07-09', 'Nam',NULL,NULL, NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Tiến sĩ', 'Không', 'Anh trình độ D', 'Giảng viên đại học', 'Đại học Bách khoa Hà Nội', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(34, NULL, 'Nguyễn Minh Tuyết', '', '1985-09-02', 'Nữ',NULL,NULL, NULL, 'Nam Định', 'Kinh', 'Không', 'Việt Nam', '', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'Không', 'Anh trình độ D', 'Bác sĩ', 'Bệnh viện quốc tế HJK', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(35, NULL, 'Trần Trung Kiên', '', '2008-12-25', 'Nam',NULL,NULL, NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '6/12 chính quy', 'Không', 'Không', 'Không', 'Học sinh', 'Trường THCS Chu Văn An', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(36, NULL, 'Trần Thúy Ngọc', '', '2013-01-15', 'Nữ',NULL,NULL, NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '1/12 chính quy', 'Không', 'Không', 'Không', 'Học sinh', 'Trường tiểu học Chu Văn An', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(37, NULL, 'Lý Văn Công', '', '1945-06-04', 'Nam',NULL,NULL, NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '10/12 chính quy', 'Không', 'Không', 'Không', 'Về hưu', 'Không', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
-(38, NULL, 'Bùi Thị Hà', '', '1948-02-03', 'Nữ',NULL,NULL,NULL, 'Hải Phòng', 'Kinh', 'Không', 'Việt Nam', '', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '10/12', 'Không', 'Không', 'Không', 'Nội trợ', 'Tại nhà', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL);
+INSERT INTO `nhan_khau` (`ID`, `maNhanKhau`, `hoTen`, `bietDanh`, `namSinh`, `gioiTinh`, `noiSinh`, `nguyenQuan`, `danToc`, `tonGiao`, `quocTich`, `soHoChieu`, `noiThuongTru`, `diaChiHienNay`, `trinhDoHocVan`, `TrinhDoChuyenMon`, `bietTiengDanToc`, `trinhDoNgoaiNgu`, `ngheNghiep`, `noiLamViec`, `tienAn`, `ngayChuyenDen`, `lyDoChuyenDen`, `ngayChuyenDi`, `lyDoChuyenDi`, `diaChiMoi`, `ngayTao`, `idNguoiTao`, `ngayXoa`, `idNguoiXoa`, `lyDoXoa`, `ghiChu`) VALUES
+(26, NULL, 'Trinh Văn An', '', '1990-12-07', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'Không', 'Anh trình đọ B', 'Giáo Viên', 'Trường THCS Chu Văn An', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(27, NULL, 'Trần Thanh Duyên', '', '1997-12-23', 'Nữ', NULL, 'Hải Phòng', 'Kinh', 'Không', 'Việt Nam', '', 'Số 3, đường Đình Đông, phường Đình Đông, quận Ngô Quyền, Hải Phòng', 'Số 2 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'Không', 'Anh trình độ D', 'Nhân viên văn phòng', 'Công ty ABC', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(28, NULL, 'Nguyễn Minh Quân', '', '1995-05-31', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 2 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 2 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'Không', 'Anh trình độ D', 'Kỹ sư', 'Viettel', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(29, NULL, 'Nguyễn Tiến Dũng', '', '1964-06-03', 'Nam', NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Kỹ sư', 'Không', 'Không', 'Phó giám đốc', 'Công ty EXE', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(30, NULL, 'Vũ Mỹ Linh', '', '1965-12-06', 'Nữ', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12', 'Cử Nhân', 'Không', 'Không', 'Nội trợ', 'Tại nhà', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(31, NULL, 'Nguyễn Tiến Đạt', '', '1990-09-09', 'Nam', NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Kỹ sư', 'không', 'Anh trình độ C', 'Kỹ sư điện', 'Công ty điện EVN', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(32, NULL, 'Nguyễn Trà My', '', '1997-12-12', 'Nữ', NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'không', 'Anh trình đố D', 'Luật sư', 'Văn phòng luật sư 123', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(33, NULL, 'Trần Văn Nam', '', '1980-07-09', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Tiến sĩ', 'Không', 'Anh trình độ D', 'Giảng viên đại học', 'Đại học Bách khoa Hà Nội', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(34, NULL, 'Nguyễn Minh Tuyết', '', '1985-09-02', 'Nữ', NULL, 'Nam Định', 'Kinh', 'Không', 'Việt Nam', '', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '12/12 chính quy', 'Thạc sĩ', 'Không', 'Anh trình độ D', 'Bác sĩ', 'Bệnh viện quốc tế HJK', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(35, NULL, 'Trần Trung Kiên', '', '2008-12-25', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '6/12 chính quy', 'Không', 'Không', 'Không', 'Học sinh', 'Trường THCS Chu Văn An', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(36, NULL, 'Trần Thúy Ngọc', '', '2013-01-15', 'Nữ', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 4 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '1/12 chính quy', 'Không', 'Không', 'Không', 'Học sinh', 'Trường tiểu học Chu Văn An', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(37, NULL, 'Lý Văn Công', '', '1945-06-04', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '10/12 chính quy', 'Không', 'Không', 'Không', 'Về hưu', 'Không', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
+(38, NULL, 'Bùi Thị Hà', '', '1948-02-03', 'Nữ', NULL, 'Hải Phòng', 'Kinh', 'Không', 'Việt Nam', '', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '10/12', 'Không', 'Không', 'Không', 'Nội trợ', 'Tại nhà', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL);
 
 -- INSERT INTO THANH VIEN CUA HO TABLE
 INSERT INTO `thanh_vien_cua_ho` (`idNhanKhau`, `idHoKhau`, `quanHeVoiChuHo`) VALUES
@@ -366,12 +356,16 @@ INSERT INTO USERTAB VALUES ('0000000008','nguyentienviet','root','Nguyễn Tiế
 INSERT INTO USERTAB VALUES ('0000000009','dangleduy','root','Đặng Lê Duy','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
 INSERT INTO USERTAB VALUES ('0000000010','ngotrunghieu','root','Ngô Trung Hiếu','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
 INSERT INTO USERTAB VALUES ('0000000011','nguyencongbinh','root','Nguyễn Công Bình','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
--- INSERT INTO MANAGERs
+
+-- INSERT INTO MANAGER
+
 INSERT INTO MANAGER VALUES('admin', 'admin', 'Nguyễn Tiến Việt', 'Long Biên-Hà Nội', '2001-04-31', '2021-05-01 17:17:17', '0973265421');
+
 -- INSERT INTO ROOM
 INSERT INTO ROOM VALUES('Hội trường', 1, 'Họp ,Hội ,Liên hoan');
 INSERT INTO ROOM VALUES ('Phòng chức năng', 2, 'Tổ chức văn nghệ');
 INSERT INTO ROOM VALUES ('Sân nhà văn hóa', 2, 'Sự kiện ngoài trời');
+
 -- INSERT INTO ROOM
 INSERT INTO INFRASTRUCTURE VALUES (1, 'Bàn', 30, '2021-05-01', 'Mới nguyên', 'Hội trường');
 INSERT INTO INFRASTRUCTURE VALUES (2, 'Ghế', 100, '2021-05-01', 'Mới nguyên', 'Hội trường');
@@ -379,15 +373,14 @@ INSERT INTO INFRASTRUCTURE VALUES (3, 'Loa',10 , '2021-05-01', 'Mới nguyên', 
 INSERT INTO INFRASTRUCTURE VALUES (4, 'Đèn', 20, '2021-05-01', 'Mới nguyên', 'Hội trường');
 INSERT INTO INFRASTRUCTURE VALUES (5, 'Lọ hoa', 40, '2021-05-01', 'Mới nguyên', 'Hội trường');
 INSERT INTO INFRASTRUCTURE VALUES (6, 'Máy chiếu', 2, '2021-05-01', 'Mới nguyên', 'Hội trường');
-
 INSERT INTO INFRASTRUCTURE VALUES (7, 'Bàn', 20, '2021-05-01', 'Mới', 'Phòng chức năng');
 INSERT INTO INFRASTRUCTURE VALUES (8, 'Ghế', 60, '2021-05-01', 'Mới ', 'Phòng chức năng');
 INSERT INTO INFRASTRUCTURE VALUES (9, 'Loa',20 , '2021-05-01', 'Mới ', 'Phòng chức năng');
 INSERT INTO INFRASTRUCTURE VALUES (10, 'Đèn', 30, '2021-05-01', 'Mới ', 'Phòng chức năng');
 INSERT INTO INFRASTRUCTURE VALUES (11, 'Lọ hoa', 50, '2021-05-01', 'Mới ', 'Phòng chức năng');
 INSERT INTO INFRASTRUCTURE VALUES (12, 'Máy chiếu', 2, '2021-05-01', 'Mới ', 'Phòng chức năng');
-
 INSERT INTO INFRASTRUCTURE VALUES (13, 'Loa', 4, '2021-05-01', 'Mới ', 'Sân nhà văn hóa');
+
 -- INSERT INTO EVENTTABLE
 INSERT INTO EVENTTABLE VALUES (1, 'Họp hội phụ nữ', '2021-05-02 20:00:00', '2021-05-02 23:00:00', 'Hội trường', 'Ban tổ chức hội phụ nữ thuê', 0);
 INSERT INTO EVENTTABLE VALUES (2, 'Học sinh mượn phòng tập văn nghệ', '2021-05-03 18:00:23', '2021-05-03 20:00:00', 'Phòng chức năng', 'Có giáo viên đi kèm', 0);
@@ -403,6 +396,12 @@ INSERT INTO EVENTTABLE VALUES (7, 'Văn nghệ thiếu niên, thanh niên', '202
 ALTER TABLE USERTAB
   ADD FULLTEXT KEY `soCMT` (`soCMT`);
 
+
+
+ALTER TABLE `chung_minh_thu`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `idNhanKhau` (`idNhanKhau`);
+ALTER TABLE `chung_minh_thu` ADD FULLTEXT KEY `soCMT` (`soCMT`);
 
 --
 -- Chỉ mục cho bảng `dinh_chinh`
@@ -443,8 +442,6 @@ ALTER TABLE `nhan_khau`
   ADD KEY `idNguoiTao` (`idNguoiTao`),
   ADD KEY `idNguoiXoa` (`idNguoiXoa`);
 ALTER TABLE `nhan_khau` 
-  ADD FULLTEXT KEY `soCMT` (`soCMT`);
-ALTER TABLE `nhan_khau` 
   ADD FULLTEXT KEY `hoTen` (`hoTen`,`bietDanh`);
 --
 -- Chỉ mục cho bảng `tam_tru`
@@ -484,7 +481,11 @@ ALTER TABLE `tieu_su`
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
+----
+-- AUTO_INCREMENT cho bảng `chung_minh_thu`
 --
+ALTER TABLE `chung_minh_thu`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT cho bảng `dinh_chinh`
 --
@@ -542,7 +543,10 @@ ALTER TABLE `thu_ky`
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
-
+-- Các ràng buộc cho bảng `chung_minh_thu`
+--
+ALTER TABLE `chung_minh_thu`
+  ADD CONSTRAINT `chung_minh_thu_ibfk_1` FOREIGN KEY (`idNhanKhau`) REFERENCES `nhan_khau` (`ID`);
 --
 -- Các ràng buộc cho bảng `dinh_chinh`
 --
