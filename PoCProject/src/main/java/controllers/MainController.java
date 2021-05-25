@@ -13,10 +13,10 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import views.HoKhauManagePanel;
+import views.mng.HoKhauManagePanel;
 import views.mng.HomePagePanel;
-import views.NhanKhauManagePanel;
-import views.ThongKePanel;
+import views.mng.NhanKhauManagePanel;
+import views.mng.ThongKePanel;
 import views.TimKiemPanel;
 
 /**
