@@ -6,7 +6,40 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+-- --------------------------------------------------------
 
+--
+-- Cấu trúc bảng cho bảng `chung_minh_thu`
+--
+
+CREATE TABLE `chung_minh_thu` (
+  `ID` int(11) NOT NULL,
+  `idNhanKhau` int(11) DEFAULT NULL,
+  `soCMT` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
+  `ngayCap` date DEFAULT NULL,
+  `noiCap` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `chung_minh_thu`
+--
+
+INSERT INTO `chung_minh_thu` (`ID`, `idNhanKhau`, `soCMT`, `ngayCap`, `noiCap`) VALUES
+(13, 26, '000000000001', NULL, NULL),
+(14, 27, '000000000002', NULL, NULL),
+(15, 28, '000000000003', NULL, NULL),
+(16, 29, '000000000004', NULL, NULL),
+(17, 30, '000000000005', NULL, NULL),
+(18, 31, '000000000006', NULL, NULL),
+(19, 32, '000000000007', NULL, NULL),
+(20, 33, '000000000008', NULL, NULL),
+(21, 34, '000000000009', NULL, NULL),
+(22, 35, '100000000001', NULL, NULL),
+(23, 36, '100000000002', NULL, NULL),
+(24, 37, '000000000010', NULL, NULL),
+(25, 38, '000000000011', NULL, NULL);
+
+-- --------------------------------------------------------
 -- CREATE DINH CHINH TABLE 
 CREATE TABLE `dinh_chinh` (
   `ID` int(11) NOT NULL,
