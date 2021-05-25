@@ -60,7 +60,7 @@ public class InfoJframe extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
         contentJlb.setBackground(new java.awt.Color(255, 255, 255));
-        contentJlb.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        contentJlb.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         contentJlb.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         contentJlb.setText("jLabel1");
         contentJlb.setVerticalAlignment(javax.swing.SwingConstants.TOP);
