@@ -45,10 +45,8 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
     }
     
     private void close() {
-        if (JOptionPane.showConfirmDialog(this, "Are you sure to close??", "Confirm", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
-            this.parentJFrame.setEnabled(true);
-            dispose();
-        }
+        this.parentJFrame.setEnabled(true);
+        dispose();
     }
     
     public void setDataChuHo() {
@@ -100,10 +98,10 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Mã hộ khẩu:");
 
-        maHoKhauJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maHoKhauJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         maHoKhauJtf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 maHoKhauJtfActionPerformed(evt);
@@ -114,10 +112,10 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("(*)");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Mã khu vực:");
 
-        maKhuVucJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maKhuVucJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         maKhuVucJtf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 maKhuVucJtfActionPerformed(evt);
@@ -128,10 +126,10 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("(*)");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setText("Địa chỉ:");
 
-        diaChiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        diaChiJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         diaChiJtf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 diaChiJtfActionPerformed(evt);
@@ -142,10 +140,10 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("(*)");
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText("Chủ hộ:");
 
-        tenChuHoJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tenChuHoJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tenChuHoJtf.setEnabled(false);
         tenChuHoJtf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,6 +155,7 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));
         jLabel8.setText("(*)");
 
+        selectBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         selectBtn.setText("Chọn...");
         selectBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,14 +163,14 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setText("Ngày sinh chủ hộ:");
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 0, 0));
         jLabel10.setText("(*)");
 
-        ngaySinhChuHoJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ngaySinhChuHoJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         ngaySinhChuHoJtf.setEnabled(false);
         ngaySinhChuHoJtf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,14 +178,14 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel11.setText("Số CMT chủ hộ:");
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel11.setText("Số CMT/CCCD chủ hộ:");
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 0, 0));
         jLabel12.setText("(*)");
 
-        soCMTChuHo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        soCMTChuHo.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         soCMTChuHo.setEnabled(false);
         soCMTChuHo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,6 +195,8 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thành viên của hộ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
+
+        memTableJpn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout memTableJpnLayout = new javax.swing.GroupLayout(memTableJpn);
         memTableJpn.setLayout(memTableJpnLayout);
@@ -208,6 +209,7 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             .addGap(0, 223, Short.MAX_VALUE)
         );
 
+        editBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         editBtn.setText("Sửa");
         editBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,6 +236,7 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
                 .addGap(37, 37, 37))
         );
 
+        saveBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         saveBtn.setText("Lưu");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,6 +244,7 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             }
         });
 
+        cancelBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         cancelBtn.setText("Hủy");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,47 +257,49 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel5)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel7)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(selectBtn))
-                                .addComponent(jLabel9)
-                                .addComponent(jLabel11))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(maHoKhauJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGap(1, 1, 1)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(diaChiJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(maKhuVucJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(tenChuHoJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(ngaySinhChuHoJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(soCMTChuHo, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGap(1, 1, 1)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel6)
-                                        .addComponent(jLabel4)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jLabel10)
-                                        .addComponent(jLabel12)))))))
+                        .addContainerGap()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel5)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(selectBtn))
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel11))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(maHoKhauJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(diaChiJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(maKhuVucJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tenChuHoJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ngaySinhChuHoJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(soCMTChuHo, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel8)
+                                            .addComponent(jLabel10)
+                                            .addComponent(jLabel12)))))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(94, 94, 94)
+                        .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -332,10 +338,10 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelBtn)
-                    .addComponent(saveBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(saveBtn)
+                    .addComponent(cancelBtn))
                 .addContainerGap())
         );
 
@@ -385,7 +391,9 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
     }//GEN-LAST:event_soCMTChuHoActionPerformed
 
     private void cancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelBtnActionPerformed
-        close();
+        if (JOptionPane.showConfirmDialog(this, "Bạn có muốn hủy?", "Confirm", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
+            close();
+        }
     }//GEN-LAST:event_cancelBtnActionPerformed
 
     private void editBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtnActionPerformed

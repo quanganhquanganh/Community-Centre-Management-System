@@ -47,57 +47,60 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="cancelBtn" min="-2" pref="80" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="saveBtn" min="-2" pref="80" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="selectBtn" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="selectBtn" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="maHoKhauJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="diaChiJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
-                                          <Component id="maKhuVucJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
-                                          <Component id="tenChuHoJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
-                                          <Component id="ngaySinhChuHoJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
-                                          <Component id="soCMTChuHo" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="maHoKhauJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="diaChiJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                                              <Component id="maKhuVucJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                                              <Component id="tenChuHoJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                                              <Component id="ngaySinhChuHoJtf" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                                              <Component id="soCMTChuHo" alignment="0" min="-2" pref="318" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                          <Component id="saveBtn" min="-2" pref="80" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="cancelBtn" min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -146,10 +149,10 @@
                   </Group>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="jPanel1" min="-2" pref="286" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cancelBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="saveBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="saveBtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="cancelBtn" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -160,7 +163,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
+              <Font name="Times New Roman" size="18" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="M&#xe3; h&#x1ed9; kh&#x1ea9;u:"/>
           </Properties>
@@ -168,7 +171,7 @@
         <Component class="javax.swing.JTextField" name="maHoKhauJtf">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
+              <Font name="Times New Roman" size="18" style="0"/>
             </Property>
           </Properties>
           <Events>
@@ -189,7 +192,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
+              <Font name="Times New Roman" size="18" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="M&#xe3; khu v&#x1ef1;c:"/>
           </Properties>
@@ -197,7 +200,7 @@
         <Component class="javax.swing.JTextField" name="maKhuVucJtf">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
+              <Font name="Times New Roman" size="18" style="0"/>
             </Property>
           </Properties>
           <Events>
@@ -218,7 +221,7 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
+              <Font name="Times New Roman" size="18" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x110;&#x1ecb;a ch&#x1ec9;:"/>
           </Properties>
@@ -226,7 +229,7 @@
         <Component class="javax.swing.JTextField" name="diaChiJtf">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
+              <Font name="Times New Roman" size="18" style="0"/>
             </Property>
           </Properties>
           <Events>
@@ -247,7 +250,7 @@
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
+              <Font name="Times New Roman" size="18" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ch&#x1ee7; h&#x1ed9;:"/>
           </Properties>
@@ -255,7 +258,7 @@
         <Component class="javax.swing.JTextField" name="tenChuHoJtf">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
+              <Font name="Times New Roman" size="18" style="0"/>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
@@ -276,6 +279,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="selectBtn">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Ch&#x1ecd;n..."/>
           </Properties>
           <Events>
@@ -285,7 +291,7 @@
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
+              <Font name="Times New Roman" size="18" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ng&#xe0;y sinh ch&#x1ee7; h&#x1ed9;:"/>
           </Properties>
@@ -304,7 +310,7 @@
         <Component class="javax.swing.JTextField" name="ngaySinhChuHoJtf">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
+              <Font name="Times New Roman" size="18" style="0"/>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
@@ -315,9 +321,9 @@
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="1"/>
+              <Font name="Times New Roman" size="18" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="S&#x1ed1; CMT ch&#x1ee7; h&#x1ed9;:"/>
+            <Property name="text" type="java.lang.String" value="S&#x1ed1; CMT/CCCD ch&#x1ee7; h&#x1ed9;:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel12">
@@ -334,7 +340,7 @@
         <Component class="javax.swing.JTextField" name="soCMTChuHo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
+              <Font name="Times New Roman" size="18" style="0"/>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
@@ -380,6 +386,11 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="memTableJpn">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="18" style="0"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -396,6 +407,9 @@
             </Container>
             <Component class="javax.swing.JButton" name="editBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
               </Properties>
               <Events>
@@ -406,6 +420,9 @@
         </Container>
         <Component class="javax.swing.JButton" name="saveBtn">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="L&#x1b0;u"/>
           </Properties>
           <Events>
@@ -414,6 +431,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="cancelBtn">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="H&#x1ee7;y"/>
           </Properties>
           <Events>

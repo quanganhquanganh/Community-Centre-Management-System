@@ -78,7 +78,7 @@ public class ChangeListPeopleJframe extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout PeopleTableJpnLayout = new javax.swing.GroupLayout(PeopleTableJpn);
         PeopleTableJpn.setLayout(PeopleTableJpnLayout);
@@ -102,13 +102,13 @@ public class ChangeListPeopleJframe extends javax.swing.JFrame {
             .addGap(0, 305, Short.MAX_VALUE)
         );
 
-        addBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        addBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         addBtn.setText(">>");
 
-        removeBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        removeBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         removeBtn.setText("<<");
 
-        saveBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        saveBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         saveBtn.setText("Lưu thay đổi");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,7 @@ public class ChangeListPeopleJframe extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
                     .addComponent(PeopleTableJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -154,7 +154,7 @@ public class ChangeListPeopleJframe extends javax.swing.JFrame {
                         .addComponent(addBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(removeBtn)
-                        .addGap(0, 244, Short.MAX_VALUE)))
+                        .addGap(0, 236, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 

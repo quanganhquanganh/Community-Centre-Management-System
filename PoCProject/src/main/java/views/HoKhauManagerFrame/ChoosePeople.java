@@ -76,26 +76,27 @@ public class ChoosePeople extends javax.swing.JFrame {
         searchJtf = new javax.swing.JTextField();
         tableJpn = new javax.swing.JPanel();
         confirmBtn = new javax.swing.JButton();
-        cancelBtn = new javax.swing.JButton();
         selectedJtf = new javax.swing.JTextField();
+        cancelBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        searchJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        searchJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout tableJpnLayout = new javax.swing.GroupLayout(tableJpn);
         tableJpn.setLayout(tableJpnLayout);
         tableJpnLayout.setHorizontalGroup(
             tableJpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 632, Short.MAX_VALUE)
         );
         tableJpnLayout.setVerticalGroup(
             tableJpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
+            .addGap(0, 266, Short.MAX_VALUE)
         );
 
+        confirmBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         confirmBtn.setText("Xác nhận");
         confirmBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +104,10 @@ public class ChoosePeople extends javax.swing.JFrame {
             }
         });
 
+        selectedJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        selectedJtf.setEnabled(false);
+
+        cancelBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         cancelBtn.setText("Hủy");
         cancelBtn.setToolTipText("");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -110,8 +115,6 @@ public class ChoosePeople extends javax.swing.JFrame {
                 cancelBtnActionPerformed(evt);
             }
         });
-
-        selectedJtf.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -123,11 +126,11 @@ public class ChoosePeople extends javax.swing.JFrame {
                     .addComponent(tableJpn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(searchJtf, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(selectedJtf, javax.swing.GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
+                        .addComponent(selectedJtf, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(confirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(confirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -140,8 +143,8 @@ public class ChoosePeople extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(confirmBtn)
-                    .addComponent(cancelBtn)
-                    .addComponent(selectedJtf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(selectedJtf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cancelBtn))
                 .addContainerGap())
         );
 

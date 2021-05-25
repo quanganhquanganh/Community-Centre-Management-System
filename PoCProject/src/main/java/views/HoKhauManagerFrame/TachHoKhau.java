@@ -53,10 +53,8 @@ public class TachHoKhau extends javax.swing.JFrame {
     }
 
     public void close() {
-        if (JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(null, "Are you sure to close?", "Warning!!", JOptionPane.YES_NO_OPTION)) {
-            this.parentJFrame.setEnabled(true);
-            dispose();
-        }
+        this.parentJFrame.setEnabled(true);
+        dispose();
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -116,16 +114,16 @@ public class TachHoKhau extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setText("Chủ hộ hiện tại");
 
         chuHoHienTaiJtf.setBackground(new java.awt.Color(240, 240, 240));
-        chuHoHienTaiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        chuHoHienTaiJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setText("Chủ hộ mới");
 
-        chuHoMoiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        chuHoMoiJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         chuHoMoiJtf.setEnabled(false);
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -140,24 +138,24 @@ public class TachHoKhau extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(255, 0, 0));
         jLabel12.setText("(*)");
 
-        jLabel13.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel13.setText("Mã khu vực");
 
-        maKhuVucJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maKhuVucJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel14.setText("Địa chỉ");
 
-        diaChiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        diaChiJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 0, 0));
         jLabel15.setText("(*)");
 
-        jLabel16.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel16.setText("Mã hộ khẩu mới");
 
-        maHoKhauMoiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maHoKhauMoiJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jLabel17.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 0, 0));
@@ -222,13 +220,13 @@ public class TachHoKhau extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
         );
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Chọn hộ cần tách");
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Nhập mã hộ khẩu");
 
-        searchJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        searchJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         tableBotJpn.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -243,7 +241,7 @@ public class TachHoKhau extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Chọn người sang hộ mới");
 
         tableRigthJtf.setBackground(new java.awt.Color(204, 204, 204));
@@ -259,13 +257,14 @@ public class TachHoKhau extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel18.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel18.setText("Những người ở hộ mới");
 
         addBtn.setText(">>");
 
         removeBtn.setText("<<");
 
+        acceptBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         acceptBtn.setText("Xác nhận");
         acceptBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,6 +272,7 @@ public class TachHoKhau extends javax.swing.JFrame {
             }
         });
 
+        cancelBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         cancelBtn.setText("Hủy");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -295,26 +295,23 @@ public class TachHoKhau extends javax.swing.JFrame {
                             .addComponent(tableBotJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(6, 6, 6)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
-                                .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(addBtn)
+                                    .addComponent(removeBtn))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(addBtn)
-                                            .addComponent(removeBtn))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(tableRigthJtf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel18)
-                                                .addGap(0, 332, Short.MAX_VALUE))))
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap())))
+                                        .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(137, 137, 137)
+                                        .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(tableRigthJtf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel18)
+                                        .addGap(0, 332, Short.MAX_VALUE)))))
+                        .addContainerGap())
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
@@ -346,16 +343,15 @@ public class TachHoKhau extends javax.swing.JFrame {
                             .addComponent(tableRigthJtf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(acceptBtn))
-                        .addGap(19, 19, 19))
+                            .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(tableTopJpn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tableBotJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(16, 16, 16))))
+                        .addComponent(tableBotJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(16, 16, 16))
         );
 
         tableTopJpn.getAccessibleContext().setAccessibleName("");
@@ -377,7 +373,9 @@ public class TachHoKhau extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelBtnActionPerformed
-        close();
+        if (JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(null, "Bạn có muốn hủy?", "Warning!!", JOptionPane.YES_NO_OPTION)) {
+            close();
+        }
     }//GEN-LAST:event_cancelBtnActionPerformed
 
     private void acceptBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptBtnActionPerformed
