@@ -47,12 +47,26 @@ public class UserLoginController {
         return true;
     }
     public void save_(String userUsername, String userPassword)  throws SQLException, ClassNotFoundException {
-      
-        Connection connection1 = MysqlConnection.getMysqlConnection();
-        Statement stm1 = connection1.createStatement();
-        String query1 = "INSERT INTO USERTAB(USERUSERNAME,USERPASSWORD) VALUES("+userUsername+","+ userPassword+")";
-        PreparedStatement rs1 = connection1.prepareStatement(query1);
-        connection1.close();
+        try {
+            Connection connection1 = MysqlConnection.getMysqlConnection();
+            Statement stm1 = connection1.createStatement();
+            String query1 = "INSERT INTO USERTAB(soCMT, USERUSERNAME, USERPASSWORD, FULLNAME, ADDRESS, SIGNUPDATE, JOB, BIRTHDAY, PHONENUMBER) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            //System.out.println(query1);
+            PreparedStatement rs1 = connection1.prepareStatement(query1);
+            rs1.setString(1, "NULL");
+            rs1.setString(2, userUsername);
+            rs1.setString(3, userPassword);
+            rs1.setString(4, "NULL");
+            rs1.setString(5, "NULL");
+            rs1.setString(6, "2021-05-23 00:00:00");
+            rs1.setString(7, "NULL");
+            rs1.setString(8, "2021-05-23");
+            rs1.setString(9, "00000000");
+            //System.out.println(rs1);
+            rs1.executeUpdate();
+            rs1.close();
+            //connection1.close();
+        } catch (Exception e) {System.out.println(e);}    
     }
     public static void main(String args[]){
         try {
