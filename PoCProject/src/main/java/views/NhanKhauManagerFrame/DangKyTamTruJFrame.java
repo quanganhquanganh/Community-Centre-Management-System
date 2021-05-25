@@ -46,21 +46,19 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
     }
     
     void close() {
-        if (JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(null, "Are you sure to close?", "Warning!!", JOptionPane.YES_NO_OPTION)) {
-            this.parentFrame.setEnabled(true);
+        this.parentFrame.setEnabled(true);
             dispose();
-        }
     }
 
     private boolean checkCMT(String cmt) {
         if (cmt.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Vui lòng nhập số CMT", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập số CMT/CCCD", "Warning", JOptionPane.WARNING_MESSAGE);
             return false;
         } else {
             try {
                 long temp = Long.parseLong(cmt);
                 if (cmt.trim().length() != 9 && cmt.trim().length() != 12) {
-                    throw new Exception("Sai dinh dang");
+                    throw new Exception("Sai định dạng");
                 }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, "Vui lòng nhập đúng định dạng số CMT!", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -105,13 +103,13 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        soCmtJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        soCmtJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Số CMT:");
 
-        checkBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        checkBtn.setText("Check");
+        checkBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        checkBtn.setText("Kiểm tra");
         checkBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkBtnActionPerformed(evt);
@@ -122,10 +120,10 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("(*)");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Mã giấy tạm trú:");
 
-        maGiayTamTruJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        maGiayTamTruJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         maGiayTamTruJtf.setEnabled(false);
         maGiayTamTruJtf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +135,7 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("(*)");
 
-        soDienThoaiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        soDienThoaiJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         soDienThoaiJtf.setEnabled(false);
         soDienThoaiJtf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,12 +147,13 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("(*)");
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setText("Số điện thoại:");
 
         tuNgayDc.setEnabled(false);
+        tuNgayDc.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText("Từ ngày:");
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -166,18 +165,21 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
         jLabel9.setText("(*)");
 
         denNgayDc.setEnabled(false);
+        denNgayDc.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel10.setText("Đến ngày:");
 
         lyDoTar.setColumns(20);
+        lyDoTar.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lyDoTar.setRows(5);
         lyDoTar.setEnabled(false);
         jScrollPane1.setViewportView(lyDoTar);
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel11.setText("Lý do:");
 
+        acceptBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         acceptBtn.setText("Xác nhận");
         acceptBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +187,7 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
             }
         });
 
+        cancelBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         cancelBtn.setText("Hủy");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,7 +215,7 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
                         .addComponent(checkBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(availableIcon)
-                        .addContainerGap(21, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -222,6 +225,10 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
                             .addComponent(jLabel11))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1)
                             .addComponent(tuNgayDc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(denNgayDc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -234,12 +241,6 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(jLabel9))
                         .addGap(36, 36, 36))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,11 +277,11 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(acceptBtn)
-                    .addComponent(cancelBtn))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -330,7 +331,9 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_soDienThoaiJtfActionPerformed
 
     private void cancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelBtnActionPerformed
-        close();
+        if (JOptionPane.showConfirmDialog(this, "Bạn có muốn hủy?", "Confirm", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
+            close();
+        }
     }//GEN-LAST:event_cancelBtnActionPerformed
 
     private void acceptBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptBtnActionPerformed
