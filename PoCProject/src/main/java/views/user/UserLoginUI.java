@@ -25,10 +25,10 @@ import java.util.logging.Logger;
  *
  * @author macbookpro
  */
-public class UserLoginUI extends javax.swing.JFrame {
+public class UserLoginUI extends javax.swing.JFrame  {
 
     private UserLoginController cont = new UserLoginController();
-
+    private UserLoginController cont1 = new UserLoginController();
     /**
      * Creates new form UserLoginUI
      */
@@ -70,7 +70,7 @@ public class UserLoginUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Có lỗi xảy ra!! Vui lòng kiểm tra lại!", "Warning!!", JOptionPane.ERROR_MESSAGE);
         }
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -435,11 +435,19 @@ public class UserLoginUI extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         keyListenner(taiKhoan1);
-        
         keyListenner(matKhau1);
         String tk1 = taiKhoan1.getText();
         String mk1 = String.valueOf(matKhau1.getPassword());
-        jDialog1.setVisible(false);
+        try {
+            if (this.cont1.checker(tk1, mk1)) {
+                 JOptionPane.showMessageDialog(rootPane, "Tạo Thành Công", "Thông báo nè ", JOptionPane.WARNING_MESSAGE);
+                 this.cont1.save_(tk1,mk1);
+                 jDialog1.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Tài khoản đã tồn tại", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -521,4 +529,6 @@ public class UserLoginUI extends javax.swing.JFrame {
     private javax.swing.JPasswordField userPassword;
     private javax.swing.JTextField userUsername;
     // End of variables declaration//GEN-END:variables
+
+   
 }
