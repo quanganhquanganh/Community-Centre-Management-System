@@ -84,6 +84,8 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -100,7 +102,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel1.setText("VUI LÒNG ĐIỀN THÔNG TIN SAU");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 4));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(240, 20, 400, 53);
+        jLabel1.setBounds(230, 0, 400, 53);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -108,7 +110,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel2.setText("BẮT ĐẦU TỪ");
         jLabel2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(78, 159, 80, 44);
+        jLabel2.setBounds(80, 120, 80, 44);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -116,14 +118,14 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel3.setText("HẠN ĐẾN");
         jLabel3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(78, 236, 80, 44);
+        jLabel3.setBounds(80, 190, 80, 44);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("NỘI DUNG");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(78, 316, 80, 80);
+        jLabel4.setBounds(80, 260, 80, 80);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -131,34 +133,34 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel5.setText("PHÒNG");
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(78, 96, 80, 45);
+        jLabel5.setBounds(80, 60, 80, 45);
 
         jLabel10.setForeground(new java.awt.Color(255, 0, 51));
         jLabel10.setText("(*)");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(758, 159, 50, 44);
+        jLabel10.setBounds(760, 120, 50, 44);
 
         jLabel11.setForeground(new java.awt.Color(255, 0, 51));
         jLabel11.setText("(*)");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(491, 96, 43, 44);
+        jLabel11.setBounds(430, 120, 43, 44);
 
         jLabel12.setForeground(new java.awt.Color(255, 0, 51));
         jLabel12.setText("(*)");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(758, 348, 37, 44);
+        jLabel12.setBounds(760, 280, 37, 44);
 
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         description.setColumns(20);
-        description.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        description.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         description.setRows(5);
         jScrollPane1.setViewportView(description);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(176, 316, 572, 85);
+        jScrollPane1.setBounds(180, 250, 572, 115);
 
-        confirmButton.setBackground(new java.awt.Color(102, 0, 153));
+        confirmButton.setBackground(new java.awt.Color(255, 255, 255));
         confirmButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         confirmButton.setText("GỬI BIỂU MẪU");
         confirmButton.addActionListener(new java.awt.event.ActionListener() {
@@ -167,8 +169,9 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(confirmButton);
-        confirmButton.setBounds(349, 418, 174, 46);
+        confirmButton.setBounds(350, 380, 174, 46);
 
+        roomComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         roomComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new DienDonSuDungNhaVanHoa().layDanhSachPhong()));
         roomComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,12 +179,14 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(roomComboBox);
-        roomComboBox.setBounds(176, 96, 311, 44);
+        roomComboBox.setBounds(180, 60, 311, 44);
 
         jDateStart.setDateFormatString("dd-MM-yyyy");
+        jDateStart.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         getContentPane().add(jDateStart);
-        jDateStart.setBounds(551, 159, 197, 44);
+        jDateStart.setBounds(550, 120, 197, 44);
 
+        hourBoxStart.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         hourBoxStart.setModel(modelHours1);
         hourBoxStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,8 +194,9 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hourBoxStart);
-        hourBoxStart.setBounds(176, 159, 94, 44);
+        hourBoxStart.setBounds(180, 120, 94, 44);
 
+        minuteBoxStart.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         minuteBoxStart.setModel(modelMinutes2);
         minuteBoxStart.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         minuteBoxStart.addActionListener(new java.awt.event.ActionListener() {
@@ -199,12 +205,14 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(minuteBoxStart);
-        minuteBoxStart.setBounds(340, 159, 91, 44);
+        minuteBoxStart.setBounds(330, 120, 91, 44);
 
         jDateFinish.setDateFormatString("dd-MM-yyyy");
+        jDateFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         getContentPane().add(jDateFinish);
-        jDateFinish.setBounds(551, 236, 197, 44);
+        jDateFinish.setBounds(550, 190, 197, 44);
 
+        hourBoxFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         hourBoxFinish.setModel(modelHours2);
         hourBoxFinish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,66 +220,80 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hourBoxFinish);
-        hourBoxFinish.setBounds(176, 236, 94, 44);
+        hourBoxFinish.setBounds(180, 190, 94, 44);
 
+        minuteBoxFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         minuteBoxFinish.setModel(modelMinutes1);
         getContentPane().add(minuteBoxFinish);
-        minuteBoxFinish.setBounds(339, 237, 90, 43);
+        minuteBoxFinish.setBounds(330, 190, 90, 43);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Giờ");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(190, 200, 50, 44);
+        jLabel7.setBounds(200, 150, 50, 44);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Phút");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(360, 210, 40, 15);
+        jLabel8.setBounds(360, 170, 40, 15);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Giờ");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(190, 270, 60, 44);
+        jLabel9.setBounds(200, 220, 60, 44);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Phút");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(360, 270, 50, 44);
+        jLabel13.setBounds(350, 220, 50, 44);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Ngày");
         getContentPane().add(jLabel14);
-        jLabel14.setBounds(493, 159, 60, 44);
+        jLabel14.setBounds(490, 120, 60, 44);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Ngày");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(497, 237, 60, 43);
+        jLabel15.setBounds(490, 190, 60, 43);
 
         jLabel16.setForeground(new java.awt.Color(255, 0, 51));
         jLabel16.setText("(*)");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(758, 236, 42, 44);
+        jLabel16.setBounds(760, 180, 42, 44);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/a3.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
+        jLabel6.setMaximumSize(null);
+        jLabel6.setMinimumSize(new java.awt.Dimension(1000, 508));
+        jLabel6.setPreferredSize(new java.awt.Dimension(1000, 511));
         getContentPane().add(jLabel6);
         jLabel6.setBounds(0, 0, 820, 510);
+
+        jLabel17.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel17.setText("(*)");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(760, 300, 37, 44);
+
+        jLabel18.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel18.setText("(*)");
+        getContentPane().add(jLabel18);
+        jLabel18.setBounds(760, 300, 37, 44);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -388,6 +410,8 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
