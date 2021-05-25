@@ -99,7 +99,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("VUI LÒNG ĐIỀN THÔNG TIN SAU");
+        jLabel1.setText(" VUI LÒNG ĐIỀN THÔNG TIN SAU");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 4));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(230, 0, 400, 53);
@@ -118,14 +118,14 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel3.setText("HẠN ĐẾN");
         jLabel3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 190, 80, 44);
+        jLabel3.setBounds(70, 190, 80, 44);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("NỘI DUNG");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 260, 80, 80);
+        jLabel4.setBounds(70, 260, 80, 80);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -133,7 +133,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel5.setText("PHÒNG");
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(80, 60, 80, 45);
+        jLabel5.setBounds(70, 60, 80, 45);
 
         jLabel10.setForeground(new java.awt.Color(255, 0, 51));
         jLabel10.setText("(*)");
@@ -253,7 +253,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Phút");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(350, 220, 50, 44);
+        jLabel13.setBounds(360, 220, 50, 44);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
