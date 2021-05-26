@@ -337,8 +337,8 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println(e);
         }
-
-
+    dispose();
+    new MainFrame();
     }//GEN-LAST:event_confirmButtonActionPerformed
 
     private void roomComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomComboBoxActionPerformed
