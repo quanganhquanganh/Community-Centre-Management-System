@@ -25,10 +25,10 @@ import java.util.logging.Logger;
  *
  * @author macbookpro
  */
-public class UserLoginUI extends javax.swing.JFrame {
+public class UserLoginUI extends javax.swing.JFrame  {
 
     private UserLoginController cont = new UserLoginController();
-
+    private UserLoginController cont1 = new UserLoginController();
     /**
      * Creates new form UserLoginUI
      */
@@ -70,7 +70,7 @@ public class UserLoginUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Có lỗi xảy ra!! Vui lòng kiểm tra lại!", "Warning!!", JOptionPane.ERROR_MESSAGE);
         }
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -145,10 +145,16 @@ public class UserLoginUI extends javax.swing.JFrame {
         jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel3.add(jLabel7);
         jLabel7.setBounds(50, 170, 130, 20);
+
+        taiKhoan1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                taiKhoan1ActionPerformed(evt);
+            }
+        });
         jPanel3.add(taiKhoan1);
-        taiKhoan1.setBounds(220, 130, 180, 20);
+        taiKhoan1.setBounds(220, 130, 180, 30);
         jPanel3.add(matKhau1);
-        matKhau1.setBounds(220, 170, 180, 20);
+        matKhau1.setBounds(220, 170, 180, 30);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton5.setText("xác nhận");
@@ -435,21 +441,43 @@ public class UserLoginUI extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         keyListenner(taiKhoan1);
-        
         keyListenner(matKhau1);
         String tk1 = taiKhoan1.getText();
         String mk1 = String.valueOf(matKhau1.getPassword());
-        jDialog1.setVisible(false);
+        try {
+            if (this.cont1.checker(tk1, mk1)) {
+                 JOptionPane.showMessageDialog(rootPane, "Tạo Thành Công", "Thông báo nè ", JOptionPane.WARNING_MESSAGE);
+                 this.cont1.save_(tk1,mk1);
+                 jDialog1.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Tài khoản đã tồn tại", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         keyListenner(taiKhoan2);
         keyListenner(matKhau2);
-        String tk1 = taiKhoan2.getText();
-        String mk1 = String.valueOf(matKhau2.getPassword());
+        String tk2 = taiKhoan2.getText();
+        String mk2 = String.valueOf(matKhau2.getPassword());
+         try {
+            if (!this.cont1.checker(tk2, mk2)) {
+                 JOptionPane.showMessageDialog(rootPane, "đổi mật khẩu thành công", "Thông báo nè ", JOptionPane.WARNING_MESSAGE);
+                 this.cont1.reset_pass(tk2, mk2);
+                 jDialog1.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Tài khoản không tồn tại", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+        }
         jDialog2.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+        
+    private void taiKhoan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taiKhoan1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_taiKhoan1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -521,4 +549,6 @@ public class UserLoginUI extends javax.swing.JFrame {
     private javax.swing.JPasswordField userPassword;
     private javax.swing.JTextField userUsername;
     // End of variables declaration//GEN-END:variables
+
+   
 }
