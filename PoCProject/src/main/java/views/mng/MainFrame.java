@@ -966,6 +966,14 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelQuanLyCSVCCentre.setVisible(false);
             jPanelLichCentre.setVisible(false);
             jPanelDonDangKyCentre.setVisible(false);
+            DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
+            model.setRowCount(0);
+            XemLich.show(model);
+            jLabelSoSK.setText(String.valueOf(model.getRowCount()));
+            DefaultTableModel model1 = (DefaultTableModel) jTableDonDangKy.getModel();
+            model1.setRowCount(0); 
+            XemThongTinDangKy();
+            jLabelSoDonDK.setText(String.valueOf(model1.getRowCount()));
         }
         if(evt.getSource() == jPanelQuanLyCSVC){
             jPanelTrangChuCentre.setVisible(false);
