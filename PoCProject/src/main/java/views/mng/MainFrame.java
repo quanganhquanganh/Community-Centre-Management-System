@@ -406,9 +406,9 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel3.add(jLabel9);
         jLabel9.setBounds(10, 11, 178, 22);
 
+        jLabelSoDonDK.setText("1000");
         jLabelSoDonDK.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         jLabelSoDonDK.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelSoDonDK.setText("1000");
         jPanel3.add(jLabelSoDonDK);
         jLabelSoDonDK.setBounds(10, 39, 108, 56);
 
@@ -866,6 +866,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jTextFieldTT1.setColumns(20);
+        jTextFieldTT1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jTextFieldTT1.setRows(5);
         jScrollPane3.setViewportView(jTextFieldTT1);
 

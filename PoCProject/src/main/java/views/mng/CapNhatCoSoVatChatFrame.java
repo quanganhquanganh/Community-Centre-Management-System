@@ -62,12 +62,13 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         datePicker = new com.github.lgooddatepicker.components.DatePicker();
         jLabel5 = new javax.swing.JLabel();
-        jTextFieldThongTin = new javax.swing.JTextField();
         jButtonXacNhan = new javax.swing.JButton();
         jButtonLamMoi = new javax.swing.JButton();
         jButtonHuy = new javax.swing.JButton();
         jComboBoxPhong = new javax.swing.JComboBox<>();
         jComboBoxVatPham = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextFieldThongTin = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cập nhật thông tin cơ sở vật chất");
@@ -90,8 +91,6 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Thông tin:");
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-
-        jTextFieldThongTin.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jButtonXacNhan.setText("Xác nhận");
         jButtonXacNhan.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -128,6 +127,11 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
 
         jComboBoxVatPham.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
+        jTextFieldThongTin.setColumns(20);
+        jTextFieldThongTin.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jTextFieldThongTin.setRows(5);
+        jScrollPane1.setViewportView(jTextFieldThongTin);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -139,27 +143,26 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jLabel2))
                 .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonXacNhan)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonLamMoi)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonHuy, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextFieldThongTin, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jComboBoxVatPham, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jSpinnerSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(61, 61, 61)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel3))
-                            .addGap(48, 48, 48)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jComboBoxPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBoxVatPham, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSpinnerSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(61, 61, 61)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addGap(48, 48, 48)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jComboBoxPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -181,10 +184,9 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextFieldThongTin, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                        .addGap(29, 29, 29)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonLamMoi)
                     .addComponent(jButtonXacNhan)
@@ -278,7 +280,8 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerSoLuong;
-    private javax.swing.JTextField jTextFieldThongTin;
+    private javax.swing.JTextArea jTextFieldThongTin;
     // End of variables declaration//GEN-END:variables
 }
