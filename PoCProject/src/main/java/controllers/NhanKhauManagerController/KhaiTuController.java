@@ -32,16 +32,15 @@ public class KhaiTuController {
     public boolean addNew(KhaiTuModel khaiTuModel) {
         try {
             Connection connection = MysqlConnection.getMysqlConnection();
-            String query = "INSERT INTO khai_tu(idNhanKhau, , lyDo)" + " value (?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO khai_tu(idNguoiKhai, idNguoiChet, ngayKhai, ngayChet, lyDoChet)" + " value (?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-//            preparedStatement.setInt(1, tamTruModel.getIdNhanKhau());
-//            preparedStatement.setString(2, tamTruModel.getMaGiayTamTru());
-//            preparedStatement.setString(3, tamTruModel.getSoDienThoaiNguoiDangKy());
-//            Date tuNgay = new Date(tamTruModel.getTuNgay().getTime());
-//            preparedStatement.setDate(4, tuNgay);
-//            Date denNgay = new Date(tamTruModel.getDenNgay().getTime());
-//            preparedStatement.setDate(5, denNgay);
-//            preparedStatement.setString(6, tamTruModel.getLyDo());
+            preparedStatement.setInt(1, khaiTuModel.getIdNguoiKhai());
+            preparedStatement.setInt(2, khaiTuModel.getIdNguoiChet());
+            Date tuNgay = new Date(khaiTuModel.getNgayKhai().getTime());
+            preparedStatement.setDate(3, tuNgay);
+            Date denNgay = new Date(khaiTuModel.getNgayChet().getTime());
+            preparedStatement.setDate(4, denNgay);
+            preparedStatement.setString(5, khaiTuModel.getLyDoChet());
             preparedStatement.execute();
             preparedStatement.close();
             connection.close();

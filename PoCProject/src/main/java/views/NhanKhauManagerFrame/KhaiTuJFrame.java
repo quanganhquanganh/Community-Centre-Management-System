@@ -256,7 +256,11 @@ public class KhaiTuJFrame extends javax.swing.JFrame {
         if (CMT1.isEmpty() || CMT2.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Vui lòng nhập số CMT/CCCD", "Warning!!", JOptionPane.WARNING_MESSAGE);
             return;
-        } else {
+        } else if(CMT1.equals(CMT2)) {
+            JOptionPane.showMessageDialog(null, "Người khai phải có CMT/CCCD khác người chết", "Warning!!", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        else {
             try {
                 long cmt1 = Long.parseLong(CMT1);
                 long cmt2 = Long.parseLong(CMT2);
@@ -317,6 +321,7 @@ public class KhaiTuJFrame extends javax.swing.JFrame {
             this.khaiTuModel.setNgayChet(this.jDateChooser2.getDate());
             this.khaiTuModel.setLyDoChet(this.jTextArea1.getText().trim());
             if (this.controller.addNew(this.khaiTuModel)) {
+                
                 JOptionPane.showMessageDialog(null, "Thêm thành công.");
             }
             close();
