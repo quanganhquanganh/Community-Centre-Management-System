@@ -47,6 +47,7 @@ public class UserLoginController {
         return true;
     }
     public void save_(String userUsername, String userPassword)  throws SQLException, ClassNotFoundException {
+      
         try {
             Connection connection1 = MysqlConnection.getMysqlConnection();
             Statement stm1 = connection1.createStatement();
@@ -65,8 +66,17 @@ public class UserLoginController {
             //System.out.println(rs1);
             rs1.executeUpdate();
             rs1.close();
-            //connection1.close();
+            connection1.close();
         } catch (Exception e) {System.out.println(e);}    
+    }
+    public void reset_pass(String userUsername, String userPassword) throws SQLException, ClassNotFoundException{
+        try{Connection connection = MysqlConnection.getMysqlConnection();
+        Statement stm = connection.createStatement();
+        String query = "UPDATE USERTAB set USERPASSWORD ='"+ userPassword +"' WHERE USERUSERNAME = '" + userUsername + "'";
+        PreparedStatement rs = connection.prepareStatement(query);
+        rs.executeUpdate();
+        rs.close();
+        connection.close();}catch (Exception e) {System.out.println(e);}
     }
     public static void main(String args[]){
         try {
