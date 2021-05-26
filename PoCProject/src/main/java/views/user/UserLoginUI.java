@@ -465,7 +465,7 @@ public class UserLoginUI extends javax.swing.JFrame  {
          try {
             if (!this.cont1.checker(tk2, mk2)) {
                  JOptionPane.showMessageDialog(rootPane, "đổi mật khẩu thành công", "Thông báo nè ", JOptionPane.WARNING_MESSAGE);
-                 this.cont1.reset_pass(tk2, mk2);
+                 //this.cont1.reset_pass(tk2, mk2);
                  jDialog1.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Tài khoản không tồn tại", "Warning", JOptionPane.WARNING_MESSAGE);
