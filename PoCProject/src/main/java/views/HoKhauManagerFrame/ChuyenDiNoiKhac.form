@@ -211,7 +211,7 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cancelBtn" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="cancelBtn" min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="confirmBtn" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
