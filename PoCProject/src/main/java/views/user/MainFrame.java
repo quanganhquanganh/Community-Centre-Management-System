@@ -224,22 +224,11 @@ public class MainFrame extends JFrame {
         taoYeuCauMoi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new DienDonSuDungNhaVanHoaViews().hienThi();
+                dispose();
             }
         });
         add(taoYeuCauMoi);
-        invalidate();
-        validate();
-        repaint();
-        hienThi1 = new JButton("Cập Nhật");
-        hienThi1.setFont(new java.awt.Font("Tahoma", 1, 12));
-        hienThi1.setBounds(850, 50, 100, 50);
-        add(hienThi1);
-         hienThi1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent eee) {
-                dispose();
-                new MainFrame();
-            }
-        });
+        
         
     }
     
