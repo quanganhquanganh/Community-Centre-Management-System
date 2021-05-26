@@ -30,21 +30,17 @@ public class ThongKePanelController {
     private JComboBox StatusJcb;
     private JTextField tuTuoiJtf;
     private JTextField denTuoiJtf;
-    private JTextField tuNamJtf;
-    private JTextField denNamJtf;
     private JPanel jpnView;
     private NhanKhauService nhanKhauService;
     private List<NhanKhauBean> listNhanKhauBeans;
     private ClassTableModel classTableModel;
     private final String[] COLUMNS = {"ID", "Họ tên", "Ngày sinh", "Giới tính", "Địa chỉ hiện nay"};
 
-    public ThongKePanelController(JComboBox genderJcb, JComboBox statusJcb, JTextField tuTuoiJtf, JTextField denTuoiJtf, JTextField tuNamJtf, JTextField denNamJtf, JPanel jpnView) {
+    public ThongKePanelController(JComboBox genderJcb, JComboBox statusJcb, JTextField tuTuoiJtf, JTextField denTuoiJtf, JPanel jpnView) {
         this.GenderJcb = genderJcb;
         this.StatusJcb = statusJcb;
         this.tuTuoiJtf = tuTuoiJtf;
         this.denTuoiJtf = denTuoiJtf;
-        this.tuNamJtf = tuNamJtf;
-        this.denNamJtf = denNamJtf;
         this.jpnView = jpnView;
         this.nhanKhauService = new NhanKhauService();
         this.listNhanKhauBeans = new ArrayList<>();
@@ -77,12 +73,6 @@ public class ThongKePanelController {
                 denTuoi = Integer.parseInt(this.denTuoiJtf.getText().trim());
             } else {
                 denTuoi = 200;
-            }
-            if (!this.tuNamJtf.getText().trim().isEmpty()) {
-                tuNam = Integer.parseInt(this.tuNamJtf.getText().trim());
-            }
-            if (!this.denNamJtf.getText().trim().isEmpty()) {
-                denNam = Integer.parseInt(this.denNamJtf.getText().trim());
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(denTuoiJtf, "Vui lòng nhập đúng kiểu dữ liệu!!", "Warring", JOptionPane.ERROR_MESSAGE);
@@ -153,21 +143,7 @@ public class ThongKePanelController {
         this.denTuoiJtf = denTuoiJtf;
     }
 
-    public JTextField getTuNamJtf() {
-        return tuNamJtf;
-    }
 
-    public void setTuNamJtf(JTextField tuNamJtf) {
-        this.tuNamJtf = tuNamJtf;
-    }
-
-    public JTextField getDenNamJtf() {
-        return denNamJtf;
-    }
-
-    public void setDenNamJtf(JTextField denNamJtf) {
-        this.denNamJtf = denNamJtf;
-    }
     
     
 }
