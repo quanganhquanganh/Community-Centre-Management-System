@@ -168,9 +168,7 @@ CREATE TABLE `thay_doi_nhan_khau` (
   `tenChuHo` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `quanHeVoiChuHo` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `noiDungThayDoi` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ngayThayDoi` date DEFAULT NULL,
-  `maHoKhauCu` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `maHoKhauMoi` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+  `ngayThayDoi` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- CREATE USER TABLE
@@ -342,9 +340,9 @@ INSERT INTO `nhan_khau` (`ID`, `maNhanKhau`, `hoTen`, `bietDanh`, `namSinh`, `gi
 (38, NULL, 'Bùi Thị Hà', '', '1948-02-03', 'Nữ', NULL, 'Hải Phòng', 'Kinh', 'Không', 'Việt Nam', '', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '10/12', 'Không', 'Không', 'Không', 'Nội trợ', 'Tại nhà', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL);
 
 -- INSERT INTO THAY DOI NHAN KHAU TABLE 
-INSERT INTO `thay_doi_nhan_khau` (`ID`,`idNhanKhau`, `hoTen`, `bietDanh`, `namSinh`, `gioiTinh`, `noiSinh`, `nguyenQuan`, `danToc`, `tonGiao`, `quocTich`, `soHoChieu`, `noiThuongTru`, `diaChiHienNay`, `soDienThoai`, `tenChuHo` , `quanHeVoiChuHo`, `noiDungThayDoi`,`ngayThayDoi`,`maHoKhauCu`,`maHoKhauMoi`) VALUES
-(1,26, 'Trinh Văn An', '', '1990-12-07', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội','69696969696',  'Trinh Văn An','Chủ hộ','Xóa đăng ký thường trú, xóa đăng ký tạm trú','2021-5-19','TQB001','TĐN023'),
-(2,32, 'Nguyễn Trà My', '', '1997-12-12', 'Nữ', NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội','96969696969','Nguyễn Tiến Dũng','Con gái','Tách sổ hộ khẩu','2021-4-12','TQB003','TQB005');
+INSERT INTO `thay_doi_nhan_khau` (`ID`,`idNhanKhau`, `hoTen`, `bietDanh`, `namSinh`, `gioiTinh`, `noiSinh`, `nguyenQuan`, `danToc`, `tonGiao`, `quocTich`, `soHoChieu`, `noiThuongTru`, `diaChiHienNay`, `soDienThoai`, `tenChuHo` , `quanHeVoiChuHo`, `noiDungThayDoi`,`ngayThayDoi`) VALUES
+(1,26, 'Trinh Văn An', '', '1990-12-07', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội','69696969696',  'Trinh Văn An','Chủ hộ','Xóa đăng ký thường trú, xóa đăng ký tạm trú','2021-5-19'),
+(2,32, 'Nguyễn Trà My', '', '1997-12-12', 'Nữ', NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội','96969696969','Nguyễn Tiến Dũng','Con gái','Tách sổ hộ khẩu','2021-4-12');
 
 -- INSERT INTO THANH VIEN CUA HO TABLE
 INSERT INTO `thanh_vien_cua_ho` (`idNhanKhau`, `idHoKhau`, `quanHeVoiChuHo`) VALUES
@@ -593,9 +591,7 @@ ALTER TABLE `chung_minh_thu`
 -- Các ràng buộc cho bảng `dinh_chinh`
 --
 ALTER TABLE `dinh_chinh`
-  ADD CONSTRAINT `dinh_chinh_ibfk_1` FOREIGN KEY (`idHoKhau`) REFERENCES `ho_khau` (`ID`),
-  ADD CONSTRAINT `dinh_chinh_ibfk_2` FOREIGN KEY (`nguoiThayDoi`) REFERENCES `thu_ky` (`ID`);
-
+  ADD CONSTRAINT `dinh_chinh_ibfk_1` FOREIGN KEY (`idHoKhau`) REFERENCES `ho_khau` (`ID`);
 --
 -- Các ràng buộc cho bảng `gia_dinh`
 --
@@ -614,13 +610,6 @@ ALTER TABLE `ho_khau`
 ALTER TABLE `khai_tu`
   ADD CONSTRAINT `khai_tu_ibfk_1` FOREIGN KEY (`idNguoiKhai`) REFERENCES `nhan_khau` (`ID`),
   ADD CONSTRAINT `khai_tu_ibfk_2` FOREIGN KEY (`idNguoiChet`) REFERENCES `nhan_khau` (`ID`);
-
---
--- Các ràng buộc cho bảng `nhan_khau`
---
-ALTER TABLE `nhan_khau`
-  ADD CONSTRAINT `nhan_khau_ibfk_1` FOREIGN KEY (`idNguoiTao`) REFERENCES `thu_ky` (`ID`),
-  ADD CONSTRAINT `nhan_khau_ibfk_2` FOREIGN KEY (`idNguoiXoa`) REFERENCES `thu_ky` (`ID`);
 
 
 ALTER TABLE `thay_doi_nhan_khau`
