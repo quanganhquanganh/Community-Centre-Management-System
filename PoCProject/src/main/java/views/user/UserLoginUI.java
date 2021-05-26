@@ -118,7 +118,8 @@ public class UserLoginUI extends javax.swing.JFrame  {
 
         jCheckBox1.setText("jCheckBox1");
 
-        jDialog1.setMinimumSize(new java.awt.Dimension(500, 400));
+        jDialog1.setFocusable(false);
+        jDialog1.setMinimumSize(new java.awt.Dimension(500, 290));
         jDialog1.setModal(true);
         jDialog1.getContentPane().setLayout(null);
 
@@ -128,21 +129,18 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Vui lòng điền thông tin !");
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 102), 3));
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(90, 30, 300, 35);
+        jLabel5.setBounds(90, 30, 300, 29);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Tên đăng nhập");
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel3.add(jLabel6);
         jLabel6.setBounds(50, 130, 130, 20);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Mật khẩu");
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel3.add(jLabel7);
         jLabel7.setBounds(50, 170, 130, 20);
 
@@ -171,7 +169,7 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jPanel3.setBounds(-3, -1, 500, 290);
 
         jDialog2.setBackground(new java.awt.Color(82, 83, 81));
-        jDialog2.setMinimumSize(new java.awt.Dimension(500, 400));
+        jDialog2.setMinimumSize(new java.awt.Dimension(400, 300));
         jDialog2.getContentPane().setLayout(null);
 
         jPanel4.setBackground(new java.awt.Color(82, 83, 81));
@@ -182,25 +180,27 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Nhập thông tin để lập lại mật khẩu");
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 3));
         jPanel4.add(jLabel9);
         jLabel9.setBounds(40, 30, 320, 40);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Tài khoản");
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel4.add(jLabel10);
         jLabel10.setBounds(40, 100, 80, 40);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Mât khẩu");
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel4.add(jLabel11);
         jLabel11.setBounds(40, 170, 80, 40);
 
         taiKhoan2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        taiKhoan2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                taiKhoan2ActionPerformed(evt);
+            }
+        });
         jPanel4.add(taiKhoan2);
         taiKhoan2.setBounds(170, 100, 190, 40);
         jPanel4.add(matKhau2);
@@ -381,7 +381,7 @@ public class UserLoginUI extends javax.swing.JFrame  {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -426,12 +426,13 @@ public class UserLoginUI extends javax.swing.JFrame  {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        jDialog2.setLocationRelativeTo(null);
         jDialog2.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
+        jDialog1.setLocationRelativeTo(null);
         jDialog1.setVisible(true);
     // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -475,6 +476,10 @@ public class UserLoginUI extends javax.swing.JFrame  {
     private void taiKhoan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taiKhoan1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_taiKhoan1ActionPerformed
+
+    private void taiKhoan2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taiKhoan2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_taiKhoan2ActionPerformed
 
     /**
      * @param args the command line arguments
