@@ -57,7 +57,6 @@ CREATE TABLE `ho_khau` (
 -- CREATE KHAI TU  TABLE 
 CREATE TABLE `khai_tu` (
   `ID` int(11) NOT NULL,
-  `soGiayKhaiTu` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `idNguoiKhai` int(11) DEFAULT NULL,
   `idNguoiChet` int(11) DEFAULT NULL,
   `ngayKhai` date DEFAULT NULL,
@@ -147,6 +146,29 @@ CREATE TABLE `thu_ky` (
   `ID` int(11) NOT NULL,
   `thu_ky_Name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `passwd` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- CREATE TABLE THAY DOI NHAN KHAU
+CREATE TABLE `thay_doi_nhan_khau` (
+  `ID` int(11) NOT NULL,
+  `idNhanKhau` int(11) DEFAULT NULL,
+  `hoTen` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bietDanh` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `namSinh` date DEFAULT NULL,
+  `gioiTinh` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `noiSinh` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `nguyenQuan` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `danToc` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `tonGiao` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `quocTich` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `soHoChieu` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `noiThuongTru` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `diaChiHienNay` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `soDienThoai` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `tenChuHo` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `quanHeVoiChuHo` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `noiDungThayDoi` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ngayThayDoi` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- CREATE USER TABLE
@@ -317,6 +339,11 @@ INSERT INTO `nhan_khau` (`ID`, `maNhanKhau`, `hoTen`, `bietDanh`, `namSinh`, `gi
 (37, NULL, 'Lý Văn Công', '', '1945-06-04', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '10/12 chính quy', 'Không', 'Không', 'Không', 'Về hưu', 'Không', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL),
 (38, NULL, 'Bùi Thị Hà', '', '1948-02-03', 'Nữ', NULL, 'Hải Phòng', 'Kinh', 'Không', 'Việt Nam', '', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 5 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', '10/12', 'Không', 'Không', 'Không', 'Nội trợ', 'Tại nhà', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-08', 1, NULL, NULL, NULL, NULL);
 
+-- INSERT INTO THAY DOI NHAN KHAU TABLE 
+INSERT INTO `thay_doi_nhan_khau` (`ID`,`idNhanKhau`, `hoTen`, `bietDanh`, `namSinh`, `gioiTinh`, `noiSinh`, `nguyenQuan`, `danToc`, `tonGiao`, `quocTich`, `soHoChieu`, `noiThuongTru`, `diaChiHienNay`, `soDienThoai`, `tenChuHo` , `quanHeVoiChuHo`, `noiDungThayDoi`,`ngayThayDoi`) VALUES
+(1,26, 'Trinh Văn An', '', '1990-12-07', 'Nam', NULL, 'Hà Nội', 'Kinh', 'Không', 'Việt Nam', '', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội', 'Số 1 Tạ Quang Bưu, Hai Bà Trưng, Hà Nội','69696969696',  'Trinh Văn An','Chủ hộ','Xóa đăng ký thường trú, xóa đăng ký tạm trú','2021-5-19'),
+(2,32, 'Nguyễn Trà My', '', '1997-12-12', 'Nữ', NULL, 'Hải Dương', 'Kinh', 'Thiên chúa giáo', 'Việt Nam', '', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội', 'Số 3 Tạ Quang Bửu, quận Hai Bà Trưng, Hà Nội','96969696969','Nguyễn Tiến Dũng','Con gái','Tách sổ hộ khẩu','2021-4-12');
+
 -- INSERT INTO THANH VIEN CUA HO TABLE
 INSERT INTO `thanh_vien_cua_ho` (`idNhanKhau`, `idHoKhau`, `quanHeVoiChuHo`) VALUES
 (26, 14, 'Chủ hộ'),
@@ -444,6 +471,14 @@ ALTER TABLE `nhan_khau`
 ALTER TABLE `nhan_khau` 
   ADD FULLTEXT KEY `hoTen` (`hoTen`,`bietDanh`);
 --
+
+
+-- Chỉ mục cho bảng `thay_doi_nhan_khau`
+ALTER TABLE `thay_doi_nhan_khau`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `idNhanKhau` (`idNhanKhau`);
+
+
 -- Chỉ mục cho bảng `tam_tru`
 --
 ALTER TABLE `tam_tru`
@@ -517,6 +552,11 @@ ALTER TABLE `nhan_khau`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
+-- AUTO_INCREMENT cho bảng `thay_doi_nhan_khau`
+ALTER TABLE `thay_doi_nhan_khau`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+
 -- AUTO_INCREMENT cho bảng `tam_tru`
 --
 ALTER TABLE `tam_tru`
@@ -580,6 +620,10 @@ ALTER TABLE `nhan_khau`
   ADD CONSTRAINT `nhan_khau_ibfk_1` FOREIGN KEY (`idNguoiTao`) REFERENCES `thu_ky` (`ID`),
   ADD CONSTRAINT `nhan_khau_ibfk_2` FOREIGN KEY (`idNguoiXoa`) REFERENCES `thu_ky` (`ID`);
 
+
+ALTER TABLE `thay_doi_nhan_khau`
+  ADD CONSTRAINT `thay_doi_nhan_khau_ibfk_1` FOREIGN KEY (`idNhanKhau`) REFERENCES `nhan_khau` (`ID`);
+ 
 --
 -- Các ràng buộc cho bảng `tam_tru`
 --
