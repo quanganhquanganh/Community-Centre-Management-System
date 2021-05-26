@@ -8,7 +8,6 @@ import java.util.Date;
  */
 public class KhaiTuModel {
     private int ID;
-    private String soGiayKhaiTu;
     private int idNguoiKhai;
     private int idNguoiChet;
     private Date ngayKhai;
@@ -21,14 +20,6 @@ public class KhaiTuModel {
 
     public void setID(int ID) {
         this.ID = ID;
-    }
-
-    public String getSoGiayKhaiTu() {
-        return soGiayKhaiTu;
-    }
-
-    public void setSoGiayKhaiTu(String soGiayKhaiTu) {
-        this.soGiayKhaiTu = soGiayKhaiTu;
     }
 
     public int getIdNguoiKhai() {

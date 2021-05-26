@@ -357,6 +357,8 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         if (!validateForm()) {
             JOptionPane.showMessageDialog(null, "Vui lòng nhập hết các trường bắt buộc!", "Warning!!", JOptionPane.WARNING_MESSAGE);
         } else {
+            System.out.print(this.tuNgayJdc.getDate());
+            System.out.print(this.denNgayJdc.getDate());
             this.tamVangModel.setMaGiayTamVang(this.maGiayTamVangJtf.getText().trim());
             this.tamVangModel.setNoiTamTru(this.noiTamTruJtf.getText().trim());
             this.tamVangModel.setTuNgay(this.tuNgayJdc.getDate());
