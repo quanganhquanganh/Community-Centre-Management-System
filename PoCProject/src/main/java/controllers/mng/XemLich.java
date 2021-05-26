@@ -23,12 +23,17 @@ public class XemLich {
         try{
             Connection conn =  services.MysqlConnection.getMysqlConnection();
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("select * from eventtable order by starttime desc");
+            String query = "select * from eventtable"
+                         + " WHERE DATEDIFF(FINISHTIME, CURDATE()) > 0"
+                         + " order by starttime desc";
+            ResultSet rs = st.executeQuery(query);
             while(rs.next()){  
                 model.addRow(new Object[]{rs.getString("EVENTName"), rs.getString("StartTime"), rs.getString("FinishTime"), rs.getString("RoomNAME")});
             }
         } catch(SQLException e){
+            System.out.print(e);
         } catch(ClassNotFoundException e){
+            System.out.print(e);
         }
     }
     
@@ -59,12 +64,15 @@ public class XemLich {
         try{
             Connection conn =  services.MysqlConnection.getMysqlConnection();
             Statement st = conn.createStatement();
+            String query = "select * from eventTABLE"
+                         + " WHERE DATEDIFF(?, STARTTIME) > 0";
             ResultSet rs = st.executeQuery("select * from eventTABLE");
             while(rs.next()){
                 if(rs.getString("RoomNAME").equals(room)){
                     String startTimeStr = rs.getString("StartTime");
                     String endTimeStr = rs.getString("FinishTime");
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                    
                     LocalDateTime db_startTime = LocalDateTime.parse(startTimeStr, formatter);
                     LocalDateTime db_endTime = LocalDateTime.parse(endTimeStr, formatter);
                     System.out.println(db_startTime);System.out.println(db_endTime);  
@@ -76,6 +84,7 @@ public class XemLich {
                 }
             }
         } catch(SQLException e){
+            System.out.print(e);
         } catch(ClassNotFoundException e){
         }
         return true;

@@ -18,6 +18,7 @@ public class ThongKePanel extends javax.swing.JPanel {
         initComponents();
         this.controller = new ThongKePanelController(GenderJcb, StatusJcb, tuTuoiJtf, denTuoiJtf, tuNamJtf, denNamJtf, tableJpn);
         this.controller.setDataTable();
+        this.controller.setData();
     }
 
     /**
@@ -105,7 +106,7 @@ public class ThongKePanel extends javax.swing.JPanel {
         });
 
         StatusJcb.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        StatusJcb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Toàn bộ", "Thường trú", "Tạm trú", "Tạm vắng" }));
+        StatusJcb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Toàn bộ", "Thường trú", "Tạm trú", "Tạm vắng", "Khai tử" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

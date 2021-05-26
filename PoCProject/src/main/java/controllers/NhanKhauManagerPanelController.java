@@ -42,7 +42,8 @@ public class NhanKhauManagerPanelController {
         this.jtfSearch = jtfSearch;
         classTableModel = new ClassTableModel();
         this.nhanKhauService = new NhanKhauService();
-        this.listNhanKhauBeans = this.nhanKhauService.getListNhanKhau();
+        this.listNhanKhauBeans = this.nhanKhauService.statisticNhanKhau(-1, 200, "Toan bo", "Chua chet", 0, 2100);
+        
         initAction();
     }
 

@@ -96,6 +96,9 @@ public class HoKhauBean {
                     + "</td>"
                     + "</tr>";
         }
+        
+        
+        
         res += "</table></div></html>";
         return res;
     }
