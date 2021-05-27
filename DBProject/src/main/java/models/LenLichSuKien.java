@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 package models;
-/**
- *
- * @author dungtinhhd123
- */
+
 public class LenLichSuKien {
     private String roomName;
     private String startTime;
