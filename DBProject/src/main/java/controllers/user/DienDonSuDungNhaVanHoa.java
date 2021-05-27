@@ -9,10 +9,7 @@ import services.MysqlConnection;
 import java.sql.*;
 import models.DonYeuCau;
 
-/**
- *
- * @author macbookpro
- */
+
 public class DienDonSuDungNhaVanHoa {
 
     private int requestID;
