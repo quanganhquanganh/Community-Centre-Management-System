@@ -5,10 +5,7 @@
  */
 package controllers.mng;
 
-/**
- *
- * @author macbookpro
- */
+
 public class CurrentMngUsername {
     String currentMngusername;
 
