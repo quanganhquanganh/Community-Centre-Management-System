@@ -5,10 +5,7 @@
  */
 package models;
 
-/**
- *
- * @author dungtinhhd123
- */
+
 public class UserLogin {
     private String useUsername;
     private String userPassword;
