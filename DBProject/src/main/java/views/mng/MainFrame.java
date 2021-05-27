@@ -20,10 +20,7 @@ import services.MysqlConnection;
 
 import controllers.user.XemLichSuDungNhaVanHoaController;
 
-/**
- *
- * @author keplegarry
- */
+
 public class MainFrame extends javax.swing.JFrame {
 
     /**
