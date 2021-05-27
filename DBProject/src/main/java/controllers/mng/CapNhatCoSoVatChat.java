@@ -14,10 +14,7 @@ import javax.swing.JOptionPane;
 import models.ThongTinCoSoVatChat;
 import services.MysqlConnection;
 
-/**
- *
- * @author keplegarry
- */
+
 public class CapNhatCoSoVatChat {
     public static ThongTinCoSoVatChat thongTinCoSoVatChat(String name, String room) {
         try{
