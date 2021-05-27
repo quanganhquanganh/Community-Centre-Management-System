@@ -5,10 +5,7 @@
  */
 package models;
 
-/**
- *
- * @author dungtinhhd123
- */
+
 public class ManagerLogin {
     private String mngUsername;
     private String mngPassword;
