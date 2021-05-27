@@ -12,10 +12,7 @@ import services.MysqlConnection;
 import java.util.*;
 import javax.swing.*;
 
-/**
- *
- * @author macbookpro
- */
+
 //Cần xem lại
 /*
 * Người dùng kiểm tra tình trạng của những yêu cầu mà mình đã gửi.
