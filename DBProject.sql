@@ -287,10 +287,7 @@ INSERT INTO `chung_minh_thu` (`ID`, `idNhanKhau`, `soCMT`, `ngayCap`, `noiCap`) 
 (19, 45, '000000000018', NULL, NULL),
 (20, 46, '000000000019', NULL, NULL),
 (21, 47, '000000000020', NULL, NULL),
-(22, 48, '100000000021', NULL, NULL),
-(23, 49, '100000000022', NULL, NULL),
-(24, 50, '000000000023', NULL, NULL),
-(25, 51, '000000000024', NULL, NULL);
+(24, 50, '000000000021', NULL, NULL),
 
 -- INSERT INTO GIA DINH TABLE 
 INSERT INTO `gia_dinh` (`ID`, `idNhanKhau`, `hoTen`, `namSinh`, `gioiTinh`, `quanHeVoiNhanKhau`, `ngheNghiep`, `diaChiHienTai`) VALUES
@@ -385,16 +382,16 @@ INSERT INTO `tieu_su` (`ID`, `idNhanKhau`, `tuNgay`, `denNgay`, `diaChi`, `ngheN
 (12, 37, '1961-01-01', '1963-01-01', 'Không rõ', 'Bộ đội', 'Hà Nội');
 
 -- INSERT INTO USERTABLE
-INSERT INTO USERTAB VALUES ('0000000001','dobuiquanganh','root','Đỗ Bùi Quang Anh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000002','nguyenvietanh','root','Nguyễn Việt Anh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000003','nguyenanhvuong','root','Nguyễn Anh Vương','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000004','leanhdung','root','Lê Anh Dũng','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000005','daongocban','root','Đào Ngọc Bản','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000006','phungngocvinh','root','Phùng Ngọc Vinh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000007','nguyentienviet','root','Nguyễn Tiến Việt','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000008','dangleduy','root','Đặng Lê Duy','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000009','ngotrunghieu','root','Ngô Trung Hiếu','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
-INSERT INTO USERTAB VALUES ('0000000010','nguyencongbinh','root','Nguyễn Công Bình','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000012','dobuiquanganh','root','Đỗ Bùi Quang Anh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000013','nguyenvietanh','root','Nguyễn Việt Anh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000014','nguyenanhvuong','root','Nguyễn Anh Vương','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000015','leanhdung','root','Lê Anh Dũng','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000016','daongocban','root','Đào Ngọc Bản','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000017','phungngocvinh','root','Phùng Ngọc Vinh','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000018','nguyentienviet','root','Nguyễn Tiến Việt','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000019','dangleduy','root','Đặng Lê Duy','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000020','ngotrunghieu','root','Ngô Trung Hiếu','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
+INSERT INTO USERTAB VALUES ('0000000021','nguyencongbinh','root','Nguyễn Công Bình','Hoa Thám-Hà Nội','2021-05-01 12:12:12','Sinh viên','2001-02-31','123456789');
 
 -- INSERT INTO MANAGER
 
