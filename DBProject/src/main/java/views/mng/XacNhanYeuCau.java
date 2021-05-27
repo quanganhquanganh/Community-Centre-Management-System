@@ -19,10 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-/**
- *
- * @author macbookpro
- */
+
 public class XacNhanYeuCau {
 
     private JButton accept, deny;
