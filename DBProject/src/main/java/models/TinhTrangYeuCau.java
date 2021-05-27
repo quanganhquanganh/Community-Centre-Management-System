@@ -5,10 +5,7 @@
  */
 package models;
 
-/**
- *
- * @author dungtinhhd123
- */
+
 public class TinhTrangYeuCau {
     private String state;
     private int fee;
