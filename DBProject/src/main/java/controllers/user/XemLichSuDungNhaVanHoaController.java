@@ -17,10 +17,7 @@ import java.sql.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author macbookpro
- */
+
 public class XemLichSuDungNhaVanHoaController {
 
     private List<XemLichSuDung> lichSuDung = new ArrayList<XemLichSuDung>();
