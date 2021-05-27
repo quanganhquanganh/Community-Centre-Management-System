@@ -11,10 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-/**
- *
- * @author keplegarry
- */
+
 public class LogInView extends javax.swing.JFrame {
 
     /**
