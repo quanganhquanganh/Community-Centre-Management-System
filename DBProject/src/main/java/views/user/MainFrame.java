@@ -22,10 +22,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author macbookpro
- */
+
 public class MainFrame extends JFrame {
 
     private JButton trangChu, xemYeuCau, xemLichSuDung, taoYeuCauMoi, hienThi,hienThi1;
