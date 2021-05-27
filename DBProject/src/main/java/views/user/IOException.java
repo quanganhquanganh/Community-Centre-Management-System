@@ -5,10 +5,7 @@
  */
 package views.user;
 
-/**
- *
- * @author Administrator
- */
+
 class IOException {
     
 }
