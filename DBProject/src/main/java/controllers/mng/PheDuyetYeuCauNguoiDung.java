@@ -14,10 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-/**
- *
- * @author macbookpro
- */
+
 public class PheDuyetYeuCauNguoiDung {
 
     private List<DonYeuCau> listDonYeuCau = new ArrayList<DonYeuCau>();
