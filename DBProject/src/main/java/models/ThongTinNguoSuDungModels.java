@@ -5,10 +5,7 @@
  */
 package models;
 
-/**
- *
- * @author macbookpro
- */
+
 public class ThongTinNguoSuDungModels {
     private String userUsername;
     private String userPassword;
