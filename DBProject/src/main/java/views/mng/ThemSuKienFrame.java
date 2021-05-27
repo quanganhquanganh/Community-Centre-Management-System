@@ -26,10 +26,7 @@ import javax.swing.JLabel;
 
 import java.time.Instant;
 import java.time.ZoneId;
-/**
- *
- * @author keplegarry
- */
+
 
 import javax.swing.DefaultComboBoxModel;
 //import com.jgoodies.forms.factories.DefaultComponentFactory;
