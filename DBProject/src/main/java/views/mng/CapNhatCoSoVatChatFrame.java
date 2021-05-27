@@ -13,10 +13,7 @@ import services.MysqlConnection;
 import controllers.mng.CapNhatCoSoVatChat;
 import javax.swing.JOptionPane;
 import controllers.user.XemLichSuDungNhaVanHoaController;
-/**
- *
- * @author keplegarry
- */
+
 public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
 
     /**
