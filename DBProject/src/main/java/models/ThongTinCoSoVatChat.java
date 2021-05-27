@@ -5,10 +5,7 @@
  */
 package models;
 
-/**
- *
- * @author dungtinhhd123
- */
+
 public class ThongTinCoSoVatChat {
     private String itemName;
     private String roomName;
