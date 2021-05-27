@@ -6,10 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import controllers.NhanKhauManagerController.KhaiTuController;
 import models.KhaiTuModel;
-/**
- *
- * @author Hai
- */
+
 public class KhaiTuJFrame extends javax.swing.JFrame {
 
     /**
