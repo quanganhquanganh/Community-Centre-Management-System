@@ -6,10 +6,7 @@
 package controllers.user;
 import services.MysqlConnection;
 import java.sql.*;
-/**
- *
- * @author dungtinhhd123
- */
+
 
 /*
 * Điều khiển đăng nhập
