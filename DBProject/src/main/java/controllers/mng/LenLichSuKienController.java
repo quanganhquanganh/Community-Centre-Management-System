@@ -11,10 +11,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import models.LenLichSuKien;
 import services.MysqlConnection;
-/**
- *
- * @author keplegarry
- */
+
 public class LenLichSuKienController {
     public static void lenLich(LenLichSuKien lich){
         try{
