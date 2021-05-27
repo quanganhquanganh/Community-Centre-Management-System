@@ -15,10 +15,7 @@ import javax.swing.table.DefaultTableModel;
 import models.LenLichSuKien;
 import models.TinhTrangYeuCau;
 
-/**
- *
- * @author keplegarry
- */
+
 public class ThongTinNguoiDungDangKy {
     public static void print(DefaultTableModel model){
         try{
