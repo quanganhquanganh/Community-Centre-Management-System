@@ -7,10 +7,7 @@ import views.NhanKhauManagerFrame.DangKyTamTruJFrame;
 import views.NhanKhauManagerFrame.DangKyTamVangJFrame;
 import views.NhanKhauManagerFrame.KhaiTuJFrame;
 
-/**
- *
- * @author Hai
- */
+
 public class NhanKhauManagePanel extends javax.swing.JPanel {
 
     /**
