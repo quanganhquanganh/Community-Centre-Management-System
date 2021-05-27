@@ -9,10 +9,7 @@ import services.MysqlConnection;
 import java.sql.*;
 import models.LenLichSuKien;
 
-/**
- *
- * @author macbookpro
- */
+
 public class CapNhatLichChoNhaVanHoa {
 
     private String roomName;
