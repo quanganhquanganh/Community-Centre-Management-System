@@ -9,10 +9,7 @@ import java.sql.*;
 import services.MysqlConnection;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author keplegarry
- */
+
 public class MngLoginController {
     private static boolean check = false;
     
