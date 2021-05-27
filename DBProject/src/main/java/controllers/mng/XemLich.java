@@ -14,10 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author keplegarry
- */
+
 public class XemLich {
     public static void show(DefaultTableModel model){
         try{
