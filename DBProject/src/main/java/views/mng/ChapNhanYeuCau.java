@@ -13,10 +13,7 @@ import javax.swing.table.DefaultTableModel;
 import models.LenLichSuKien;
 import models.TinhTrangYeuCau;
 
-/**
- *
- * @author keplegarry
- */
+
 public class ChapNhanYeuCau extends javax.swing.JFrame {
     private int index;
     private DefaultTableModel model;
