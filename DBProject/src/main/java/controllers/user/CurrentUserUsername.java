@@ -5,10 +5,7 @@
  */
 package controllers.user;
 
-/**
- *
- * @author macbookpro
- */
+
 public class CurrentUserUsername {
 
     private static String currentUserUsrename;
