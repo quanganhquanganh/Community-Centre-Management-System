@@ -8,10 +8,7 @@ import models.ThongTinNguoSuDungModels;
 import services.MysqlConnection;
 import java.sql.*;
 import javax.swing.JOptionPane;
-/**
- *
- * @author macbookpro
- */
+
 public class ThongTinNguoiSuDungController {
     ThongTinNguoSuDungModels thongTinNguoiSuDung = new ThongTinNguoSuDungModels();
     public ThongTinNguoSuDungModels nguoiSuDung(String userUsername) {
