@@ -386,7 +386,7 @@ INSERT INTO USERTAB VALUES ('0000000011','nguyencongbinh','root','Nguyễn Công
 
 -- INSERT INTO MANAGER
 
-INSERT INTO MANAGER VALUES('admin', 'admin', 'Nguyễn Tiến Việt', 'Long Biên-Hà Nội', '2001-04-31', '2021-05-01 17:17:17', '0973265421');
+INSERT INTO MANAGER VALUES('admin', '1', 'Nguyễn Tiến Việt', 'Long Biên-Hà Nội', '2001-04-31', '2021-05-01 17:17:17', '0973265421');
 
 -- INSERT INTO ROOM
 INSERT INTO ROOM VALUES('Hội trường', 1, 'Họp ,Hội ,Liên hoan');
