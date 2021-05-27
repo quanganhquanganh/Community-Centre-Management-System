@@ -287,7 +287,7 @@ INSERT INTO `chung_minh_thu` (`ID`, `idNhanKhau`, `soCMT`, `ngayCap`, `noiCap`) 
 (19, 45, '000000000018', NULL, NULL),
 (20, 46, '000000000019', NULL, NULL),
 (21, 47, '000000000020', NULL, NULL),
-(24, 48, '000000000021', NULL, NULL),
+(22, 48, '000000000021', NULL, NULL),
 
 -- INSERT INTO GIA DINH TABLE 
 INSERT INTO `gia_dinh` (`ID`, `idNhanKhau`, `hoTen`, `namSinh`, `gioiTinh`, `quanHeVoiNhanKhau`, `ngheNghiep`, `diaChiHienTai`) VALUES
