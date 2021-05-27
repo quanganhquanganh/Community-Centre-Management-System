@@ -21,10 +21,7 @@ import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author macbookpro
- */
+
 public class UserLoginUI extends javax.swing.JFrame  {
 
     private UserLoginController cont = new UserLoginController();
