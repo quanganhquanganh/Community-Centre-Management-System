@@ -23,10 +23,7 @@ import services.NhanKhauService;
 import utility.ClassTableModel;
 import views.infoViews.InfoJframe;
 
-/**
- *
- * @author Hai
- */
+
 public class NhanKhauManagerPanelController {
     
     private JPanel jpnView;
