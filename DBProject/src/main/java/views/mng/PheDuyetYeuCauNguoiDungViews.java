@@ -19,10 +19,7 @@ import java.awt.Toolkit;
 import models.ThongTinNguoSuDungModels;
 import javax.swing.JLabel;
 
-/**
- *
- * @author macbookpro
- */
+
 public class PheDuyetYeuCauNguoiDungViews {
 
     private PheDuyetYeuCauNguoiDung pheDuyet = new PheDuyetYeuCauNguoiDung();
