@@ -12,10 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import models.ThanhVienCuaHoModel;
 
-/**
- *
- * @author User
- */
+
 public class ThemMoiHoKhau extends javax.swing.JFrame {
 
     private JFrame parentJFrame;
