@@ -17,7 +17,7 @@ import views.mng.HoKhauManagePanel;
 import views.mng.HomePagePanel;
 import views.mng.NhanKhauManagePanel;
 import views.mng.ThongKePanel;
-import views.TimKiemPanel;
+import views.mng.TimKiemPanel;
 
 
 public class MainController {
