@@ -35,7 +35,7 @@ public class TieuSuJFrame extends javax.swing.JFrame {
     }
 
     public void Close() {
-        if (JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(null, "Are you sure to close?", "Warning!!", JOptionPane.YES_NO_OPTION)) {
+        if (JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(null, "Bạn có muốn hủy?", "Warning!!", JOptionPane.YES_NO_OPTION)) {
             this.parentFrame.setEnabled(true);
             dispose();
         }
@@ -165,7 +165,7 @@ public class TieuSuJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelBtnActionPerformed
 
     private void acceptBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptBtnActionPerformed
-        if (JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(null, "Save?", "Confirm", JOptionPane.YES_NO_OPTION)) {
+        if (JOptionPane.OK_OPTION == JOptionPane.showConfirmDialog(null, "Lưu?", "Confirm", JOptionPane.YES_NO_OPTION)) {
             this.controller.changeData();
             this.parentFrame.setEnabled(true);
             dispose();
