@@ -60,9 +60,6 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         description = new javax.swing.JTextArea();
         confirmButton = new javax.swing.JButton();
@@ -79,10 +76,10 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -91,61 +88,52 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(852, 480));
+        setMinimumSize(new java.awt.Dimension(782, 590));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText(" VUI LÒNG ĐIỀN THÔNG TIN SAU");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 4));
+        jLabel1.setText("From đăng kí thuê nhà văn hóa");
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(230, 0, 400, 53);
+        jLabel1.setBounds(220, 30, 360, 80);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("BẮT ĐẦU TỪ");
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel2.setText("BẮT ĐẦU");
+        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 120, 80, 44);
+        jLabel2.setBounds(80, 210, 90, 44);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("HẠN ĐẾN");
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 190, 80, 44);
+        jLabel3.setBounds(80, 270, 80, 44);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("NỘI DUNG");
+        jLabel4.setToolTipText("");
+        jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(70, 260, 80, 80);
+        jLabel4.setBounds(80, 330, 80, 80);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("PHÒNG");
+        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 60, 80, 45);
-
-        jLabel10.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel10.setText("(*)");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(760, 120, 50, 44);
-
-        jLabel11.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel11.setText("(*)");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(430, 120, 43, 44);
-
-        jLabel12.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel12.setText("(*)");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(760, 280, 37, 44);
+        jLabel5.setBounds(80, 140, 70, 45);
 
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
@@ -155,18 +143,18 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         jScrollPane1.setViewportView(description);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(180, 250, 572, 115);
+        jScrollPane1.setBounds(190, 330, 510, 160);
 
         confirmButton.setBackground(new java.awt.Color(255, 255, 255));
-        confirmButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        confirmButton.setText("GỬI BIỂU MẪU");
+        confirmButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        confirmButton.setText("Đăng kí");
         confirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmButtonActionPerformed(evt);
             }
         });
         getContentPane().add(confirmButton);
-        confirmButton.setBounds(350, 380, 174, 46);
+        confirmButton.setBounds(320, 500, 174, 46);
 
         roomComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         roomComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new DienDonSuDungNhaVanHoa().layDanhSachPhong()));
@@ -176,12 +164,12 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(roomComboBox);
-        roomComboBox.setBounds(180, 60, 311, 44);
+        roomComboBox.setBounds(190, 140, 220, 44);
 
         jDateStart.setDateFormatString("dd-MM-yyyy");
         jDateStart.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         getContentPane().add(jDateStart);
-        jDateStart.setBounds(550, 120, 197, 44);
+        jDateStart.setBounds(350, 210, 160, 40);
 
         hourBoxStart.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         hourBoxStart.setModel(modelHours1);
@@ -191,7 +179,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hourBoxStart);
-        hourBoxStart.setBounds(180, 120, 94, 44);
+        hourBoxStart.setBounds(190, 210, 60, 40);
 
         minuteBoxStart.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         minuteBoxStart.setModel(modelMinutes2);
@@ -202,12 +190,12 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(minuteBoxStart);
-        minuteBoxStart.setBounds(330, 120, 91, 44);
+        minuteBoxStart.setBounds(270, 210, 60, 40);
 
         jDateFinish.setDateFormatString("dd-MM-yyyy");
         jDateFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         getContentPane().add(jDateFinish);
-        jDateFinish.setBounds(550, 190, 197, 44);
+        jDateFinish.setBounds(350, 270, 160, 44);
 
         hourBoxFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         hourBoxFinish.setModel(modelHours2);
@@ -217,80 +205,84 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hourBoxFinish);
-        hourBoxFinish.setBounds(180, 190, 94, 44);
+        hourBoxFinish.setBounds(190, 270, 60, 40);
 
         minuteBoxFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         minuteBoxFinish.setModel(modelMinutes1);
+        minuteBoxFinish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                minuteBoxFinishActionPerformed(evt);
+            }
+        });
         getContentPane().add(minuteBoxFinish);
-        minuteBoxFinish.setBounds(330, 190, 90, 43);
+        minuteBoxFinish.setBounds(270, 270, 60, 40);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Giờ");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(200, 150, 50, 44);
+        jLabel7.setBounds(170, 180, 60, 44);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel8.setText("Phút");
+        jLabel8.setMaximumSize(new java.awt.Dimension(20, 15));
+        jLabel8.setMinimumSize(new java.awt.Dimension(20, 15));
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(360, 170, 40, 15);
+        jLabel8.setBounds(270, 180, 50, 44);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Giờ");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(200, 220, 60, 44);
+        jLabel9.setBounds(170, 240, 60, 44);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Phút");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(360, 220, 50, 44);
+        jLabel13.setBounds(260, 240, 50, 44);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Ngày");
         getContentPane().add(jLabel14);
-        jLabel14.setBounds(490, 120, 60, 44);
+        jLabel14.setBounds(340, 180, 60, 44);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Ngày");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(490, 190, 60, 43);
+        jLabel15.setBounds(340, 240, 60, 43);
 
-        jLabel16.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel16.setText("(*)");
-        getContentPane().add(jLabel16);
-        jLabel16.setBounds(760, 180, 42, 44);
+        jPanel4.setBackground(new java.awt.Color(0, 51, 102));
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(0, 0, 790, 90);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/a3.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
-        jLabel6.setMaximumSize(null);
         jLabel6.setMinimumSize(new java.awt.Dimension(1000, 508));
         jLabel6.setPreferredSize(new java.awt.Dimension(1000, 511));
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 820, 510);
+        jLabel6.setBounds(0, 50, 790, 510);
+        getContentPane().add(jPanel6);
+        jPanel6.setBounds(980, -30, 10, 10);
 
-        jLabel17.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel17.setText("(*)");
-        getContentPane().add(jLabel17);
-        jLabel17.setBounds(760, 300, 37, 44);
-
-        jLabel18.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel18.setText("(*)");
-        getContentPane().add(jLabel18);
-        jLabel18.setBounds(760, 300, 37, 44);
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Phút");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(260, 200, 50, 44);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -354,6 +346,10 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_minuteBoxStartActionPerformed
 
+    private void minuteBoxFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minuteBoxFinishActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_minuteBoxFinishActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -400,15 +396,10 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jDateFinish;
     private com.toedter.calendar.JDateChooser jDateStart;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -417,6 +408,8 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSpinner jSpinner1;
