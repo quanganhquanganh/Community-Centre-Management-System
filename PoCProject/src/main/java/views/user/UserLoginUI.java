@@ -91,6 +91,20 @@ public class UserLoginUI extends javax.swing.JFrame  {
         taiKhoan1 = new javax.swing.JTextField();
         matKhau1 = new javax.swing.JPasswordField();
         jButton5 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
         jDialog2 = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -118,31 +132,30 @@ public class UserLoginUI extends javax.swing.JFrame  {
 
         jCheckBox1.setText("jCheckBox1");
 
-        jDialog1.setMinimumSize(new java.awt.Dimension(500, 400));
+        jDialog1.setFocusable(false);
+        jDialog1.setMinimumSize(new java.awt.Dimension(500, 561));
         jDialog1.setModal(true);
         jDialog1.getContentPane().setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(82, 83, 81));
+        jPanel3.setMinimumSize(new java.awt.Dimension(500, 561));
         jPanel3.setLayout(null);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Vui lòng điền thông tin !");
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 102), 3));
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(90, 30, 300, 35);
+        jLabel5.setBounds(90, 30, 300, 29);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Tên đăng nhập");
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel3.add(jLabel6);
         jLabel6.setBounds(50, 130, 130, 20);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Mật khẩu");
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel3.add(jLabel7);
         jLabel7.setBounds(50, 170, 130, 20);
 
@@ -158,20 +171,88 @@ public class UserLoginUI extends javax.swing.JFrame  {
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton5.setText("xác nhận");
-        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
+        jButton5.setBorder(null);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         jPanel3.add(jButton5);
-        jButton5.setBounds(310, 210, 90, 19);
+        jButton5.setBounds(380, 510, 90, 15);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Số CMT");
+        jPanel3.add(jLabel12);
+        jLabel12.setBounds(50, 200, 100, 40);
+        jPanel3.add(jTextField1);
+        jTextField1.setBounds(220, 210, 180, 30);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Họ và tên");
+        jPanel3.add(jLabel13);
+        jLabel13.setBounds(50, 244, 100, 30);
+        jPanel3.add(jTextField2);
+        jTextField2.setBounds(220, 250, 180, 30);
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Địa chỉ");
+        jPanel3.add(jLabel14);
+        jLabel14.setBounds(50, 284, 100, 30);
+        jPanel3.add(jTextField3);
+        jTextField3.setBounds(220, 290, 180, 30);
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Ngày đăng kí");
+        jPanel3.add(jLabel15);
+        jLabel15.setBounds(50, 324, 100, 30);
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jTextField4);
+        jTextField4.setBounds(220, 330, 180, 30);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Nghê nghiệp");
+        jPanel3.add(jLabel16);
+        jLabel16.setBounds(50, 370, 100, 30);
+        jPanel3.add(jTextField5);
+        jTextField5.setBounds(220, 370, 180, 30);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Ngày Sinh");
+        jPanel3.add(jLabel17);
+        jLabel17.setBounds(50, 410, 100, 30);
+        jPanel3.add(jTextField6);
+        jTextField6.setBounds(220, 410, 180, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Số điện thoại");
+        jPanel3.add(jLabel18);
+        jLabel18.setBounds(50, 450, 100, 30);
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jTextField7);
+        jTextField7.setBounds(220, 450, 180, 30);
 
         jDialog1.getContentPane().add(jPanel3);
-        jPanel3.setBounds(-3, -1, 500, 290);
+        jPanel3.setBounds(-3, -1, 500, 561);
 
         jDialog2.setBackground(new java.awt.Color(82, 83, 81));
-        jDialog2.setMinimumSize(new java.awt.Dimension(500, 400));
+        jDialog2.setMinimumSize(new java.awt.Dimension(400, 300));
         jDialog2.getContentPane().setLayout(null);
 
         jPanel4.setBackground(new java.awt.Color(82, 83, 81));
@@ -182,25 +263,27 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Nhập thông tin để lập lại mật khẩu");
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 3));
         jPanel4.add(jLabel9);
         jLabel9.setBounds(40, 30, 320, 40);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Tài khoản");
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel4.add(jLabel10);
         jLabel10.setBounds(40, 100, 80, 40);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Mât khẩu");
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51), 2));
         jPanel4.add(jLabel11);
         jLabel11.setBounds(40, 170, 80, 40);
 
         taiKhoan2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        taiKhoan2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                taiKhoan2ActionPerformed(evt);
+            }
+        });
         jPanel4.add(taiKhoan2);
         taiKhoan2.setBounds(170, 100, 190, 40);
         jPanel4.add(matKhau2);
@@ -276,7 +359,7 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 51, 51));
         jButton1.setText("Đăng nhập");
-        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 0, 0)));
+        jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -288,7 +371,6 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Tên hộ gia đình");
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51), 2));
         jLabel3.setOpaque(true);
 
         jLabel4.setBackground(new java.awt.Color(51, 51, 51));
@@ -296,7 +378,6 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Mật khẩu");
-        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51), 2));
         jLabel4.setOpaque(true);
 
         userUsername.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -316,11 +397,10 @@ public class UserLoginUI extends javax.swing.JFrame  {
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText(" Vui lòng đăng nhập để tiếp tục");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 0, 51), 3));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setText("Taọ tài khoản");
-        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 2));
+        jButton3.setBorder(null);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -329,7 +409,7 @@ public class UserLoginUI extends javax.swing.JFrame  {
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setText("Quên mật khẩu");
-        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 2));
+        jButton4.setBorder(null);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -344,47 +424,47 @@ public class UserLoginUI extends javax.swing.JFrame  {
                 .addGap(202, 202, 202)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(userUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                            .addComponent(userPassword)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(67, 67, 67)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(userUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)))))
-                .addGap(53, 53, 53))
+                                .addGap(32, 32, 32)))
+                        .addGap(53, 53, 53))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(userUsername, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(userUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(userPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addGap(14, 14, 14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -401,7 +481,7 @@ public class UserLoginUI extends javax.swing.JFrame  {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE))
         );
 
         pack();
@@ -429,12 +509,13 @@ public class UserLoginUI extends javax.swing.JFrame  {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        jDialog2.setLocationRelativeTo(null);
         jDialog2.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
+        jDialog1.setLocationRelativeTo(null);
         jDialog1.setVisible(true);
     // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -442,12 +523,26 @@ public class UserLoginUI extends javax.swing.JFrame  {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         keyListenner(taiKhoan1);
         keyListenner(matKhau1);
+        keyListenner(jTextField1);
+        keyListenner(jTextField2);
+        keyListenner(jTextField3);
+        keyListenner(jTextField4);
+        keyListenner(jTextField5);
+        keyListenner(jTextField6);
+        keyListenner(jTextField7);
+        String cmt = jTextField1.getText();
+        String name  = jTextField2.getText();
+        String diaChi =jTextField3.getText();
+        String singUp = jTextField4.getText();
+        String nghe = jTextField5.getText();
+        String ngaySinh = jTextField6.getText();
+        String phone = jTextField7.getText();
         String tk1 = taiKhoan1.getText();
         String mk1 = String.valueOf(matKhau1.getPassword());
         try {
             if (this.cont1.checker(tk1, mk1)) {
                  JOptionPane.showMessageDialog(rootPane, "Tạo Thành Công", "Thông báo nè ", JOptionPane.WARNING_MESSAGE);
-                 this.cont1.save_(tk1,mk1);
+                 this.cont1.save_(tk1,mk1,cmt,name,diaChi,singUp,nghe,ngaySinh,phone);
                  jDialog1.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Tài khoản đã tồn tại", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -460,8 +555,10 @@ public class UserLoginUI extends javax.swing.JFrame  {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         keyListenner(taiKhoan2);
         keyListenner(matKhau2);
+        
         String tk2 = taiKhoan2.getText();
         String mk2 = String.valueOf(matKhau2.getPassword());
+        
          try {
             if (!this.cont1.checker(tk2, mk2)) {
                  JOptionPane.showMessageDialog(rootPane, "đổi mật khẩu thành công", "Thông báo nè ", JOptionPane.WARNING_MESSAGE);
@@ -478,6 +575,18 @@ public class UserLoginUI extends javax.swing.JFrame  {
     private void taiKhoan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taiKhoan1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_taiKhoan1ActionPerformed
+
+    private void taiKhoan2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taiKhoan2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_taiKhoan2ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -527,6 +636,13 @@ public class UserLoginUI extends javax.swing.JFrame  {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -540,6 +656,13 @@ public class UserLoginUI extends javax.swing.JFrame  {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private javax.swing.JPasswordField matKhau1;
