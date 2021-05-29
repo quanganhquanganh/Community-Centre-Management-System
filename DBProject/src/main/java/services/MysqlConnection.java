@@ -4,10 +4,11 @@ import java.sql.*;
 
 public class MysqlConnection {
     public static Connection getMysqlConnection() throws SQLException, ClassNotFoundException {
-        String hostName = "localhost";
-        String dbName = "DBProject";
-        String userName = "root";
-        String password = "25102001";
+        String hostName = "sql6.freemysqlhosting.net";
+        String dbName = "sql6415471";
+        String userName = "sql6415471";
+        String password = "z9UTUxedgt";
+        System.out.print("Lol");
         return getMysqlConnection(hostName, dbName, userName, password);
     }
     
