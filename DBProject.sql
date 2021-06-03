@@ -105,7 +105,6 @@ CREATE TABLE `nhan_khau` (
 CREATE TABLE `tam_tru` (
   `ID` int(11) NOT NULL,
   `idNhanKhau` int(11) DEFAULT NULL,
-  `maGiayTamtru` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `soDienThoaiNguoiDangKy` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tuNgay` date NOT NULL,
   `denNgay` date NOT NULL,
@@ -116,7 +115,6 @@ CREATE TABLE `tam_tru` (
 CREATE TABLE `tam_vang` (
   `ID` int(11) NOT NULL,
   `idNhanKhau` int(11) DEFAULT NULL,
-  `maGiayTamVang` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `noiTamtru` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tuNgay` date DEFAULT NULL,
   `denNgay` date DEFAULT NULL,
