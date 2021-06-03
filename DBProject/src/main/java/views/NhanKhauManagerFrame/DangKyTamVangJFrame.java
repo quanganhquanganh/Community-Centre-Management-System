@@ -49,8 +49,7 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
     }
     
     private boolean validateForm() {
-        return !(maGiayTamVangJtf.getText().trim().isEmpty()
-                || noiTamTruJtf.getText().trim().isEmpty()
+        return !(noiTamTruJtf.getText().trim().isEmpty()
                 || lyDoJta.getText().trim().isEmpty());
     }
     
@@ -72,7 +71,6 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
             // khong cho phep sua lai gia tri
             this.soCMTjtf.setEditable(false);
             this.availableIcon.setEnabled(true);
-            this.maGiayTamVangJtf.setEnabled(true);
             this.noiTamTruJtf.setEnabled(true);
             this.tuNgayJdc.setEnabled(true);
             this.denNgayJdc.setEnabled(true);
@@ -103,25 +101,19 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         CancelBtn = new javax.swing.JButton();
         soCMTjtf = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         checkBtn = new javax.swing.JButton();
         availableIcon = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        maGiayTamVangJtf = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         noiTamTruJtf = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
         tuNgayJdc = new com.toedter.calendar.JDateChooser();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         denNgayJdc = new com.toedter.calendar.JDateChooser();
-        jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         lyDoJta = new javax.swing.JTextArea();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -153,10 +145,6 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Số CMT/ CCCD:");
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("(*)");
-
         checkBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         checkBtn.setText("Kiểm tra");
         checkBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -165,23 +153,8 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
             }
         });
 
-        availableIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/checked.png"))); // NOI18N
+        availableIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/checked.png"))); // NOI18N
         availableIcon.setEnabled(false);
-
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel3.setText("Mã giấy tạm vắng:");
-
-        maGiayTamVangJtf.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        maGiayTamVangJtf.setEnabled(false);
-        maGiayTamVangJtf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                maGiayTamVangJtfActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel4.setText("(*)");
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setText("Nơi tạm trú:");
@@ -194,16 +167,8 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel6.setText("(*)");
-
         tuNgayJdc.setEnabled(false);
         tuNgayJdc.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel7.setText("(*)");
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setText("Từ ngày:");
@@ -214,10 +179,6 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         denNgayJdc.setEnabled(false);
         denNgayJdc.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel10.setText("(*)");
-
         lyDoJta.setColumns(20);
         lyDoJta.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lyDoJta.setRows(5);
@@ -227,102 +188,85 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel11.setText("Lý do:");
 
-        jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel12.setText("(*)");
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setText("Họ và tên:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel3)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel8)
-                                .addComponent(jLabel9)
-                                .addComponent(jLabel11))
-                            .addGap(49, 49, 49)))
-                    .addComponent(jLabel1))
-                .addGap(52, 52, 52)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel11))
+                                .addGap(101, 101, 101))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(52, 52, 52))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)
+                        .addGap(116, 116, 116)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                    .addComponent(tuNgayJdc, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                    .addComponent(noiTamTruJtf, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(CancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(denNgayJdc, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(checkBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(availableIcon))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(soCMTjtf, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(maGiayTamVangJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel4))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tuNgayJdc, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(noiTamTruJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(48, 48, 48)
-                                    .addComponent(CancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(denNgayJdc, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel10)
-                                .addComponent(jLabel12)))))
-                .addContainerGap(186, Short.MAX_VALUE))
+                    .addComponent(soCMTjtf, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                    .addComponent(jTextField1))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(soCMTjtf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(checkBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(availableIcon))
-                .addGap(8, 8, 8)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(maGiayTamVangJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(noiTamTruJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tuNgayJdc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(denNgayJdc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel11))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(acceptBtn)
                     .addComponent(CancelBtn))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -343,10 +287,6 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_soCMTjtfActionPerformed
 
-    private void maGiayTamVangJtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maGiayTamVangJtfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_maGiayTamVangJtfActionPerformed
-
     private void noiTamTruJtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noiTamTruJtfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_noiTamTruJtfActionPerformed
@@ -357,7 +297,6 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         } else {
             System.out.print(this.tuNgayJdc.getDate());
             System.out.print(this.denNgayJdc.getDate());
-            this.tamVangModel.setMaGiayTamVang(this.maGiayTamVangJtf.getText().trim());
             this.tamVangModel.setNoiTamTru(this.noiTamTruJtf.getText().trim());
             this.tamVangModel.setTuNgay(this.tuNgayJdc.getDate());
             this.tamVangModel.setDenNgay(this.denNgayJdc.getDate());
@@ -388,21 +327,15 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
     private javax.swing.JButton checkBtn;
     private com.toedter.calendar.JDateChooser denNgayJdc;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextArea lyDoJta;
-    private javax.swing.JTextField maGiayTamVangJtf;
     private javax.swing.JTextField noiTamTruJtf;
     private javax.swing.JTextField soCMTjtf;
     private com.toedter.calendar.JDateChooser tuNgayJdc;
