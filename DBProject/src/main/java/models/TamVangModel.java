@@ -6,7 +6,6 @@ import java.util.Date;
 public class TamVangModel {
     private int ID;
     private int idNhanKhau;
-    private String maGiayTamVang;
     private String noiTamTru;
     private Date tuNgay;
     private Date denNgay;
@@ -26,14 +25,6 @@ public class TamVangModel {
 
     public void setIdNhanKhau(int idNhanKhau) {
         this.idNhanKhau = idNhanKhau;
-    }
-
-    public String getMaGiayTamVang() {
-        return maGiayTamVang;
-    }
-
-    public void setMaGiayTamVang(String maGiayTamVang) {
-        this.maGiayTamVang = maGiayTamVang;
     }
 
     public String getNoiTamTru() {
