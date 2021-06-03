@@ -21,10 +21,10 @@ public class MngLoginController {
             try {
                     Connection conn = MysqlConnection.getMysqlConnection();
                     Statement st = conn.createStatement();
-                    ResultSet rs = st.executeQuery("select * from MANAGER");
+                    ResultSet rs = st.executeQuery("SELECT * FROM MANAGER");
                     
                     while(rs.next()){
-                        if(rs.getString("mngUsername").equals(mngUsername) && rs.getString("mngPassword").equals(mngPassword))
+                        if(rs.getString("MNGUSERNAME").equals(mngUsername) && rs.getString("MNGPASSWORD").equals(mngPassword))
                             check = true;
                     }
                     if(check){

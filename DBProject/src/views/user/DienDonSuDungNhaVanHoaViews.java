@@ -320,7 +320,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
                 if (new DienDonSuDungNhaVanHoa().themDonYeuCau(userUsername, startTimeRequest, finishTimeRequest, requestDescriptions, requestRoom)) {
                     JOptionPane.showMessageDialog(this, "Yêu cầu được thêm vào hệ thống");
                 } else {
-                    JOptionPane.showMessageDialog(this, "�? c� l?i x?y ra. Vui l?ng th? l?i");
+                    JOptionPane.showMessageDialog(this, "Có lỗi xảy ra. Vui long nhập lại.");
                 };
             }
         } catch (Exception e) {

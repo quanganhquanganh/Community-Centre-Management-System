@@ -6,6 +6,7 @@
 package controllers.mng;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.table.DefaultTableModel;
+import services.MysqlConnection;
 
 
 public class XemLich {
@@ -20,12 +22,12 @@ public class XemLich {
         try{
             Connection conn =  services.MysqlConnection.getMysqlConnection();
             Statement st = conn.createStatement();
-            String query = "select * from eventtable"
+            String query = "SELECT * FROM EVENTTABLE"
                          + " WHERE DATEDIFF(FINISHTIME, CURDATE()) > 0"
-                         + " order by starttime desc";
+                         + " ORDER BY STARTTIME DESC";
             ResultSet rs = st.executeQuery(query);
             while(rs.next()){  
-                model.addRow(new Object[]{rs.getString("EVENTName"), rs.getString("StartTime"), rs.getString("FinishTime"), rs.getString("RoomNAME")});
+                model.addRow(new Object[]{rs.getString("EVENTNAME"), rs.getString("STARTTIME"), rs.getString("FINISHTIME"), rs.getString("ROOMNAME")});
             }
         } catch(SQLException e){
             System.out.print(e);
@@ -34,20 +36,39 @@ public class XemLich {
         }
     }
     
+    public static int count() {
+        int tong = -1;
+        try{
+            Connection connection = MysqlConnection.getMysqlConnection();
+            String query = "SELECT COUNT(*) AS tong FROM EVENTTABLE"
+                         + " WHERE DATEDIFF(FINISHTIME, CURDATE()) > 0"
+                         + " ORDER BY STARTTIME DESC";
+            PreparedStatement preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                tong = rs.getInt("tong");
+            }
+            preparedStatement.close();
+        } catch (Exception e) {
+            System.out.print(e);
+        }
+        return tong;
+    }
+    
     public static ArrayList<String> showDetail(DefaultTableModel model, int index){
         ArrayList<String> arr = new ArrayList<>();
         try{
             Connection conn =  services.MysqlConnection.getMysqlConnection();
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("select * from eventTABLE");
+            ResultSet rs = st.executeQuery("SELECT * FROM EVENTTABLE");
             while(rs.next()){  
-                if(rs.getString("EVENTName").equals(model.getValueAt(index, 0).toString()) && rs.getString("StartTime").equals(model.getValueAt(index, 1).toString())){                   
-                    arr.add(rs.getString("EVENTName"));
-                    arr.add(rs.getString("StartTime"));
-                    arr.add(rs.getString("FinishTime"));
-                    arr.add(rs.getString("RoomNAME"));
-                    arr.add(rs.getString("EVENTDescription"));
-                    arr.add(rs.getString("Fee"));
+                if(rs.getString("EVENTNAME").equals(model.getValueAt(index, 0).toString()) && rs.getString("StartTime").equals(model.getValueAt(index, 1).toString())){                   
+                    arr.add(rs.getString("EVENTNAME"));
+                    arr.add(rs.getString("STARTTIME"));
+                    arr.add(rs.getString("FINISHTIME"));
+                    arr.add(rs.getString("ROOMNAME"));
+                    arr.add(rs.getString("EVENTDESCRIPTION"));
+                    arr.add(rs.getString("FEE"));
                     return arr;
                 }
                 
@@ -61,13 +82,13 @@ public class XemLich {
         try{
             Connection conn =  services.MysqlConnection.getMysqlConnection();
             Statement st = conn.createStatement();
-            String query = "select * from eventTABLE"
+            String query = "SELECT * FROM EVENTTABLE"
                          + " WHERE DATEDIFF(?, STARTTIME) > 0";
-            ResultSet rs = st.executeQuery("select * from eventTABLE");
+            ResultSet rs = st.executeQuery("SELECT * FROM EVENTTABLE");
             while(rs.next()){
-                if(rs.getString("RoomNAME").equals(room)){
-                    String startTimeStr = rs.getString("StartTime");
-                    String endTimeStr = rs.getString("FinishTime");
+                if(rs.getString("ROOMNAME").equals(room)){
+                    String startTimeStr = rs.getString("STARTTIME");
+                    String endTimeStr = rs.getString("FINISHTIME");
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                     
                     LocalDateTime db_startTime = LocalDateTime.parse(startTimeStr, formatter);

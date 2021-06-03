@@ -25,7 +25,7 @@ public class LenLichSuKienController {
                 eventID = 0;
             }
             // Xong phần lấy ra EventID
-            PreparedStatement ps = conn.prepareStatement("insert into eventtable(RoomNAME, StartTime, FinishTime, EVENTNAME, EVENTDescription, Fee, EVENTID) values(?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO EVENTTABLE(ROOMNAME, STARTTIME, FINISHTIME, EVENTNAME, EVENTDESCRIPTION, FEE, EVENTID) VALUES(?, ?, ?, ?, ?, ?, ?)");
             ps.setString(1, lich.getRoomName());
             ps.setString(2, lich.getStartTime());
             ps.setString(3, lich.getFinishTime());

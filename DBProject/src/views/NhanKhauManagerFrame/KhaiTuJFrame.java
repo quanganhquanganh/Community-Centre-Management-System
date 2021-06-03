@@ -135,7 +135,7 @@ public class KhaiTuJFrame extends javax.swing.JFrame {
 
         jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/checked.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/checked.png"))); // NOI18N
         jLabel8.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

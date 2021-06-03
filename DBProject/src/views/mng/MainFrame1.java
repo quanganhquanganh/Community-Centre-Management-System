@@ -71,10 +71,10 @@ public class MainFrame1 extends javax.swing.JFrame {
 
         Home.setBackground(new java.awt.Color(76, 175, 80));
 
-        jlbTrangChu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/trangchu.png"))); // NOI18N
-        jlbTrangChu.setText("Trang chủ");
         jlbTrangChu.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlbTrangChu.setForeground(new java.awt.Color(255, 255, 255));
+        jlbTrangChu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/trangchu.png"))); // NOI18N
+        jlbTrangChu.setText("Trang chủ");
 
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);
@@ -90,10 +90,10 @@ public class MainFrame1 extends javax.swing.JFrame {
         NhanKhauBtn.setBackground(new java.awt.Color(76, 175, 80));
         NhanKhauBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jlbNhanKhau.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/multiple-users-silhouette.png"))); // NOI18N
-        jlbNhanKhau.setText("Nhân khẩu");
         jlbNhanKhau.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlbNhanKhau.setForeground(new java.awt.Color(255, 255, 255));
+        jlbNhanKhau.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/multiple-users-silhouette.png"))); // NOI18N
+        jlbNhanKhau.setText("Nhân khẩu");
 
         javax.swing.GroupLayout NhanKhauBtnLayout = new javax.swing.GroupLayout(NhanKhauBtn);
         NhanKhauBtn.setLayout(NhanKhauBtnLayout);
@@ -108,10 +108,10 @@ public class MainFrame1 extends javax.swing.JFrame {
 
         HoKhauBtn.setBackground(new java.awt.Color(76, 175, 80));
 
-        jlbHoKhau.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/home.png"))); // NOI18N
-        jlbHoKhau.setText("Hộ khẩu");
         jlbHoKhau.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlbHoKhau.setForeground(new java.awt.Color(255, 255, 255));
+        jlbHoKhau.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/home.png"))); // NOI18N
+        jlbHoKhau.setText("Hộ khẩu");
 
         javax.swing.GroupLayout HoKhauBtnLayout = new javax.swing.GroupLayout(HoKhauBtn);
         HoKhauBtn.setLayout(HoKhauBtnLayout);
@@ -126,10 +126,10 @@ public class MainFrame1 extends javax.swing.JFrame {
 
         ThongKeBtn.setBackground(new java.awt.Color(76, 175, 80));
 
-        jlbThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/increasing-stocks-graphic.png"))); // NOI18N
-        jlbThongKe.setText("Thống kê");
         jlbThongKe.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlbThongKe.setForeground(new java.awt.Color(255, 255, 255));
+        jlbThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/increasing-stocks-graphic.png"))); // NOI18N
+        jlbThongKe.setText("Thống kê");
 
         javax.swing.GroupLayout ThongKeBtnLayout = new javax.swing.GroupLayout(ThongKeBtn);
         ThongKeBtn.setLayout(ThongKeBtnLayout);
@@ -149,11 +149,11 @@ public class MainFrame1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/quanlysudungnhavanhoa.png"))); // NOI18N
-        jLabel1.setText("Quản lý sử dụng nhà văn hóa");
         jLabel1.setBackground(new java.awt.Color(76, 175, 80));
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/quanlysudungnhavanhoa.png"))); // NOI18N
+        jLabel1.setText("Quản lý sử dụng nhà văn hóa");
 
         javax.swing.GroupLayout QlnvhLayout = new javax.swing.GroupLayout(Qlnvh);
         Qlnvh.setLayout(QlnvhLayout);
@@ -175,10 +175,10 @@ public class MainFrame1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dangxuat.png"))); // NOI18N
-        jLabel5.setText("Đăng xuất");
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dangxuat.png"))); // NOI18N
+        jLabel5.setText("Đăng xuất");
 
         javax.swing.GroupLayout DangXuatLayout = new javax.swing.GroupLayout(DangXuat);
         DangXuat.setLayout(DangXuatLayout);
@@ -193,10 +193,10 @@ public class MainFrame1 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(232, 64, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/qlgd.png"))); // NOI18N
-        jLabel2.setText("Quản lý nhân khẩu");
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/qlgd.png"))); // NOI18N
+        jLabel2.setText("Quản lý nhân khẩu");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

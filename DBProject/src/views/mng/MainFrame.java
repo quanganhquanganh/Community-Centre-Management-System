@@ -26,17 +26,22 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
+    private CalendarCheckController controller;
     public MainFrame() {
         initComponents();
         setLocationRelativeTo(null);
         
-        jComboBoxVatPhamUpdate();
-        XemLichSuDung();
-        XemThongTinDangKy();
-        DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
-        jLabelSoSK.setText(String.valueOf(model.getRowCount()));
-        DefaultTableModel model1 = (DefaultTableModel) jTableDonDangKy.getModel();
-        jLabelSoDonDK.setText(String.valueOf(model1.getRowCount()));
+        //jComboBoxVatPhamUpdate();
+        //XemLichSuDung();
+        //XemThongTinDangKy();
+        //DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
+        //jLabelSoSK.setText(String.valueOf(model.getRowCount()));
+        //jLabelSoSK.setText(String.valueOf(XemLich.count()));
+        //DefaultTableModel model1 = (DefaultTableModel) jTableDonDangKy.getModel();
+        //jLabelSoDonDK.setText(String.valueOf(model1.getRowCount()));
+        //jLabelSoDonDK.setText(String.valueOf(ThongTinNguoiDungDangKy.count()));
+        this.controller = new CalendarCheckController(jLabelSoSK, jLabelSoDonDK);
+        this.controller.setData();
     }
     
     private void XemLichSuDung(){
@@ -217,7 +222,7 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelLichLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLichLayout.createSequentialGroup()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 50, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanelLichLayout.setVerticalGroup(
             jPanelLichLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -961,19 +966,23 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPanelLeftMouseClickedEvt(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelLeftMouseClickedEvt
+        jComboBoxVatPhamUpdate();
         if(evt.getSource() == jPanelTrangChu){
             jPanelTrangChuCentre.setVisible(true);
             jPanelQuanLyCSVCCentre.setVisible(false);
             jPanelLichCentre.setVisible(false);
             jPanelDonDangKyCentre.setVisible(false);
-            DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
-            model.setRowCount(0);
-            XemLich.show(model);
-            jLabelSoSK.setText(String.valueOf(model.getRowCount()));
-            DefaultTableModel model1 = (DefaultTableModel) jTableDonDangKy.getModel();
-            model1.setRowCount(0); 
-            XemThongTinDangKy();
-            jLabelSoDonDK.setText(String.valueOf(model1.getRowCount()));
+            
+            //jComboBoxVatPhamUpdate();
+            //DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
+            //model.setRowCount(0);
+            //XemLich.show(model);
+            //jLabelSoSK.setText(String.valueOf(model.getRowCount()));
+            //DefaultTableModel model1 = (DefaultTableModel) jTableDonDangKy.getModel();
+            //model1.setRowCount(0); 
+            //XemThongTinDangKy();
+            //jLabelSoDonDK.setText(String.valueOf(model1.getRowCount()));jLabelSoSK.setText(String.valueOf(XemLich.count()));
+            this.controller.setData();
         }
         if(evt.getSource() == jPanelQuanLyCSVC){
             jPanelTrangChuCentre.setVisible(false);
@@ -1086,15 +1095,17 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldTTSoLuongActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
-        model.setRowCount(0);
-        XemLich.show(model);
-        jLabelSoSK.setText(String.valueOf(model.getRowCount()));
-        DefaultTableModel model1 = (DefaultTableModel) jTableDonDangKy.getModel();
-        model1.setRowCount(0); 
-        XemThongTinDangKy();
-        jLabelSoDonDK.setText(String.valueOf(model1.getRowCount()));
-       
+        //DefaultTableModel model = (DefaultTableModel) jTableLich.getModel();
+        //model.setRowCount(0);
+        //XemLich.show(model);
+        //jLabelSoSK.setText(String.valueOf(model.getRowCount()));
+        //DefaultTableModel model1 = (DefaultTableModel) jTableDonDangKy.getModel();
+        //model1.setRowCount(0); 
+        //XemThongTinDangKy();
+        //jLabelSoDonDK.setText(String.valueOf(model1.getRowCount()));
+        //jLabelSoSK.setText(String.valueOf(XemLich.count()));
+        //jLabelSoDonDK.setText(String.valueOf(ThongTinNguoiDungDangKy.count()));
+        this.controller.setData();
     }//GEN-LAST:event_jButton3ActionPerformed
     
     private void jComboBoxVatPhamUpdate(){
@@ -1103,10 +1114,10 @@ public class MainFrame extends javax.swing.JFrame {
             Connection conn = MysqlConnection.getMysqlConnection();
             String phong = (String)jComboBoxPhong.getSelectedItem();
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("select * from Infrastructure");
+            ResultSet rs = st.executeQuery("select * from INFRASTRUCTURE");
              while(rs.next()){
-                if(rs.getString("RoomName").equals(phong)){
-                    jComboBoxVatPham.addItem(rs.getString("ItemName"));
+                if(rs.getString("ROOMNAME").equals(phong)){
+                    jComboBoxVatPham.addItem(rs.getString("ITEMNAME"));
                 }
         }
         } catch(SQLException e){

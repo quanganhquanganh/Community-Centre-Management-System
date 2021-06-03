@@ -44,6 +44,7 @@ public class MainFrame extends JFrame {
     private JLabel labelYeuCauDaTao;
     
     public MainFrame() {
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 //        add(new JLabel(new ImageIcon("/Volumes/Data/Eagle Pictures/patrick-hendry-L4EsOAoU8-M-unsplash.jpg")));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         
