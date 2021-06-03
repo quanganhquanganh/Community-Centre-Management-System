@@ -21,8 +21,8 @@ public class AddNewController {
         ChungMinhThuModel chungMinhThu = nhanKhauBean.getChungMinhThuModel();
         Connection connection = MysqlConnection.getMysqlConnection();
         // 1 - 19
-        String query = "INSERT INTO nhan_khau (hoTen, bietDanh, namSinh, gioiTinh, noiSinh, nguyenQuan, danToc, tonGiao, quocTich, soHoChieu, noiThuongTru, diaChiHienNay, trinhDoHocVan, TrinhDoChuyenMon, bietTiengDanToc, trinhDoNgoaiNgu, ngheNghiep, noiLamViec, idNguoiTao, ngayTao)" 
-                        + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO nhan_khau (hoTen, bietDanh, namSinh, gioiTinh, noiSinh, nguyenQuan, danToc, tonGiao, quocTich, soHoChieu, noiThuongTru, diaChiHienNay, trinhDoHocVan, TrinhDoChuyenMon, bietTiengDanToc, trinhDoNgoaiNgu, ngheNghiep, noiLamViec, tienAn, idNguoiTao, ngayTao)" 
+                        + " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement preparedStatement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         preparedStatement.setString(1, nhanKhau.getHoTen());
         preparedStatement.setString(2, nhanKhau.getBietDanh());
@@ -43,9 +43,10 @@ public class AddNewController {
         preparedStatement.setString(16, nhanKhau.getTrinhDoNgoaiNgu());
         preparedStatement.setString(17, nhanKhau.getNgheNghiep());
         preparedStatement.setString(18, nhanKhau.getNoiLamViec());
-        preparedStatement.setInt(19, nhanKhau.getIdNguoiTao());
+        preparedStatement.setString(19, nhanKhau.getTienAn());
+        preparedStatement.setInt(20, nhanKhau.getIdNguoiTao());
         java.sql.Date createDate = new java.sql.Date(quanlynhankhau.QuanLyNhanKhau.calendar.getTime().getTime());
-        preparedStatement.setDate(20, createDate);
+        preparedStatement.setDate(21, createDate);
         
         preparedStatement.executeUpdate();
         ResultSet rs = preparedStatement.getGeneratedKeys();
