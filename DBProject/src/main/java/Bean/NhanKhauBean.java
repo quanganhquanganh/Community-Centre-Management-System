@@ -63,7 +63,7 @@ public class NhanKhauBean {
     @Override
     public String toString() {
         String res =  "<html><style>p {padding: 5px; margin-left: 20px} table, th, td {border: 1px solid black; border-collapse: collapse;} table {width: 500px}</style> <div>"
-                + "<h3>Thông tin cơ bản:"
+                + "<h1>Thông tin cơ bản:"
                 + "<p>Họ Tên: <b>" + nhanKhauModel.getHoTen() + "</p>"
                 + "<p>Năm Sinh: <b>" + nhanKhauModel.getNamSinh() + "</p>"
                 + "<p>Giới Tính: <b>" + nhanKhauModel.getGioiTinh() + "</p>"
@@ -81,7 +81,7 @@ public class NhanKhauBean {
                 + "<p>Nghề Nghiệp : <b>" + nhanKhauModel.getNgheNghiep()+ "</p>"
                 + "<p>Nơi Làm Việc : <b>" + nhanKhauModel.getNoiLamViec()+ "</p>"
                 + "<p>Tiền Án : <b>" + nhanKhauModel.getTienAn()+ "</p>" 
-                + "<h4>Tiểu sử<table>"
+                + "<h1>Tiểu sử<table>"
                         + "<tr>"
                         + "<th>Từ ngày</th>"
                         + "<th>Đến ngày</th>"
