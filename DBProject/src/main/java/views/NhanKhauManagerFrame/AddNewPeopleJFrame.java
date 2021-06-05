@@ -13,6 +13,9 @@ import javax.swing.JOptionPane;
 import models.ChungMinhThuModel;
 import models.NhanKhauModel;
 import views.user.MainFrame;
+import controllers.user.UserLoginController;
+import java.sql.SQLException;
+import java.util.Date;
 
 
 public class AddNewPeopleJFrame extends javax.swing.JFrame {
@@ -24,7 +27,7 @@ public class AddNewPeopleJFrame extends javax.swing.JFrame {
     private JFrame parentFrame;
     private NhanKhauBean nhanKhauBean;
     private AddNewController controller;
-
+    private UserLoginController US = new UserLoginController();
 
 //    public AddNewPeopleJFrame() {
 //        initComponents();
@@ -89,7 +92,7 @@ public class AddNewPeopleJFrame extends javax.swing.JFrame {
         this.parentFrame.setEnabled(true);
         dispose();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -597,17 +600,52 @@ public class AddNewPeopleJFrame extends javax.swing.JFrame {
             temp.setTienAn(tienAnTxb.getText());
             temp.setIdNguoiTao(LoginController.currentUser.getID());
             
+            
             try {
                 if (this.controller.addNewPeople(this.nhanKhauBean)) {
                     JOptionPane.showMessageDialog(null, "Thêm thành công!!");
                     close();
                     parentController.refreshData();
+                    
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 JOptionPane.showMessageDialog(rootPane, "Có lỗi xảy ra. Vui long kiểm tra lại!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
+        String cmt = soCMTTxb.getText();
+        String ptr_name = hoTenTxb.getText();
+        ptr_name.replaceFirst("\\s++$", "");
+        for(int i =0;i<ptr_name.length();++i)
+        {
+             int ch=ptr_name.charAt(i);
+            if(ch>64&&ch<91)
+            {
+                ch=ch+32;
+            }
+        }
+        String pass_w = "root";
+        String full_name = hoTenTxb.getText();
+        String dia_chi = diaChiHienNayTxb.getText();
+        long millis=System.currentTimeMillis();  
+        Date up_date=new java.util.Date(millis);
+        String up_date_= up_date.toString();
+        String nghe = ngheNghiepTxb.getText();
+        Date date = new Date();
+        date = namSinhDateC.getDate();
+        String date_ = date.toString();
+        String phone_number = soHoChieuTxb.getText();
+        
+
+        try {
+            this.US.save_(ptr_name,pass_w,cmt, full_name, dia_chi, up_date_, nghe, date_, phone_number);
+        } catch (SQLException ex) {
+            Logger.getLogger(AddNewPeopleJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(AddNewPeopleJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+  
     }//GEN-LAST:event_CreateBtnActionPerformed
     
     
