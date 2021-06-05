@@ -11,8 +11,8 @@ import models.ChungMinhThuModel;
 import models.GiaDinhModel;
 import models.NhanKhauModel;
 import models.TieuSuModel;
-
-
+import java.util.Date;
+import java.sql.*;
 public class NhanKhauService {
     
     /* 
@@ -306,5 +306,45 @@ public class NhanKhauService {
      */
     private void exceptionHandle(String message) {
         JOptionPane.showMessageDialog(null, message, "Warning", JOptionPane.ERROR_MESSAGE);
+    }
+    public int count_gen(String s)
+    {
+        int count = 0;
+        try{
+        Connection connection = MysqlConnection.getMysqlConnection();
+        Statement stm = connection.createStatement();
+        String query = "SELECT gioiTinh  from nhan_khau";
+        ResultSet rs = stm.executeQuery(query);
+        while (rs.next()) {
+            if (s.equals(rs.getString("gioiTinh"))){
+                count++;
+            };
+        } 
+        }catch(Exception e){
+            System.out.println("Failed!");
+        }
+        return count;
+    }
+    public int count_age(int limit_start,int limit_end)
+    {
+        int count = 0;
+        int ptr_age;
+        Date year;
+        try{
+        Connection connection = MysqlConnection.getMysqlConnection();
+        Statement stm = connection.createStatement();
+        String query = "SELECT namSinh  from nhan_khau";
+        ResultSet rs = stm.executeQuery(query);
+        while (rs.next()) {
+            year=rs.getDate("namSinh");
+            ptr_age = year.getYear();
+            if(ptr_age>limit_start||ptr_age<limit_end){
+                count++;
+            }
+        } 
+        }catch(Exception e){
+            System.out.println("Failed!");
+        }
+        return count;
     }
 }
