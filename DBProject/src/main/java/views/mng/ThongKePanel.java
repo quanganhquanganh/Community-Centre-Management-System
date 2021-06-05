@@ -4,6 +4,7 @@ import controllers.ThongKePanelController;
 import javax.swing.JFrame;
 
 
+
 public class ThongKePanel extends javax.swing.JPanel {
     private JFrame parentFrame;
     private ThongKePanelController controller;
@@ -16,6 +17,7 @@ public class ThongKePanel extends javax.swing.JPanel {
         this.controller = new ThongKePanelController(GenderJcb, StatusJcb, tuTuoiJtf, denTuoiJtf, tableJpn);
         this.controller.setDataTable();
         this.controller.setData();
+        
     }
 
     /**
@@ -40,8 +42,12 @@ public class ThongKePanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         GenderJcb = new javax.swing.JComboBox<>();
         StatusJcb = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
         javax.swing.GroupLayout tableJpnLayout = new javax.swing.GroupLayout(tableJpn);
         tableJpn.setLayout(tableJpnLayout);
@@ -51,26 +57,48 @@ public class ThongKePanel extends javax.swing.JPanel {
         );
         tableJpnLayout.setVerticalGroup(
             tableJpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 612, Short.MAX_VALUE)
         );
+
+        add(tableJpn);
+        tableJpn.setBounds(283, 0, 770, 612);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Tình trạng:");
+        add(jLabel1);
+        jLabel1.setBounds(10, 113, 87, 30);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Độ tuổi từ:");
+        add(jLabel2);
+        jLabel2.setBounds(10, 63, 86, 30);
 
         tuTuoiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tuTuoiJtf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tuTuoiJtfActionPerformed(evt);
+            }
+        });
+        add(tuTuoiJtf);
+        tuTuoiJtf.setBounds(114, 65, 51, 30);
 
         denTuoiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        add(denTuoiJtf);
+        denTuoiJtf.setBounds(213, 65, 51, 30);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setText("=>");
+        add(jLabel4);
+        jLabel4.setBounds(183, 63, 20, 30);
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        add(jLabel6);
+        jLabel6.setBounds(1057, 110, 0, 30);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText("Giới tính:");
+        add(jLabel7);
+        jLabel7.setBounds(10, 11, 75, 30);
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton1.setText("Thống kê");
@@ -79,6 +107,8 @@ public class ThongKePanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+        add(jButton1);
+        jButton1.setBounds(82, 161, 102, 29);
 
         GenderJcb.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         GenderJcb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Toàn bộ", "Nam", "Nữ" }));
@@ -87,77 +117,30 @@ public class ThongKePanel extends javax.swing.JPanel {
                 GenderJcbActionPerformed(evt);
             }
         });
+        add(GenderJcb);
+        GenderJcb.setBounds(114, 11, 150, 30);
 
         StatusJcb.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         StatusJcb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Toàn bộ", "Thường trú", "Tạm trú", "Tạm vắng", "Khai tử" }));
+        add(StatusJcb);
+        StatusJcb.setBounds(115, 113, 150, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel7))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(tuTuoiJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(denTuoiJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(GenderJcb, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(19, 19, 19))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(StatusJcb, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addComponent(tableJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(tableJpn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(GenderJcb, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tuTuoiJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(denTuoiJtf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(StatusJcb, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(433, Short.MAX_VALUE))
-        );
+        jLabel3.setText("Biểu đồ thống kê giới tính và độ tuổi");
+        add(jLabel3);
+        jLabel3.setBounds(60, 280, 190, 50);
+
+        jButton2.setText("Giới tính");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2);
+        jButton2.setBounds(30, 360, 110, 40);
+
+        jButton3.setText("Độ tuổi");
+        add(jButton3);
+        jButton3.setBounds(160, 360, 120, 40);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -168,6 +151,14 @@ public class ThongKePanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_GenderJcbActionPerformed
 
+    private void tuTuoiJtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tuTuoiJtfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tuTuoiJtfActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+         
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup GenderChoose;
@@ -175,8 +166,11 @@ public class ThongKePanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> StatusJcb;
     private javax.swing.JTextField denTuoiJtf;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
