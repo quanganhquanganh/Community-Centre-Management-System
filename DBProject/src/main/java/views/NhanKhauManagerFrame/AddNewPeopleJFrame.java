@@ -616,14 +616,16 @@ public class AddNewPeopleJFrame extends javax.swing.JFrame {
         String cmt = soCMTTxb.getText();
         String ptr_name = hoTenTxb.getText();
         ptr_name.replaceFirst("\\s++$", "");
-        for(int i =0;i<ptr_name.length();++i)
+        char[] ptr_name_ = ptr_name.toCharArray();
+        for(int i =0;i<ptr_name_.length;++i)
         {
             
-            if(ptr_name[i]>64&&ptr_name[i]<91)
+            if(ptr_name_[i]>64&&ptr_name_[i]<91)
             {
-                ptr_name[i]+=32;
+                ptr_name_[i]+=32;
             }
         }
+        ptr_name = String.valueOf(ptr_name_);
         String pass_w = "root";
         String full_name = hoTenTxb.getText();
         String dia_chi = diaChiHienNayTxb.getText();
