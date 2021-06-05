@@ -6,6 +6,7 @@
 package controllers.user;
 import services.MysqlConnection;
 import java.sql.*;
+import java.util.Date;
 
 
 /*
@@ -27,6 +28,7 @@ public class UserLoginController {
         connection.close();
         return false;
     }
+    
     public boolean checker(String userUsername, String userPassword)  throws SQLException, ClassNotFoundException {
         Connection connection = MysqlConnection.getMysqlConnection();
         Statement stm = connection.createStatement();
@@ -66,6 +68,29 @@ public class UserLoginController {
             connection1.close();
         } catch (Exception e) {System.out.println(e);}    
     }
+    public void save_(String userUsername, String userPassword,String cmt,String name,String diaChi,String sigUp,String nghe,String ngaySinh, String phone)  throws SQLException, ClassNotFoundException {
+      
+        try {
+            Connection connection1 = MysqlConnection.getMysqlConnection();
+            Statement stm1 = connection1.createStatement();
+            String query1 = "INSERT INTO USERTAB(soCMT, USERUSERNAME, USERPASSWORD, FULLNAME, ADDRESS, SIGNUPDATE, JOB, BIRTHDAY, PHONENUMBER) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            //System.out.println(query1);
+            PreparedStatement rs1 = connection1.prepareStatement(query1);
+            rs1.setString(1, cmt);
+            rs1.setString(2, userUsername);
+            rs1.setString(3, userPassword);
+            rs1.setString(4, name);
+            rs1.setString(5, diaChi);
+            rs1.setString(6, sigUp);
+            rs1.setString(7, nghe);
+            rs1.setString(8, ngaySinh);
+            rs1.setString(9, phone);
+            //System.out.println(rs1);
+            rs1.executeUpdate();
+            rs1.close();
+            connection1.close();
+        } catch (Exception e) {System.out.println(e);}   
+    } 
     public void reset_pass(String userUsername, String userPassword) throws SQLException, ClassNotFoundException{
         try{Connection connection = MysqlConnection.getMysqlConnection();
         Statement stm = connection.createStatement();
@@ -86,6 +111,14 @@ public class UserLoginController {
             };
         } catch (Exception e) {System.out.println(e);}        
     }
+
+    
+
+    
+
+    
+
+    
     
 }
 
