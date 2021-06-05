@@ -618,10 +618,10 @@ public class AddNewPeopleJFrame extends javax.swing.JFrame {
         ptr_name.replaceFirst("\\s++$", "");
         for(int i =0;i<ptr_name.length();++i)
         {
-             int ch=ptr_name.charAt(i);
-            if(ch>64&&ch<91)
+            
+            if(ptr_name[i]>64&&ptr_name[i]<91)
             {
-                ch=ch+32;
+                ptr_name[i]+=32;
             }
         }
         String pass_w = "root";
