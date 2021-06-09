@@ -644,8 +644,7 @@ public class AddNewPeopleJFrame extends javax.swing.JFrame {
         try {
             this.US.save_(ptr_name,pass_w,cmt, full_name, dia_chi, up_date_, nghe, date_, phone_number);
         } catch (SQLException | ClassNotFoundException e) {
-            Object ex = null;
-            Logger.getLogger(AddNewPeopleJFrame.class.getName()).log(Level.SEVERE, null, ex);
+           
         }
         
   
