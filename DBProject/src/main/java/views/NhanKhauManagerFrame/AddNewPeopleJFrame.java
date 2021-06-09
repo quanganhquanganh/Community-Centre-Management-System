@@ -627,7 +627,6 @@ public class AddNewPeopleJFrame extends javax.swing.JFrame {
         }
         ptr_name = String.valueOf(ptr_name_);
         char [] ptr = cmt.toCharArray();
-        ptr_name = ptr_name + ptr[ptr.length-1]+ptr[ptr.length]  ;
         String pass_w = "root";
         String full_name = hoTenTxb.getText();
         String dia_chi = diaChiHienNayTxb.getText();

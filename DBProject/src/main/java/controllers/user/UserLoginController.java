@@ -76,14 +76,15 @@ public class UserLoginController {
             String query1 = "INSERT INTO USERTAB(soCMT, USERUSERNAME, USERPASSWORD, FULLNAME, ADDRESS, SIGNUPDATE, JOB, BIRTHDAY, PHONENUMBER) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
             //System.out.println(query1);
             PreparedStatement rs1 = connection1.prepareStatement(query1);
+            
             rs1.setString(1, cmt);
             rs1.setString(2, userUsername);
             rs1.setString(3, userPassword);
             rs1.setString(4, name);
             rs1.setString(5, diaChi);
-            rs1.setString(6, sigUp);
+            rs1.setString(6, "2021-06-10");
             rs1.setString(7, nghe);
-            rs1.setString(8, ngaySinh);
+            rs1.setString(8, "2001-07-26");
             rs1.setString(9, phone);
             //System.out.println(rs1);
             rs1.executeUpdate();

@@ -11,7 +11,7 @@ public class MysqlConnection {
         String hostName = "localhost";
         String dbName = "dbproject";
         String userName = "root";
-        String password = "25102001";
+        String password = "26072001";
         System.out.print("Lol");
         return getMysqlConnection(hostName, dbName, userName, password);
     }
@@ -22,5 +22,6 @@ public class MysqlConnection {
         String connectionUrl = "jdbc:mysql://" + hostName + ":3306/" + dbName;
         Connection conn = DriverManager.getConnection(connectionUrl, userName, password);
         return conn;
+       
     }
 }
