@@ -133,64 +133,67 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel1.setText("-Chọn phòng:");
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         XemLichSuDungNhaVanHoaController xemLichSuDungNhaVanHoaController = new XemLichSuDungNhaVanHoaController();
-        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(xemLichSuDungNhaVanHoaController.layDanhSachPhong()));
+        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("-Tên sự kiện:");
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jTextFieldTenSk.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel3.setText("-Bắt đầu:");
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel4.setText("-Kết thúc:");
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel6.setText("-Chi phí:");
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
+        jTextFieldChiPhi.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jTextFieldChiPhi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldChiPhiActionPerformed(evt);
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel7.setText("-Mô tả:");
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton1.setText("Xác nhận");
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton2.setText("Hủy");
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jDateStart.setToolTipText("");
         jDateStart.setDateFormatString("dd-MM-yyyy");
         jDateStart.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jDateStart.setToolTipText("");
 
         jDateFinish.setDateFormatString("dd-MM-yyyy");
+        jDateFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         hourBoxStart.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
+        hourBoxStart.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         hourBoxStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hourBoxStartActionPerformed(evt);
@@ -198,6 +201,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         });
 
         minuteBoxStart.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+        minuteBoxStart.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         minuteBoxStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 minuteBoxStartActionPerformed(evt);
@@ -205,6 +209,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         });
 
         hourBoxFinish.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
+        hourBoxFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         hourBoxFinish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hourBoxFinishActionPerformed(evt);
@@ -212,25 +217,27 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
         });
 
         minuteBoxFinish.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+        minuteBoxFinish.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         minuteBoxFinish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 minuteBoxFinishActionPerformed(evt);
             }
         });
 
-        jLabelTime1_1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabelTime1_1.setText("Giờ");
+        jLabelTime1_1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jLabelTime2_1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabelTime2_1.setText("Giờ");
+        jLabelTime2_1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jLabelTime1_2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabelTime1_2.setText("Phút");
+        jLabelTime1_2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jLabelTime2_2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabelTime2_2.setText("Phút");
+        jLabelTime2_2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
         jTextFieldMoTa.setColumns(20);
+        jTextFieldMoTa.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jTextFieldMoTa.setRows(5);
         jScrollPane1.setViewportView(jTextFieldMoTa);
 
@@ -313,7 +320,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jDateFinish, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(minuteBoxFinish, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(minuteBoxFinish, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(hourBoxFinish, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                         .addComponent(jLabelTime2_1)
