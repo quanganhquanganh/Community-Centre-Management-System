@@ -29,7 +29,7 @@ public class InfoJframe extends javax.swing.JFrame {
             }
             
         });
-        this.setTitle("Thông tin chi tiết");
+        this.setTitle("Thông tin cơ bản");
     }
     
     public void close() {
