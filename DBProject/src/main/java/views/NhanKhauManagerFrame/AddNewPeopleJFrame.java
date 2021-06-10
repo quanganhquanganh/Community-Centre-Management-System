@@ -16,6 +16,7 @@ import views.user.MainFrame;
 import controllers.user.UserLoginController;
 import java.sql.SQLException;
 import java.util.Date;
+import services.VNCharacterUtils;
 
 
 public class AddNewPeopleJFrame extends javax.swing.JFrame {
@@ -614,8 +615,9 @@ public class AddNewPeopleJFrame extends javax.swing.JFrame {
             }
         }
         String cmt = soCMTTxb.getText();
-        String ptr_name = hoTenTxb.getText();
+        String ptr_name = VNCharacterUtils.removeAccent(hoTenTxb.getText());
         ptr_name.replaceFirst("\\s++$", "");
+        ptr_name = ptr_name.replaceAll(" ", "");
         char[] ptr_name_ = ptr_name.toCharArray();
         for(int i =0;i<ptr_name_.length;++i)
         {
