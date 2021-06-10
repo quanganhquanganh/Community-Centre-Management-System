@@ -66,7 +66,7 @@ public class ThemSuKienFrame extends javax.swing.JFrame {
             return false;
         }
         
-                 String startHour = hourBoxStart.getItemAt(hourBoxStart.getSelectedIndex());
+        String startHour = hourBoxStart.getItemAt(hourBoxStart.getSelectedIndex());
         String startMinute = minuteBoxStart.getItemAt(minuteBoxStart.getSelectedIndex());
         LocalDateTime startTime = Instant.ofEpochMilli(jDateStart.getDate().getTime() )
                             .atZone( ZoneId.systemDefault() )

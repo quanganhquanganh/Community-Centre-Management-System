@@ -8,11 +8,14 @@ package views.mng;
 import controllers.mng.LenLichSuKienController;
 import controllers.mng.ThongTinNguoiDungDangKy;
 import controllers.mng.XemLich;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import models.LenLichSuKien;
 import models.TinhTrangYeuCau;
-
+import java.time.format.DateTimeFormatter;
 
 public class ChapNhanYeuCau extends javax.swing.JFrame {
     private int index;
@@ -51,6 +54,36 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Phí sử dụng không hợp lệ", "Warning", JOptionPane.WARNING_MESSAGE);
             return false;
         }
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+         
+        //Parse String to LocalDateTime
+        LocalDateTime startTime = LocalDateTime.parse((String)model.getValueAt(index, 2), formatter);
+        LocalDateTime endTime = LocalDateTime.parse((String)model.getValueAt(index, 3), formatter);
+        
+        /*
+        (String)model.getValueAt(index, 2)
+        String startHour = hourBoxStart.getItemAt(hourBoxStart.getSelectedIndex());
+        String startMinute = minuteBoxStart.getItemAt(minuteBoxStart.getSelectedIndex());
+        LocalDateTime startTime = Instant.ofEpochMilli(jDateStart.getDate().getTime() )
+                            .atZone( ZoneId.systemDefault() )
+                            .toLocalDateTime();
+        startTime.plusHours(Integer.valueOf(startHour));
+        startTime.plusMinutes(Integer.valueOf(startMinute));
+
+        String endHour = hourBoxFinish.getItemAt(hourBoxFinish.getSelectedIndex());
+        String endMinute = minuteBoxFinish.getItemAt(minuteBoxFinish.getSelectedIndex());
+        LocalDateTime endTime = Instant.ofEpochMilli(jDateFinish.getDate().getTime() )
+                            .atZone( ZoneId.systemDefault() )
+                            .toLocalDateTime();
+        endTime.plusHours(Integer.valueOf(endHour));
+        endTime.plusMinutes(Integer.valueOf(endMinute));
+        */
+        if(!XemLich.checkAvailable((String)model.getValueAt(index, 4), startTime, endTime)) {
+            JOptionPane.showMessageDialog(null, "Sự kiện trùng với sự kiện khác", "Warning", JOptionPane.WARNING_MESSAGE);
+            return false;
+        }
+        
         return true;
     }
     /**

@@ -53,7 +53,9 @@ public class XemLichSuDungNhaVanHoaController {
 
             Connection connection = MysqlConnection.getMysqlConnection();
             Statement statement = connection.createStatement();
-            String query = "SELECT ROOMNAME, STARTTIME, FINISHTIME, EVENTNAME, EVENTID FROM EVENTTABLE WHERE ROOMNAME = '" + roomName + "'";
+            String query = "SELECT ROOMNAME, STARTTIME, FINISHTIME, EVENTNAME, EVENTID FROM EVENTTABLE WHERE ROOMNAME = '" + roomName + "'"
+                         + " AND DATEDIFF(FINISHTIME, CURDATE()) > 0"
+                         + " order by starttime desc";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
                 XemLichSuDung lsd = new XemLichSuDung(); //Biến dùng để lưu tạm kết quả từ result sau đó thêm vào danh sách
