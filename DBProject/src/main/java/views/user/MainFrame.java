@@ -229,7 +229,7 @@ public class MainFrame extends JFrame {
         validate();
         repaint();
         hienThi1 = new JButton("Cập Nhật");
-        hienThi1.setBounds(800, 40, 100, 60);
+        hienThi1.setBounds(820, 50, 100, 50);
         hienThi1.setFont(new java.awt.Font("Tahoma", 1, 12));
         hienThi1.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
