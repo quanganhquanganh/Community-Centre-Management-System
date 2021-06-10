@@ -60,7 +60,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="From &#x111;&#x103;ng k&#xed; thu&#xea; nh&#xe0; v&#x103;n h&#xf3;a"/>
+        <Property name="text" type="java.lang.String" value="Form &#x111;&#x103;ng k&#xed; thu&#xea; nh&#xe0; v&#x103;n h&#xf3;a"/>
         <Property name="verticalAlignment" type="int" value="1"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">

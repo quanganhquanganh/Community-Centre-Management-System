@@ -93,7 +93,7 @@ public class DienDonSuDungNhaVanHoaViews extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("From đăng kí thuê nhà văn hóa");
+        jLabel1.setText("Form đăng kí thuê nhà văn hóa");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         getContentPane().add(jLabel1);
