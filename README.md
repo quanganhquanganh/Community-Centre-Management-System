@@ -6,7 +6,7 @@ HI! Xin Chào Các Bạnn !!
 Cách để install sourcecode:
 - Sử dụng Mysql, mở Mysql Command Line Client.
 - Sử dụng lệnh "source <ĐỊA CHỈ ĐẾN DATABASE>;"
-- Vào phần mềm và chọn một trong 2 main view để chạy: LogInView hoặc UserLoginUI
+- Sử dụng netbeans vào phần mềm và chọn một trong 2 main view để chạy: LogInView hoặc UserLoginUI
 - Giả vờ làm người quản lí nhà văn hóa và hộ gia đình.
 
 Cách để install phần mềm:
